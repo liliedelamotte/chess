@@ -2,63 +2,84 @@
 // Assignment 7
 // 2019-03-19
 
+
+#include <iostream>
 #include "Board.h"
+#include "Square.h"
 
 /**
- * Board implementation
+ * Implements the Board object.
  */
 
-
 /**
- * @return Board&
+ * Returns a reference to the Board object.
+ *
+ * @return a reference to the Board object.
  */
 static Board& Board::getInstance() {
+    /* todo */
     return null;
 }
 
 /**
- * @param rank
- * @param file
- * @return Square&
+ * Returns a reference to the Square at a given rank and file.
+ *
+ * @param rank todo
+ * @param file todo
+ * @return a reference to the Square at a given rank and file.
  */
 Square& Board::getSquareAt(int rank, int file) {
+    /* todo */
     return null;
 }
 
 /**
- * @param from
- * @param to
- * @return boolean
+ * todo
+ *
+ * @param from todo
+ * @param to todo
+ * @return whether or not the file is clear.
  */
-boolean Board::isClearRank(Square& from, Square& to) {
+bool Board::isClearRank(Square& from, Square& to) {
+    /* todo */
     return false;
 }
 
 /**
- * @param from
- * @param to
- * @return boolean
+ * todo
+ *
+ * @param from todo
+ * @param to todo
+ * @return whether or not the file is clear.
  */
-boolean Board::isClearFile(Square& from, Square& to) {
+bool Board::isClearFile(Square& from, Square& to) {
+    /* todo */
     return false;
 }
 
 /**
- * @param from
- * @param to
- * @return boolean
+ * Determines whether or not a set of diagonal Squares is clear.
+ *
+ * @param from todo
+ * @param to todo
+ * @return whether or not a set of diagonal Squares is clear.
  */
-boolean Board::isClearDiagonal(Square& from, Square& to) {
+bool Board::isClearDiagonal(Square& from, Square& to) {
     return false;
 }
 
 /**
- * @param os
+ * Displays the Board.
+ *
+ * @param os an output stream.
  */
 void Board::display(ostream& os) {
-
+    /* todo */
 }
 
-void Board::Board() {
-
+/*
+ * todo
+ */
+Board::Board() {
+    /* todo */
 }

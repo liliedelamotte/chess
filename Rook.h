@@ -5,19 +5,27 @@
 
 #ifndef _ROOK_H
 #define _ROOK_H
-
 #include "RestrictedPiece.h"
 
-
-class Rook: public RestrictedPiece {
-public: 
-    
-int getValue();
-    
 /**
- * @param location
+ * Implements the Rook object.
  */
-boolean canMoveTo(Square& location);
+class Rook: public RestrictedPiece {
+
+    public:
+
+        /**
+         * Returns the integer value of the Rook.
+         */
+        int getValue();
+
+        /**
+         * Determines whether or not the Rook can move to a given space.
+         *
+         * @param location the Square in which the Rook is to be moved to.
+         */
+        bool canMoveTo(Square& location);
+
 };
 
 #endif //_ROOK_H

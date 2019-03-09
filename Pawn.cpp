@@ -3,31 +3,40 @@
 // 2019-03-19
 
 
+#include <iostream>
 #include "Pawn.h"
+using namespace std;
 
 /**
- * Pawn implementation
+ * Implements the Pawn object.
  */
 
-
 /**
- * @return int
+ * Returns the integer value of the Pawn.
+ *
+ * @return the integer value of the Pawn.
  */
 int Pawn::getValue() {
+    /* todo */
     return 0;
 }
 
 /**
- * @param location
- * @return boolean
+ * Determines whether or not the Pawn can move to a given location.
+ *
+ * @param location the Square in which the Pawn is to be moved to.
+ * @return whether or not the Pawn can move to the given location.
  */
-boolean Pawn::canMoveTo(Square& location) {
+bool Pawn::canMoveTo(Square& location) {
+    /* todo */
     return false;
 }
 
 /**
- * @param os
+ * Displays the Pawn using a terminal-based figurine.
+ *
+ * @param os an output stream.
  */
 void Pawn::display(ostream& os) {
-
+    /* todo */
 }

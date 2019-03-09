@@ -6,21 +6,26 @@
 #include "Rook.h"
 
 /**
- * Rook implementation
- */
-
+* Implements the Rook object.
+*/
 
 /**
- * @return int
+ * Returns the integer value of the Rook.
+ *
+ * @return the integer value of the Rook.
  */
 int Rook::getValue() {
+    /* todo */
     return 0;
 }
 
 /**
- * @param location
- * @return boolean
+ * Determines whether or not the Rook can move to a given space.
+ *
+ * @param location the Square in which the Rook is to be moved to.
+ * @return whether or not the Knight can move to the given location.
  */
-boolean Rook::canMoveTo(Square& location) {
+bool Rook::canMoveTo(Square& location) {
+    /* todo */
     return false;
 }

@@ -2,24 +2,32 @@
 // Assignment 7
 // 2019-03-19
 
+
 #include "Knight.h"
 
-/**
- * Knight implementation
- */
-
+using namespace std;
 
 /**
- * @return int
+* Implements the Knight object.
+*/
+
+/**
+ * Returns the integer value of the Knight.
+ *
+ * @return the integer value of the Knight.
  */
 int Knight::getValue() {
+    /* todo */
     return 0;
 }
 
 /**
- * @param location
- * @return boolean
+ * Determines whether or not the Knight can move to a given space.
+ *
+ * @param location the Square in which the Knight is to be moved to.
+ * @return whether or not the Knight can move to the given location.
  */
-boolean Knight::canMoveTo(Square& location) {
+bool Knight::canMoveTo(Square& location) {
+    /* todo */
     return false;
 }

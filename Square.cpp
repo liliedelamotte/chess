@@ -6,49 +6,64 @@
 #include "Square.h"
 
 /**
- * Square implementation
+ * Implements the Square object.
  */
 
-
 /**
- * @param rank
- * @param file
+ * Constructs a Square.
+ *
+ * @param rank todo
+ * @param file todo
  */
 void Square::Square(int rank, int file) {
-
+    /* todo */
 }
 
 /**
- * @return int
+ * Returns the integer rank of the Square called upon.
+ *
+ * @return the integer rank of the Square called upon.
  */
 int Square::getRank() {
+    /* todo */
     return 0;
 }
 
 /**
- * @return int
+ * todo
+ *
+ * @return int todo
  */
 int Square::getFile() {
+    /* todo */
     return 0;
 }
 
 /**
- * @return boolean
+ * Determines whether or not the Square called upon is occupied by a Piece.
+ *
+ * @return whether or not the Square called upon is occupied by a Piece.
  */
-boolean Square::isOccupied() {
+bool Square::isOccupied() {
+    /* todo */
     return false;
 }
 
 /**
- * @return Piece*
+ * Returns a pointer to the occupant at the Square called upon.
+ *
+ * @return a pointer to the occupant at the Square called upon.
  */
 Piece* Square::getOccupant() {
+    /* todo */
     return null;
 }
 
 /**
- * @param occupant
+ * Sets a given occupant at the Square called upon.
+ *
+ * @param occupant a pointer to the Piece to be placed at the Square called upon.
  */
 void Square::setOccupant(Piece* occupant) {
-
+    /* todo */
 }

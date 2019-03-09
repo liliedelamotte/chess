@@ -5,44 +5,78 @@
 
 #ifndef _PIECE_H
 #define _PIECE_H
-
 #include "Square.h"
 
-
+/**
+ * Implements the Piece object.
+ */
 class Piece {
-public: 
-    
-virtual int getValue() = 0;
-    
-string getColor();
-    
-Square* getLocation();
-    
-/**
- * @param location
- */
-void setLocation(Square* location);
-    
-boolean isOnSquare();
-    
-/**
- * @param location
- */
-virtual boolean canMoveTo(Square& location) = 0;
-    
-/**
- * @param location
- * @param byPlayer
- */
-boolean moveTo(Square& location, Player& byPlayer);
-    
-/**
- * @param os
- */
-void display(ostream& os);
-private: 
-    string color;
-    Square occupant;
+
+    public:
+
+        /**
+         * Returns the integer value of the Piece.
+         */
+        virtual int getValue() = 0;
+
+        /**
+         * Returns the color of the Piece.
+         */
+        string getColor();
+
+        /**
+         * Returns a pointer to location of the Piece.
+         */
+        Square* getLocation();
+
+        /**
+         * Sets the location of the Piece on the board.
+         *
+         * @param location the pointer to the Square
+         * at which the Piece should be placed.
+         */
+        void setLocation(Square* location);
+
+        /**
+         * Determines whether or not the Piece is on the board.
+         */
+        bool isOnSquare();
+
+        /**
+         * Determines whether or not the Piece can move to a given location.
+         *
+         * @param location the Square in which the Piece is to be moved to.
+         */
+        virtual boolean canMoveTo(Square& location) = 0;
+
+        /**
+         * Moves a Piece to a given location.
+         *
+         * @param location the Square in which the Piece is to be moved to.
+         * @param byPlayer the Player that is to make the move.
+         * @return whether or not the move was successful.
+         */
+        bool moveTo(Square& location, Player& byPlayer);
+
+        /**
+         * Displays the Piece using a terminal-based figurine.
+         *
+         * @param os an output stream.
+         */
+        void display(ostream& os);
+
+    private:
+
+        /**
+         * The color of the piece.
+         */
+        string color;
+
+        /**
+         * todo
+         */
+        Square occupant;
+
 };
 
 #endif //_PIECE_H
