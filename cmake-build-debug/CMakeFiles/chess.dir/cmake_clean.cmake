@@ -1,5 +1,17 @@
 file(REMOVE_RECURSE
   "CMakeFiles/chess.dir/main.cpp.o"
+  "CMakeFiles/chess.dir/Bishop.cpp.o"
+  "CMakeFiles/chess.dir/Board.cpp.o"
+  "CMakeFiles/chess.dir/Game.cpp.o"
+  "CMakeFiles/chess.dir/King.cpp.o"
+  "CMakeFiles/chess.dir/Knight.cpp.o"
+  "CMakeFiles/chess.dir/Pawn.cpp.o"
+  "CMakeFiles/chess.dir/Piece.cpp.o"
+  "CMakeFiles/chess.dir/Player.cpp.o"
+  "CMakeFiles/chess.dir/Queen.cpp.o"
+  "CMakeFiles/chess.dir/RestrictedPiece.cpp.o"
+  "CMakeFiles/chess.dir/Rook.cpp.o"
+  "CMakeFiles/chess.dir/Square.cpp.o"
   "chess.pdb"
   "chess"
 )

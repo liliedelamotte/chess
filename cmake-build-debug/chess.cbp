@@ -80,6 +80,78 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/liliedelamotte/dev/csis370/chess/Bishop.cpp">
+			<Option target="chess"/>
+		</Unit>
+		<Unit filename="/Users/liliedelamotte/dev/csis370/chess/Bishop.h">
+			<Option target="chess"/>
+		</Unit>
+		<Unit filename="/Users/liliedelamotte/dev/csis370/chess/Board.cpp">
+			<Option target="chess"/>
+		</Unit>
+		<Unit filename="/Users/liliedelamotte/dev/csis370/chess/Board.h">
+			<Option target="chess"/>
+		</Unit>
+		<Unit filename="/Users/liliedelamotte/dev/csis370/chess/Game.cpp">
+			<Option target="chess"/>
+		</Unit>
+		<Unit filename="/Users/liliedelamotte/dev/csis370/chess/Game.h">
+			<Option target="chess"/>
+		</Unit>
+		<Unit filename="/Users/liliedelamotte/dev/csis370/chess/King.cpp">
+			<Option target="chess"/>
+		</Unit>
+		<Unit filename="/Users/liliedelamotte/dev/csis370/chess/King.h">
+			<Option target="chess"/>
+		</Unit>
+		<Unit filename="/Users/liliedelamotte/dev/csis370/chess/Knight.cpp">
+			<Option target="chess"/>
+		</Unit>
+		<Unit filename="/Users/liliedelamotte/dev/csis370/chess/Knight.h">
+			<Option target="chess"/>
+		</Unit>
+		<Unit filename="/Users/liliedelamotte/dev/csis370/chess/Pawn.cpp">
+			<Option target="chess"/>
+		</Unit>
+		<Unit filename="/Users/liliedelamotte/dev/csis370/chess/Pawn.h">
+			<Option target="chess"/>
+		</Unit>
+		<Unit filename="/Users/liliedelamotte/dev/csis370/chess/Piece.cpp">
+			<Option target="chess"/>
+		</Unit>
+		<Unit filename="/Users/liliedelamotte/dev/csis370/chess/Piece.h">
+			<Option target="chess"/>
+		</Unit>
+		<Unit filename="/Users/liliedelamotte/dev/csis370/chess/Player.cpp">
+			<Option target="chess"/>
+		</Unit>
+		<Unit filename="/Users/liliedelamotte/dev/csis370/chess/Player.h">
+			<Option target="chess"/>
+		</Unit>
+		<Unit filename="/Users/liliedelamotte/dev/csis370/chess/Queen.cpp">
+			<Option target="chess"/>
+		</Unit>
+		<Unit filename="/Users/liliedelamotte/dev/csis370/chess/Queen.h">
+			<Option target="chess"/>
+		</Unit>
+		<Unit filename="/Users/liliedelamotte/dev/csis370/chess/RestrictedPiece.cpp">
+			<Option target="chess"/>
+		</Unit>
+		<Unit filename="/Users/liliedelamotte/dev/csis370/chess/RestrictedPiece.h">
+			<Option target="chess"/>
+		</Unit>
+		<Unit filename="/Users/liliedelamotte/dev/csis370/chess/Rook.cpp">
+			<Option target="chess"/>
+		</Unit>
+		<Unit filename="/Users/liliedelamotte/dev/csis370/chess/Rook.h">
+			<Option target="chess"/>
+		</Unit>
+		<Unit filename="/Users/liliedelamotte/dev/csis370/chess/Square.cpp">
+			<Option target="chess"/>
+		</Unit>
+		<Unit filename="/Users/liliedelamotte/dev/csis370/chess/Square.h">
+			<Option target="chess"/>
+		</Unit>
 		<Unit filename="/Users/liliedelamotte/dev/csis370/chess/main.cpp">
 			<Option target="chess"/>
 		</Unit>
