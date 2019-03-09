@@ -1,7 +1,6 @@
-/**
- * Project Chess
- * @author Brian R. Snider
- */
+// ldelamotte17@georgefox.edu
+// Assignment 7
+// 2019-03-19
 
 
 #ifndef _RESTRICTEDPIECE_H
