@@ -4,24 +4,30 @@
 
 
 #include "RestrictedPiece.h"
+#include "Player.h"
 
 /**
- * RestrictedPiece implementation
+ * Implements the RestrictedPiece object.
  */
-
 
 /**
- * @param location
- * @param byPlayer
- * @return boolean
+ * Moves a Piece to a given location.
+ *
+ * @param location the Square in which the Piece is to be moved to.
+ * @param byPlayer the Player that is to make the move.
+ * @return whether or not the move was successful.
  */
-virtual boolean RestrictedPiece::moveTo(Square& location, Player& byPlayer) {
+virtual bool RestrictedPiece::moveTo(Square& location, Player& byPlayer) {
+    /* todo */
     return false;
 }
 
 /**
- * @return boolean
+ * Returns whether or not the Piece called upon has moved.
+ *
+ * @return whether or not the Piece called upon has moved.
  */
-boolean RestrictedPiece::hasMoved() {
+bool RestrictedPiece::hasMoved() {
+    /* todo */
     return false;
 }

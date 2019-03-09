@@ -4,18 +4,32 @@
 
 #ifndef _GAME_H
 #define _GAME_H
+#include "Player.h"
 
-class Game {
-public: 
-    
-static void initialize();
-    
-static Player& getNextPlayer();
-    
 /**
- * @param player
+ * Implements the game object.
  */
-static Player& getOpponentOf(Player& player);
+class Game {
+
+    public:
+
+        /**
+         * Initializes the game.
+         */
+        static void initialize();
+
+        /**
+         * Returns a reference to the Player whose turn is next.
+         */
+        static Player& getNextPlayer();
+
+        /**
+         * Returns a reference to the opponent of a given Player.
+         *
+         * @param player a reference to a Player.
+         */
+        static Player& getOpponentOf(Player& player);
+
 };
 
 #endif //_GAME_H

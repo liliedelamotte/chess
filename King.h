@@ -5,19 +5,27 @@
 
 #ifndef _KING_H
 #define _KING_H
-
 #include "RestrictedPiece.h"
 
-
-class King: public RestrictedPiece {
-public: 
-    
-int getValue();
-    
 /**
- * @param location
+ * Implements the King object.
  */
-boolean canMoveTo(Square& location);
+class King: public RestrictedPiece {
+
+    public:
+
+        /**
+         * Returns the integer value of the King.
+         */
+        int getValue();
+
+        /**
+         * Determines whether or not the King can move to a given location.
+         *
+         * @param location the Square in which the King is to be moved to.
+         */
+        bool canMoveTo(Square& location);
+
 };
 
 #endif //_KING_H

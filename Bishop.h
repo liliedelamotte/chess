@@ -5,19 +5,30 @@
 
 #ifndef _BISHOP_H
 #define _BISHOP_H
-
 #include "Piece.h"
 
-
-class Bishop: public Piece {
-public: 
-    
-int getValue();
-    
 /**
- * @param location
+ * Implements the Bishop object.
  */
-boolean canMoveTo(Square& location);
+class Bishop: public Piece {
+
+    public:
+
+        /**
+         * Returns the integer value of the Bishop.
+         *
+         * @return the integer value of the Bishop.
+         */
+        int getValue();
+
+        /**
+         * Determines whether or not the Bishop can move to a given location.
+         *
+         * @param location the Square in which the Bishop is to be moved to.
+         * @return whether or not the Bishop can move to the given location.
+         */
+        bool canMoveTo(Square& location);
+
 };
 
 #endif //_BISHOP_H

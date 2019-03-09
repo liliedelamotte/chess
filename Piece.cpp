@@ -3,68 +3,103 @@
 // 2019-03-19
 
 
+#include <iostream>
 #include "Piece.h"
+#include "Player.h"
+
+using namespace std;
+
 
 /**
- * Piece implementation
+ * Implements the Piece object.
  */
 
 
 /**
- * @return int
+ * Returns the integer value of the Piece.
+ *
+ * @return the integer value of the Piece.
  */
 virtual int Piece::getValue() {
+    /* todo */
     return 0;
 }
 
+
 /**
- * @return string
+ * Returns the color of the Piece.
+ *
+ * @return the color of the Piece.
  */
 string Piece::getColor() {
+    /* todo */
     return "";
 }
 
+
 /**
- * @return Square*
+ * Returns a pointer to location of the Piece.
+ *
+ * @return the a pointer to location of the Piece.
  */
 Square* Piece::getLocation() {
+    /* todo */
     return null;
 }
 
+
 /**
- * @param location
+ * Sets the location of the Piece on the board.
+ *
+ * @param location the pointer to the Square
+ * at which the Piece should be placed.
  */
 void Piece::setLocation(Square* location) {
-
+    /* todo */
 }
 
+
 /**
- * @return boolean
+ * Determines whether or not the Piece is on the board.
+ *
+ * @return whether or not the Piece is on the board.
  */
-boolean Piece::isOnSquare() {
+bool Piece::isOnSquare() {
+    /* todo */
     return false;
 }
 
+
 /**
- * @param location
- * @return boolean
+ * Determines whether or not the Piece can move to a given location.
+ *
+ * @param location the Square in which the Piece is to be moved to.
+ * @return whether or not the Piece can move to the given location.
  */
-virtual boolean Piece::canMoveTo(Square& location) {
+virtual bool Piece::canMoveTo(Square& location) {
+    /* todo */
     return false;
 }
 
+
 /**
- * @param location
- * @param byPlayer
- * @return boolean
+ * Moves a Piece to a given location.
+ *
+ * @param location the Square in which the Piece is to be moved to.
+ * @param byPlayer the Player that is to make the move.
+ * @return whether or not the move was successful.
  */
-boolean Piece::moveTo(Square& location, Player& byPlayer) {
+bool Piece::moveTo(Square& location, Player& byPlayer) {
+    /* todo */
     return false;
 }
 
+
 /**
- * @param os
+ * Displays the Piece using a terminal-based figurine.
+ *
+ * @param os an output stream.
  */
 void Piece::display(ostream& os) {
-
+    /* todo */
 }

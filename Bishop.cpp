@@ -6,21 +6,26 @@
 #include "Bishop.h"
 
 /**
- * Bishop implementation
+ * Implements the Bishop object.
  */
-
 
 /**
- * @return int
+ * Returns the integer value of the Bishop.
+ *
+ * @return the integer value of the Bishop.
  */
 int Bishop::getValue() {
+    /* todo */
     return 0;
 }
 
 /**
- * @param location
- * @return boolean
+ * Determines whether or not the Bishop can move to a given location.
+ *
+ * @param location the Square in which the Bishop is to be moved to.
+ * @return whether or not the Bishop can move to the given location.
  */
-boolean Bishop::canMoveTo(Square& location) {
+bool Bishop::canMoveTo(Square& location) {
+    /* todo */
     return false;
 }

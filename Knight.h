@@ -5,19 +5,27 @@
 
 #ifndef _KNIGHT_H
 #define _KNIGHT_H
-
 #include "Piece.h"
 
-
-class Knight: public Piece {
-public: 
-    
-int getValue();
-    
 /**
- * @param location
+ * Implements the Knight object.
  */
-boolean canMoveTo(Square& location);
+class Knight: public Piece {
+
+    public:
+
+        /**
+         * Returns the integer value of the Bishop.
+         */
+        int getValue();
+
+        /**
+         * Determines whether or not the Knight can move to a given space.
+         *
+         * @param location the Square in which the Knight is to be moved to.
+         */
+        bool canMoveTo(Square& location);
+
 };
 
 #endif //_KNIGHT_H

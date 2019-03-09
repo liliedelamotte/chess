@@ -6,21 +6,26 @@
 #include "Queen.h"
 
 /**
- * Queen implementation
- */
-
+* Implements the Queen object.
+*/
 
 /**
- * @return int
+ * Returns the integer value of the Queen.
+ *
+ * @return the integer value of the Queen.
  */
 int Queen::getValue() {
+    /* todo */
     return 0;
 }
 
 /**
- * @param location
- * @return boolean
+ * Determines whether or not the Queen can move to a given location.
+ *
+ * @param location the Square in which the Queen is to be moved to.
+ * @return whether or not the Queen can move to the given location.
  */
-boolean Queen::canMoveTo(Square& location) {
+bool Queen::canMoveTo(Square& location) {
+    /* todo */
     return false;
 }
