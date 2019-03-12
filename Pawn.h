@@ -18,6 +18,8 @@ class Pawn: public RestrictedPiece {
 
         /**
          * Returns the integer value of the Pawn.
+         *
+         * @return the integer value of the Pawn.
          */
         int getValue();
 
@@ -25,6 +27,7 @@ class Pawn: public RestrictedPiece {
          * Determines whether or not the Pawn can move to a given location.
          *
          * @param location the Square in which the Pawn is to be moved to.
+         * @return whether or not the Pawn can move to the given location.
          */
         bool canMoveTo(Square& location);
 

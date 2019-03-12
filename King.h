@@ -16,6 +16,8 @@ class King: public RestrictedPiece {
 
         /**
          * Returns the integer value of the King.
+         *
+         * @return the integer value of the King.
          */
         int getValue();
 
@@ -23,6 +25,7 @@ class King: public RestrictedPiece {
          * Determines whether or not the King can move to a given location.
          *
          * @param location the Square in which the King is to be moved to.
+         * @return whether or not the King can move to the given location.
          */
         bool canMoveTo(Square& location);
 

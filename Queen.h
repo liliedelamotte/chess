@@ -16,6 +16,8 @@ class Queen: public Piece {
 
         /**
          * Returns the integer value of the Queen.
+         *
+         * @return the integer value of the Queen.
          */
         int getValue();
 
@@ -23,6 +25,7 @@ class Queen: public Piece {
          * Determines whether or not the Queen can move to a given location.
          *
          * @param location the Square in which the Queen is to be moved to.
+         * @return whether or not the Queen can move to the given location.
          */
         bool canMoveTo(Square& location);
 

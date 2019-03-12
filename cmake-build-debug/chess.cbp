@@ -92,6 +92,9 @@
 		<Unit filename="/Users/liliedelamotte/dev/csis370/chess/Board.h">
 			<Option target="chess"/>
 		</Unit>
+		<Unit filename="/Users/liliedelamotte/dev/csis370/chess/Chess.cpp">
+			<Option target="chess"/>
+		</Unit>
 		<Unit filename="/Users/liliedelamotte/dev/csis370/chess/Game.cpp">
 			<Option target="chess"/>
 		</Unit>

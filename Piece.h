@@ -16,16 +16,22 @@ class Piece {
 
         /**
          * Returns the integer value of the Piece.
+         *
+         * @return the integer value of the Piece.
          */
         virtual int getValue() = 0;
 
         /**
          * Returns the color of the Piece.
+         *
+         * @return the color of the Piece.
          */
         string getColor();
 
         /**
          * Returns a pointer to location of the Piece.
+         *
+         * @return the a pointer to location of the Piece.
          */
         Square* getLocation();
 
@@ -39,6 +45,8 @@ class Piece {
 
         /**
          * Determines whether or not the Piece is on the board.
+         *
+         * @return whether or not the Piece is on the board.
          */
         bool isOnSquare();
 
@@ -46,6 +54,7 @@ class Piece {
          * Determines whether or not the Piece can move to a given location.
          *
          * @param location the Square in which the Piece is to be moved to.
+         * @return whether or not the Piece can move to the given location.
          */
         virtual boolean canMoveTo(Square& location) = 0;
 
@@ -73,7 +82,7 @@ class Piece {
         string color;
 
         /**
-         * todo
+         * The Square at which the Piece is currently occupying.
          */
         Square occupant;
 
