@@ -18,32 +18,44 @@ class Board {
 
         /**
          * Returns a reference to the Board object.
+         *
+         * @return a reference to the Board object.
          */
         static Board& getInstance();
 
         /**
          * Returns a reference to the Square at a given rank and file.
          *
-         * @param rank todo
-         * @param file todo
+         * @param rank horizontal rows of Squares, labeled 1 through 8.
+         * @param file vertical columns of Squares, labeled a through h.
+         * @return a reference to the Square at a given rank and file.
          */
         Square& getSquareAt(int rank, int file);
 
         /**
+         * Determines whether or not a set of horizontal Squares is clear.
+         *
          * @param from todo
          * @param to todo
+         * @return whether or not the file is clear.
          */
         bool isClearRank(Square& from, Square& to);
 
         /**
+         * Determines whether or not a set of vertical Squares is clear.
+         *
          * @param from todo
          * @param to todo
+         * @return whether or not the file is clear.
          */
         bool isClearFile(Square& from, Square& to);
 
         /**
+         * Determines whether or not a set of diagonal Squares is clear.
+         *
          * @param from todo
          * @param to todo
+         * @return whether or not a set of diagonal Squares is clear.
          */
         bool isClearDiagonal(Square& from, Square& to);
 
@@ -56,10 +68,14 @@ class Board {
 
     private:
 
-        /* todo */
+        /*
+         * The height and width of the board.
+         */
         int DIMENSION = 8;
 
-        /* todo */
+        /*
+         * The Board instance itself.
+         */
         static Board& instance;
 
         /* todo */

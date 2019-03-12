@@ -17,28 +17,36 @@ class Square {
         /**
          * Constructs a Square.
          *
-         * @param rank todo
-         * @param file todo
+         * @param rank horizontal rows of Squares, labeled 1 through 8.
+         * @param file vertical columns of Squares, labeled a through h.
          */
         void Square(int rank, int file);
 
         /**
-         * Returns the integer rank of the Square called upon.
+         * Returns the rank of the Square.
+         *
+         * @return the rank of the Square.
          */
         int getRank();
 
         /**
-         * todo
+         * Returns the file of the Square.
+         *
+         * @return the file of the Square.
          */
         int getFile();
 
         /**
          * Determines whether or not the Square called upon is occupied by a Piece.
+         *
+         * @return whether or not the Square called upon is occupied by a Piece.
          */
         boolean isOccupied();
 
         /**
          * Returns a pointer to the occupant at the Square called upon.
+         *
+         * @return a pointer to the occupant at the Square called upon.
          */
         Piece* getOccupant();
 
@@ -52,12 +60,12 @@ class Square {
     private:
 
         /**
-         * todo
+         * The rank of the Square.
          */
         int rank;
 
         /**
-         * todo
+         * The file of the Square.
          */
         int file;
 

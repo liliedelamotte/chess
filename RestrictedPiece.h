@@ -20,6 +20,7 @@ class RestrictedPiece: public Piece {
          *
          * @param location the Square in which the Piece is to be moved to.
          * @param byPlayer the Player that is to make the move.
+         * @return whether or not the move was successful.
          */
         virtual bool moveTo(Square& location, Player& byPlayer) = 0;
 
@@ -27,6 +28,8 @@ class RestrictedPiece: public Piece {
 
         /**
          * Returns whether or not the Piece called upon has moved.
+         *
+         * @return whether or not the Piece called upon has moved.
          */
         bool hasMoved();
 

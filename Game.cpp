@@ -6,34 +6,16 @@
 #include "Game.h"
 #include "Player.h"
 
-/**
- * Implements the Game object.
- */
-
-/**
- * Initializes the game.
- */
-static void Game::initialize() {
+void Game::initialize() {
     /* todo */
 }
 
-/**
- * Returns a reference to the Player whose turn is next.
- *
- * @return a reference to the Player whose turn is next.
- */
-static Player& Game::getNextPlayer() {
+Player& Game::getNextPlayer() {
     /* todo */
-    return null;
+    return nullptr;
 }
 
-/**
- * Returns a reference to the opponent of a given Player.
- *
- * @param player a reference to a Player.
- * @return a reference to the opponent of a given Player.
- */
-static Player& Game::getOpponentOf(Player& player) {
+Player& Game::getOpponentOf(Player& player) {
     /* todo */
-    return null;
+    return nullptr;
 }
