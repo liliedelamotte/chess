@@ -4,6 +4,8 @@
 
 
 #include "Queen.h"
+#include "Piece.h"
+#include "Square.h"
 
 int Queen::getValue() {
     /* todo */

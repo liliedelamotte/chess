@@ -5,18 +5,16 @@
 
 #include "Square.h"
 
-void Square::Square(int rank, int file) {
+Square::Square(int rank, int file) {
     /* todo */
 }
 
 int Square::getRank() {
-    /* todo */
-    return 0;
+    return _rank;
 }
 
 int Square::getFile() {
-    /* todo */
-    return 0;
+    return _file;
 }
 
 bool Square::isOccupied() {
@@ -26,9 +24,12 @@ bool Square::isOccupied() {
 
 Piece* Square::getOccupant() {
     /* todo */
-    return null;
+//    return _occupant;
 }
 
 void Square::setOccupant(Piece* occupant) {
     /* todo */
+    // fyi: should be _occupant = occupant; after it's changed
+//    _occupant = occupant;
+//    occupant->setLocation(this);
 }

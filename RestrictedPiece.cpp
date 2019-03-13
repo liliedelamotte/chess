@@ -5,6 +5,8 @@
 
 #include "RestrictedPiece.h"
 #include "Player.h"
+#include "Piece.h"
+#include "Square.h"
 
 bool RestrictedPiece::moveTo(Square& location, Player& byPlayer) {
     /* todo */
@@ -12,6 +14,5 @@ bool RestrictedPiece::moveTo(Square& location, Player& byPlayer) {
 }
 
 bool RestrictedPiece::hasMoved() {
-    /* todo */
-    return false;
+    return _moved;
 }

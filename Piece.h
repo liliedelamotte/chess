@@ -5,7 +5,15 @@
 
 #ifndef _PIECE_H
 #define _PIECE_H
-#include "Square.h"
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+// forward declaration of a class needed as a data type
+class Square;
+class Player;
 
 /**
  * Implements the Piece object.
@@ -13,6 +21,9 @@
 class Piece {
 
     public:
+
+        /* todo */
+        Piece(Square* location);
 
         /**
          * Returns the integer value of the Piece.
@@ -56,7 +67,7 @@ class Piece {
          * @param location the Square in which the Piece is to be moved to.
          * @return whether or not the Piece can move to the given location.
          */
-        virtual boolean canMoveTo(Square& location) = 0;
+        virtual bool canMoveTo(Square& location) = 0;
 
         /**
          * Moves a Piece to a given location.
@@ -79,12 +90,12 @@ class Piece {
         /**
          * The color of the piece.
          */
-        string color;
+        string _color;
 
         /**
          * The Square at which the Piece is currently occupying.
          */
-        Square occupant;
+        Square* _occupant;
 
 };
 

@@ -6,8 +6,10 @@
 #ifndef _BOARD_H
 #define _BOARD_H
 #include <iostream>
-#include "Square.h"
 using namespace std;
+
+class Board;
+class Square;
 
 /**
  * Implements the Board object.
@@ -21,7 +23,7 @@ class Board {
          *
          * @return a reference to the Board object.
          */
-        static Board& getInstance();
+        static Board* getInstance();
 
         /**
          * Returns a reference to the Square at a given rank and file.
@@ -76,7 +78,7 @@ class Board {
         /*
          * The Board instance itself.
          */
-        static Board& instance;
+        static Board* _instance;
 
         /* todo */
         Board();

@@ -4,6 +4,8 @@
 
 
 #include "Bishop.h"
+#include "Piece.h"
+#include "Square.h"
 
 /**
  * Implements the Bishop object.

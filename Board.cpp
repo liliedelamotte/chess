@@ -6,10 +6,10 @@
 #include <iostream>
 #include "Board.h"
 #include "Square.h"
+using namespace std;
 
-Board& Board::getInstance() {
-    /* todo */
-    return nullptr;
+Board* Board::getInstance() {
+    return _instance;
 }
 
 Square& Board::getSquareAt(int rank, int file) {

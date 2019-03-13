@@ -5,7 +5,9 @@
 
 #ifndef _QUEEN_H
 #define _QUEEN_H
-#include "Piece.h"
+
+class Piece;
+class Square;
 
 /**
  * Implements the Queen object.

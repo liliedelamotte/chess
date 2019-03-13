@@ -4,8 +4,8 @@
 
 
 #include "Knight.h"
-
-using namespace std;
+#include "Piece.h"
+#include "Square.h"
 
 int Knight::getValue() {
     /* todo */

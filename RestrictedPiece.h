@@ -5,8 +5,10 @@
 
 #ifndef _RESTRICTEDPIECE_H
 #define _RESTRICTEDPIECE_H
-#include "Piece.h"
-#include "Player.h"
+
+class Piece;
+class Player;
+class Square;
 
 /**
  * Implements the RestrictedPiece object.
@@ -38,7 +40,7 @@ class RestrictedPiece: public Piece {
         /**
          * Whether or not the Restricted Piece has moved yet.
          */
-        bool moved = false;
+        bool _moved = false;
 };
 
 #endif //_RESTRICTEDPIECE_H

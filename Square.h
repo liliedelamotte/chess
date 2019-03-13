@@ -5,7 +5,8 @@
 
 #ifndef _SQUARE_H
 #define _SQUARE_H
-#include "Piece.h"
+
+class Piece;
 
 /**
  * Implements the Square object.
@@ -20,7 +21,7 @@ class Square {
          * @param rank horizontal rows of Squares, labeled 1 through 8.
          * @param file vertical columns of Squares, labeled a through h.
          */
-        void Square(int rank, int file);
+        Square(int rank, int file);
 
         /**
          * Returns the rank of the Square.
@@ -41,7 +42,7 @@ class Square {
          *
          * @return whether or not the Square called upon is occupied by a Piece.
          */
-        boolean isOccupied();
+        bool isOccupied();
 
         /**
          * Returns a pointer to the occupant at the Square called upon.
@@ -62,17 +63,17 @@ class Square {
         /**
          * The rank of the Square.
          */
-        int rank;
+        int _rank;
 
         /**
          * The file of the Square.
          */
-        int file;
+        int _file;
 
         /**
          * The location of a Piece.
          */
-        Piece location;
+        Piece* _location;
 };
 
 #endif //_SQUARE_H
