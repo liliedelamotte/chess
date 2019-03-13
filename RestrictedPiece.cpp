@@ -14,6 +14,5 @@ bool RestrictedPiece::moveTo(Square& location, Player& byPlayer) {
 }
 
 bool RestrictedPiece::hasMoved() {
-    /* todo */
-    return false;
+    return _moved;
 }

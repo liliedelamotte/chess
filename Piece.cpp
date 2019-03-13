@@ -9,7 +9,7 @@
 #include "Square.h"
 using namespace std;
 
-Piece::Piece(Square* location) : _location(location) { }
+//Piece::Piece(Square* location) : _location(location) { }
 
 int Piece::getValue() {
     /* todo */

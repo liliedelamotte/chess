@@ -4,13 +4,12 @@
 
 
 #include <iostream>
-
-class Board;
-class Square;
+#include "Board.h"
+#include "Square.h"
+using namespace std;
 
 Board* Board::getInstance() {
-    /* todo */
-    return nullptr;
+    return _instance;
 }
 
 Square& Board::getSquareAt(int rank, int file) {
