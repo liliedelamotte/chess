@@ -5,7 +5,9 @@
 
 #ifndef _BISHOP_H
 #define _BISHOP_H
-#include "Piece.h"
+
+class Piece;
+class Square;
 
 /**
  * Implements the Bishop object.

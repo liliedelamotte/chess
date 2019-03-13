@@ -5,7 +5,7 @@
 
 #include "Square.h"
 
-void Square::Square(int rank, int file) {
+Square::Square(int rank, int file) {
     /* todo */
 }
 
@@ -26,9 +26,12 @@ bool Square::isOccupied() {
 
 Piece* Square::getOccupant() {
     /* todo */
-    return null;
+    return nullptr;
 }
 
 void Square::setOccupant(Piece* occupant) {
     /* todo */
+    // fyi: should be _occupant = occupant; after it's changed
+    _occupant = occupant;
+    occupant->setLocation(this);
 }

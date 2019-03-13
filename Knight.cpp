@@ -4,6 +4,8 @@
 
 
 #include "Knight.h"
+#include "Piece.h"
+#include "Square.h"
 
 using namespace std;
 

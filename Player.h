@@ -9,6 +9,9 @@
 #include "King.h"
 using namespace std;
 
+class King;
+class Piece;
+
 /**
  * Implements the Player object.
  */
@@ -23,7 +26,7 @@ class Player {
          * @param king a reference to the Player's King.
          * @param pieces the set of Pieces the Player currently has.
          */
-        void Player(string name, King& king, set<Piece*>& pieces);
+        Player(string name, King& king, set<Piece*>& pieces);
 
         /**
          * Returns the name of the Player called upon.

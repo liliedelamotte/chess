@@ -5,7 +5,9 @@
 
 #ifndef _KNIGHT_H
 #define _KNIGHT_H
-#include "Piece.h"
+
+class Piece;
+class Square;
 
 /**
  * Implements the Knight object.

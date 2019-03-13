@@ -5,7 +5,9 @@
 
 #ifndef _ROOK_H
 #define _ROOK_H
-#include "RestrictedPiece.h"
+
+class RestrictedPiece;
+class Square;
 
 /**
  * Implements the Rook object.

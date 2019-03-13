@@ -5,8 +5,10 @@
 
 #ifndef _RESTRICTEDPIECE_H
 #define _RESTRICTEDPIECE_H
-#include "Piece.h"
-#include "Player.h"
+
+class Piece;
+class Player;
+class Square;
 
 /**
  * Implements the RestrictedPiece object.

@@ -4,10 +4,11 @@
 
 
 #include <iostream>
-#include "Board.h"
-#include "Square.h"
 
-Board& Board::getInstance() {
+class Board;
+class Square;
+
+Board* Board::getInstance() {
     /* todo */
     return nullptr;
 }

@@ -4,6 +4,8 @@
 
 
 #include "Rook.h"
+#include "RestrictedPiece.h"
+#include "Square.h"
 
 int Rook::getValue() {
     /* todo */

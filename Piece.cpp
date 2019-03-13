@@ -6,7 +6,10 @@
 #include <iostream>
 #include "Piece.h"
 #include "Player.h"
+#include "Square.h"
 using namespace std;
+
+Piece::Piece(Square* location) : _location(location) { }
 
 int Piece::getValue() {
     /* todo */
@@ -25,6 +28,8 @@ Square* Piece::getLocation() {
 
 void Piece::setLocation(Square* location) {
     /* todo */
+    location = location;
+    location->setOccupant(this);
 }
 
 

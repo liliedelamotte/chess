@@ -6,8 +6,10 @@
 #ifndef _PAWN_H
 #define _PAWN_H
 #include <iostream>
-#include "RestrictedPiece.h"
 using namespace std;
+
+class Square;
+class RestrictedPiece;
 
 /**
  * Implements the Pawn object.

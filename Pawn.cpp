@@ -5,6 +5,8 @@
 
 #include <iostream>
 #include "Pawn.h"
+#include "Square.h"
+#include "RestrictedPiece.h"
 using namespace std;
 
 int Pawn::getValue() {

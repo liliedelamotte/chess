@@ -5,7 +5,9 @@
 
 #ifndef _KING_H
 #define _KING_H
-#include "RestrictedPiece.h"
+
+class RestrictedPiece;
+class Square;
 
 /**
  * Implements the King object.

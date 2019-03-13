@@ -7,6 +7,7 @@
 #include <set>
 #include "Player.h"
 #include "King.h"
+#include "Piece.h"
 using namespace std;
 
 void Player::Player(string name, King& king, set<Piece*>& pieces) {
