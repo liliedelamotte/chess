@@ -7,8 +7,6 @@
 #include "Piece.h"
 #include "Square.h"
 
-using namespace std;
-
 int Knight::getValue() {
     /* todo */
     return 0;

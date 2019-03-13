@@ -6,6 +6,9 @@
 #ifndef _BISHOP_H
 #define _BISHOP_H
 
+// todo this fixes an error... why?
+#include "Piece.h"
+
 class Piece;
 class Square;
 

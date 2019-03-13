@@ -5,6 +5,10 @@
 
 #ifndef _PIECE_H
 #define _PIECE_H
+
+#include <iostream>
+#include <string>
+
 using namespace std;
 
 // forward declaration of a class needed as a data type

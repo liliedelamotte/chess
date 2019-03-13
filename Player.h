@@ -6,7 +6,7 @@
 #ifndef _PLAYER_H
 #define _PLAYER_H
 #include <string>
-#include "King.h"
+#include <set>
 using namespace std;
 
 class King;
