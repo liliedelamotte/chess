@@ -75,7 +75,7 @@ class Player {
         /**
          * The name of the player.
          */
-        string name;
+        string _name;
 };
 
 #endif //_PLAYER_H

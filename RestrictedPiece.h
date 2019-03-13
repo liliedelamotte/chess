@@ -40,7 +40,7 @@ class RestrictedPiece: public Piece {
         /**
          * Whether or not the Restricted Piece has moved yet.
          */
-        bool moved = false;
+        bool _moved = false;
 };
 
 #endif //_RESTRICTEDPIECE_H

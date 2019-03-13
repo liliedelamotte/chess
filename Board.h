@@ -77,7 +77,7 @@ class Board {
         /*
          * The Board instance itself.
          */
-        static Board& instance;
+        static Board& _instance;
 
         /* todo */
         Board();
