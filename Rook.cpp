@@ -4,13 +4,7 @@
 
 
 #include "Rook.h"
-#include "RestrictedPiece.h"
 #include "Square.h"
-
-int Rook::getValue() {
-    /* todo */
-    return 0;
-}
 
 bool Rook::canMoveTo(Square& location) {
     /* todo */

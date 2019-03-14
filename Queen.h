@@ -5,8 +5,8 @@
 
 #ifndef _QUEEN_H
 #define _QUEEN_H
+#include "Piece.h"
 
-class Piece;
 class Square;
 
 /**
@@ -15,13 +15,6 @@ class Square;
 class Queen: public Piece {
 
     public:
-
-        /**
-         * Returns the integer value of the Queen.
-         *
-         * @return the integer value of the Queen.
-         */
-        int getValue();
 
         /**
          * Determines whether or not the Queen can move to a given location.

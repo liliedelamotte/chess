@@ -5,8 +5,8 @@
 
 #ifndef _KING_H
 #define _KING_H
+#include "RestrictedPiece.h"
 
-class RestrictedPiece;
 class Square;
 
 /**
@@ -15,13 +15,6 @@ class Square;
 class King: public RestrictedPiece {
 
     public:
-
-        /**
-         * Returns the integer value of the King.
-         *
-         * @return the integer value of the King.
-         */
-        int getValue();
 
         /**
          * Determines whether or not the King can move to a given location.

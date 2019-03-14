@@ -95,7 +95,7 @@ class Piece {
         /**
          * The Square at which the Piece is currently occupying.
          */
-        Square* _occupant;
+        Square* _location;
 
 };
 

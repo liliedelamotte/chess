@@ -10,7 +10,8 @@
 #include "Square.h"
 using namespace std;
 
-//Piece::Piece(Square* location) : _location(location) { }
+
+Piece::Piece(Square* location) : _location(location) { }
 
 int Piece::getValue() {
     /* todo */
@@ -18,13 +19,11 @@ int Piece::getValue() {
 }
 
 string Piece::getColor() {
-    /* todo */
-    return "";
+    return _color;
 }
 
 Square* Piece::getLocation() {
-    /* todo */
-    return nullptr;
+    return _location;
 }
 
 void Piece::setLocation(Square* location) {

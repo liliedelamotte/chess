@@ -6,13 +6,7 @@
 #include <iostream>
 #include "Pawn.h"
 #include "Square.h"
-#include "RestrictedPiece.h"
 using namespace std;
-
-int Pawn::getValue() {
-    /* todo */
-    return 0;
-}
 
 bool Pawn::canMoveTo(Square& location) {
     /* todo */

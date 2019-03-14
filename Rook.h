@@ -5,8 +5,8 @@
 
 #ifndef _ROOK_H
 #define _ROOK_H
+#include "RestrictedPiece.h"
 
-class RestrictedPiece;
 class Square;
 
 /**
@@ -15,13 +15,6 @@ class Square;
 class Rook: public RestrictedPiece {
 
     public:
-
-        /**
-         * Returns the integer value of the Rook.
-         *
-         * @return the integer value of the Rook.
-         */
-        int getValue();
 
         /**
          * Determines whether or not the Rook can move to a given space.

@@ -4,14 +4,7 @@
 
 
 #include "King.h"
-#include "RestrictedPiece.h"
 #include "Square.h"
-using namespace std;
-
-int King::getValue() {
-    /* todo */
-    return 0;
-}
 
 bool King::canMoveTo(Square& location) {
     /* todo */

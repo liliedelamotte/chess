@@ -5,11 +5,8 @@
 
 #ifndef _BISHOP_H
 #define _BISHOP_H
-
-// todo this fixes an error... why?
 #include "Piece.h"
 
-class Piece;
 class Square;
 
 /**
@@ -18,13 +15,6 @@ class Square;
 class Bishop: public Piece {
 
     public:
-
-        /**
-         * Returns the integer value of the Bishop.
-         *
-         * @return the integer value of the Bishop.
-         */
-        int getValue();
 
         /**
          * Determines whether or not the Bishop can move to a given location.

@@ -73,7 +73,8 @@ class Square {
         /**
          * The location of a Piece.
          */
-        Piece* _location;
+        Piece* _occupant;
+
 };
 
 #endif //_SQUARE_H

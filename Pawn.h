@@ -6,10 +6,10 @@
 #ifndef _PAWN_H
 #define _PAWN_H
 #include <iostream>
+#include "RestrictedPiece.h"
 using namespace std;
 
 class Square;
-class RestrictedPiece;
 
 /**
  * Implements the Pawn object.
@@ -17,13 +17,6 @@ class RestrictedPiece;
 class Pawn: public RestrictedPiece {
 
     public:
-
-        /**
-         * Returns the integer value of the Pawn.
-         *
-         * @return the integer value of the Pawn.
-         */
-        int getValue();
 
         /**
          * Determines whether or not the Pawn can move to a given location.

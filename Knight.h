@@ -6,7 +6,8 @@
 #ifndef _KNIGHT_H
 #define _KNIGHT_H
 
-class Piece;
+#include "Piece.h"
+
 class Square;
 
 /**
@@ -15,13 +16,6 @@ class Square;
 class Knight: public Piece {
 
     public:
-
-        /**
-         * Returns the integer value of the Knight.
-         *
-         * @return the integer value of the Knight.
-         */
-        int getValue();
 
         /**
          * Determines whether or not the Knight can move to a given space.

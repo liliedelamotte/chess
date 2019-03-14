@@ -4,13 +4,7 @@
 
 
 #include "Knight.h"
-#include "Piece.h"
 #include "Square.h"
-
-int Knight::getValue() {
-    /* todo */
-    return 0;
-}
 
 bool Knight::canMoveTo(Square& location) {
     /* todo */
