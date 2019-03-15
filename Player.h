@@ -7,6 +7,8 @@
 #define _PLAYER_H
 #include <string>
 #include <set>
+#include "King.h"
+
 using namespace std;
 
 class King;
@@ -50,7 +52,7 @@ class Player {
         set<Piece*>& getPieces();
 
         /**
-         * todo
+         * Aids the player in making a move.
          *
          * @return whether or not the move was successful.
          */
@@ -73,9 +75,20 @@ class Player {
     private:
 
         /**
-         * The name of the player.
+         * The name of the Player.
          */
         string _name;
+
+        /**
+         * The Player's King.
+         */
+        King& _king;
+
+        /**
+         * The Player's set of Pieces.
+         */
+        set<Piece*>& _pieces;
+
 };
 
 #endif //_PLAYER_H

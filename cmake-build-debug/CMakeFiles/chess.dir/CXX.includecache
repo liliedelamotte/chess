@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/liliedelamotte/dev/csis370/chess/Game.cpp
+iostream
+-
+string
+-
+Game.h
+/Users/liliedelamotte/dev/csis370/chess/Game.h
+Player.h
+/Users/liliedelamotte/dev/csis370/chess/Player.h
+King.h
+/Users/liliedelamotte/dev/csis370/chess/King.h
+
+/Users/liliedelamotte/dev/csis370/chess/Game.h
+Player.h
+/Users/liliedelamotte/dev/csis370/chess/Player.h
+
+/Users/liliedelamotte/dev/csis370/chess/King.h
+RestrictedPiece.h
+/Users/liliedelamotte/dev/csis370/chess/RestrictedPiece.h
+
+/Users/liliedelamotte/dev/csis370/chess/Piece.h
+iostream
+-
+string
+-
+
+/Users/liliedelamotte/dev/csis370/chess/Player.h
+string
+-
+set
+-
+King.h
+/Users/liliedelamotte/dev/csis370/chess/King.h
+
+/Users/liliedelamotte/dev/csis370/chess/RestrictedPiece.h
+Piece.h
+/Users/liliedelamotte/dev/csis370/chess/Piece.h
+

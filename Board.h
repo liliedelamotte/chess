@@ -37,8 +37,8 @@ class Board {
         /**
          * Determines whether or not a set of horizontal Squares is clear.
          *
-         * @param from todo
-         * @param to todo
+         * @param from a Square reference.
+         * @param to a Square reference.
          * @return whether or not the file is clear.
          */
         bool isClearRank(Square& from, Square& to);
@@ -46,8 +46,8 @@ class Board {
         /**
          * Determines whether or not a set of vertical Squares is clear.
          *
-         * @param from todo
-         * @param to todo
+         * @param from a Square reference.
+         * @param to a Square reference.
          * @return whether or not the file is clear.
          */
         bool isClearFile(Square& from, Square& to);
@@ -55,8 +55,8 @@ class Board {
         /**
          * Determines whether or not a set of diagonal Squares is clear.
          *
-         * @param from todo
-         * @param to todo
+         * @param from a Square reference.
+         * @param to a Square reference.
          * @return whether or not a set of diagonal Squares is clear.
          */
         bool isClearDiagonal(Square& from, Square& to);

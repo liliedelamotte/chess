@@ -13,11 +13,6 @@ using namespace std;
 
 Piece::Piece(Square* location) : _location(location) { }
 
-int Piece::getValue() {
-    /* todo */
-    return 0;
-}
-
 string Piece::getColor() {
     return _color;
 }
@@ -27,15 +22,14 @@ Square* Piece::getLocation() {
 }
 
 void Piece::setLocation(Square* location) {
-    /* todo */
-    location = location;
+    _location = location;
     location->setOccupant(this);
 }
 
 
 bool Piece::isOnSquare() {
     /* todo */
-    return false;
+    return (_location != nullptr);
 }
 
 bool Piece::canMoveTo(Square& location) {

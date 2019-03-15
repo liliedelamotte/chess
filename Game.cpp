@@ -7,6 +7,8 @@
 #include <string>
 #include "Game.h"
 #include "Player.h"
+#include "King.h"
+
 using namespace std;
 
 void Game::initialize() {
@@ -27,10 +29,10 @@ void Game::initialize() {
 
 Player& Game::getNextPlayer() {
     /* todo */
-    return nullptr;
+//    return nullptr;
 }
 
 Player& Game::getOpponentOf(Player& player) {
     /* todo */
-    return nullptr;
+//    return nullptr;
 }

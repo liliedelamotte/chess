@@ -22,15 +22,12 @@ class Piece {
 
     public:
 
-        /* todo */
-        Piece(Square* location);
-
         /**
-         * Returns the integer value of the Piece.
+         * A Piece constructor.
          *
-         * @return the integer value of the Piece.
+         * @param location the Square the Piece begins on.
          */
-        virtual int getValue() = 0;
+        Piece(Square* location);
 
         /**
          * Returns the color of the Piece.

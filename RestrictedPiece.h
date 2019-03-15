@@ -5,8 +5,8 @@
 
 #ifndef _RESTRICTEDPIECE_H
 #define _RESTRICTEDPIECE_H
+#include "Piece.h"
 
-class Piece;
 class Player;
 class Square;
 

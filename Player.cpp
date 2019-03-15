@@ -10,23 +10,19 @@
 #include "Piece.h"
 using namespace std;
 
-Player::Player(string name, King& king, set<Piece*>& pieces) {
-    /* todo */
-}
+Player::Player(string name, King& king, set<Piece*>& pieces)
+: _name(name), _king(king), _pieces(pieces){ }
 
 string Player::getName() {
-    /* todo */
-    return "";
+    return _name;
 }
 
 King& Player::getKing() {
-    /* todo */
-    return nullptr;
+    return _king;
 }
 
 set<Piece*>& Player::getPieces() {
-    /* todo */
-    return nullptr;
+    return _pieces;
 }
 
 bool Player::makeMove() {

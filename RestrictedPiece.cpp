@@ -5,7 +5,6 @@
 
 #include "RestrictedPiece.h"
 #include "Player.h"
-#include "Piece.h"
 #include "Square.h"
 
 bool RestrictedPiece::moveTo(Square& location, Player& byPlayer) {

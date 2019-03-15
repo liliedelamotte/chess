@@ -8,13 +8,17 @@
 #include "Square.h"
 using namespace std;
 
+Board::Board() {
+    /* todo */
+}
+
 Board* Board::getInstance() {
     return _instance;
 }
 
 Square& Board::getSquareAt(int rank, int file) {
     /* todo */
-    return nullptr;
+    //return nullptr;
 }
 
 bool Board::isClearRank(Square& from, Square& to) {
@@ -32,9 +36,5 @@ bool Board::isClearDiagonal(Square& from, Square& to) {
 }
 
 void Board::display(ostream& os) {
-    /* todo */
-}
-
-Board::Board() {
     /* todo */
 }
