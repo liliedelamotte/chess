@@ -66,14 +66,16 @@ class Board {
          *
          * @param os an output stream.
          */
-        void display(ostream& os);
+        void display();
 
-    private:
+    protected:
 
         /*
          * The height and width of the board.
          */
         int DIMENSION = 8;
+
+    private:
 
         /*
          * The Board instance itself.

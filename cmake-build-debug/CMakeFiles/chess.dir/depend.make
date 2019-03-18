@@ -12,12 +12,16 @@ CMakeFiles/chess.dir/Board.cpp.o: ../Square.h
 
 CMakeFiles/chess.dir/Chess.cpp.o: ../Chess.cpp
 
+CMakeFiles/chess.dir/Game.cpp.o: ../Bishop.h
+CMakeFiles/chess.dir/Game.cpp.o: ../Board.h
 CMakeFiles/chess.dir/Game.cpp.o: ../Game.cpp
 CMakeFiles/chess.dir/Game.cpp.o: ../Game.h
 CMakeFiles/chess.dir/Game.cpp.o: ../King.h
+CMakeFiles/chess.dir/Game.cpp.o: ../Pawn.h
 CMakeFiles/chess.dir/Game.cpp.o: ../Piece.h
 CMakeFiles/chess.dir/Game.cpp.o: ../Player.h
 CMakeFiles/chess.dir/Game.cpp.o: ../RestrictedPiece.h
+CMakeFiles/chess.dir/Game.cpp.o: ../Square.h
 
 CMakeFiles/chess.dir/King.cpp.o: ../King.cpp
 CMakeFiles/chess.dir/King.cpp.o: ../King.h

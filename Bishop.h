@@ -10,11 +10,16 @@
 class Square;
 
 /**
- * Implements the Bishop object.
+ * Implements the Bishop object using Piece constructors.
  */
 class Bishop: public Piece {
 
-    public:
+    /** Lift base constructors into scope. */
+    using Piece::Piece;
+    //        Bishop(Square* location, string color) : Piece(location, color) {};
+
+
+public:
 
         /**
          * Determines whether or not the Bishop can move to a given location.

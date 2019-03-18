@@ -11,7 +11,8 @@
 using namespace std;
 
 
-Piece::Piece(Square* location) : _location(location) { }
+Piece::Piece(Square* location, string color)
+: _location(location), _color(color) {};
 
 string Piece::getColor() {
     return _color;
@@ -26,15 +27,9 @@ void Piece::setLocation(Square* location) {
     location->setOccupant(this);
 }
 
-
 bool Piece::isOnSquare() {
     /* todo */
     return (_location != nullptr);
-}
-
-bool Piece::canMoveTo(Square& location) {
-    /* todo */
-    return false;
 }
 
 bool Piece::moveTo(Square& location, Player& byPlayer) {

@@ -14,6 +14,9 @@ class Square;
  */
 class Queen: public Piece {
 
+    /** Lift base constructors into scope. */
+    using Piece::Piece;
+
     public:
 
         /**

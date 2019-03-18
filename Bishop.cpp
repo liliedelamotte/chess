@@ -6,8 +6,6 @@
 #include "Bishop.h"
 #include "Square.h"
 
-// Bishop b = Bishop(bishop params)
-
 bool Bishop::canMoveTo(Square& location) {
     /* todo */
     return false;

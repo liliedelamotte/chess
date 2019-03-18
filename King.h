@@ -14,6 +14,9 @@ class Square;
  */
 class King: public RestrictedPiece {
 
+    /** Lift base constructors into scope. */
+    using RestrictedPiece::RestrictedPiece;
+
     public:
 
         /**

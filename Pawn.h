@@ -16,6 +16,9 @@ class Square;
  */
 class Pawn: public RestrictedPiece {
 
+    /** Lift base constructors into scope. */
+    using RestrictedPiece::RestrictedPiece;
+
     public:
 
         /**

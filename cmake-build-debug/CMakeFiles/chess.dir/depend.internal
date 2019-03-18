@@ -13,12 +13,16 @@ CMakeFiles/chess.dir/Board.cpp.o
 CMakeFiles/chess.dir/Chess.cpp.o
  /Users/liliedelamotte/dev/csis370/chess/Chess.cpp
 CMakeFiles/chess.dir/Game.cpp.o
+ /Users/liliedelamotte/dev/csis370/chess/Bishop.h
+ /Users/liliedelamotte/dev/csis370/chess/Board.h
  /Users/liliedelamotte/dev/csis370/chess/Game.cpp
  /Users/liliedelamotte/dev/csis370/chess/Game.h
  /Users/liliedelamotte/dev/csis370/chess/King.h
+ /Users/liliedelamotte/dev/csis370/chess/Pawn.h
  /Users/liliedelamotte/dev/csis370/chess/Piece.h
  /Users/liliedelamotte/dev/csis370/chess/Player.h
  /Users/liliedelamotte/dev/csis370/chess/RestrictedPiece.h
+ /Users/liliedelamotte/dev/csis370/chess/Square.h
 CMakeFiles/chess.dir/King.cpp.o
  /Users/liliedelamotte/dev/csis370/chess/King.cpp
  /Users/liliedelamotte/dev/csis370/chess/King.h

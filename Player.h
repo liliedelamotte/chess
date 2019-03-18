@@ -65,13 +65,6 @@ class Player {
          */
         void capture(Piece& piece);
 
-        /**
-         * Calculates a Player's total score.
-         *
-         * @return a Player's total score.
-         */
-        int calculateScore();
-
     private:
 
         /**

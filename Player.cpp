@@ -33,8 +33,3 @@ bool Player::makeMove() {
 void Player::capture(Piece& piece) {
     /* todo */
 }
-
-int Player::calculateScore() {
-    /* todo */
-    return 0;
-}

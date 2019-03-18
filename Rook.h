@@ -14,6 +14,9 @@ class Square;
  */
 class Rook: public RestrictedPiece {
 
+    /** Lift base constructors into scope. */
+    using RestrictedPiece::RestrictedPiece;
+
     public:
 
         /**

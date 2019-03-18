@@ -27,7 +27,7 @@ class Piece {
          *
          * @param location the Square the Piece begins on.
          */
-        Piece(Square* location);
+        Piece(Square* location, string color);
 
         /**
          * Returns the color of the Piece.
