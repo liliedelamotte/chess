@@ -6,14 +6,14 @@
 #ifndef _BOARD_H
 #define _BOARD_H
 #include <iostream>
+#include <array>
 using namespace std;
 
 class Board;
 class Square;
+class Piece;
 
-/**
- * Implements the Board object.
- */
+/** Implements the Board object. */
 class Board {
 
     public:
@@ -70,20 +70,22 @@ class Board {
 
     protected:
 
-        /*
-         * The height and width of the board.
-         */
+        /** The height and width of the board. */
         int DIMENSION = 8;
 
     private:
 
-        /*
-         * The Board instance itself.
-         */
+        /** The Board instance itself. */
         static Board* _instance;
 
-        /* todo */
+        /** An initializer for the Board constructor. */
         Board();
+//        Board() {
+//            //_instance = new array<Square>[DIMENSION][DIMENSION];
+//            Piece** _instance = new Piece*[DIMENSION];
+//            for(int i = 0; i < DIMENSION; i++)
+//                _instance[i] = new Piece[DIMENSION];
+//        };
 
 };
 

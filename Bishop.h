@@ -19,7 +19,7 @@ class Bishop: public Piece {
     //        Bishop(Square* location, string color) : Piece(location, color) {};
 
 
-public:
+    public:
 
         /**
          * Determines whether or not the Bishop can move to a given location.
