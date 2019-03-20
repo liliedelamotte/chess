@@ -8,6 +8,7 @@ CMakeFiles/chess.dir/Bishop.cpp.o: ../Square.h
 
 CMakeFiles/chess.dir/Board.cpp.o: ../Board.cpp
 CMakeFiles/chess.dir/Board.cpp.o: ../Board.h
+CMakeFiles/chess.dir/Board.cpp.o: ../Piece.h
 CMakeFiles/chess.dir/Board.cpp.o: ../Square.h
 
 CMakeFiles/chess.dir/Game.cpp.o: ../Bishop.h
@@ -77,6 +78,7 @@ CMakeFiles/chess.dir/Square.cpp.o: ../Square.h
 
 CMakeFiles/chess.dir/chess.cpp.o: ../Game.h
 CMakeFiles/chess.dir/chess.cpp.o: ../King.h
+CMakeFiles/chess.dir/chess.cpp.o: ../Pawn.h
 CMakeFiles/chess.dir/chess.cpp.o: ../Piece.h
 CMakeFiles/chess.dir/chess.cpp.o: ../Player.h
 CMakeFiles/chess.dir/chess.cpp.o: ../RestrictedPiece.h

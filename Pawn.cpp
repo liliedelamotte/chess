@@ -1,6 +1,6 @@
 // ldelamotte17@georgefox.edu
 // Assignment 7
-// 2019-03-19
+// 2019-03-23
 
 
 #include <iostream>
@@ -12,6 +12,6 @@ bool Pawn::canMoveTo(Square& location) {
     return false;
 }
 
-void Pawn::display(ostream& os) {
-    /* todo */
+string Pawn::toString() {
+    return "P";
 }

@@ -1,12 +1,11 @@
 // ldelamotte17@georgefox.edu
 // Assignment 7
-// 2019-03-19
+// 2019-03-23
 
 
 #ifndef _BOARD_H
 #define _BOARD_H
 #include <iostream>
-#include <array>
 
 using namespace std;
 
@@ -80,7 +79,7 @@ class Board {
         static Board* _instance;
 
         /** Creates an 2D array of Squares. */
-        static Square _squares[DIMENSION][DIMENSION];
+        static Square* _squares[DIMENSION][DIMENSION];
 
         /** An initializer for the Board constructor. */
         Board();

@@ -1,6 +1,6 @@
 // ldelamotte17@georgefox.edu
 // Assignment 7
-// 2019-03-19
+// 2019-03-23
 
 
 #ifndef _BISHOP_H
@@ -16,8 +16,6 @@ class Bishop: public Piece {
 
     /** Lift base constructors into scope. */
     using Piece::Piece;
-    //        Bishop(Square* location, string color) : Piece(location, color) {};
-
 
     public:
 
@@ -28,6 +26,14 @@ class Bishop: public Piece {
          * @return whether or not the Bishop can move to the given location.
          */
         bool canMoveTo(Square& location);
+
+
+        /**
+         * Returns a string version of a Bishop.
+         *
+         * @return a string version of a Bishop.
+         */
+        string toString();
 
 };
 

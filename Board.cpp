@@ -1,16 +1,17 @@
 // ldelamotte17@georgefox.edu
 // Assignment 7
-// 2019-03-19
+// 2019-03-23
 
 
 #include <iostream>
 #include "Board.h"
 #include "Square.h"
+#include "Piece.h"
 using namespace std;
 
 // const int Board::DIMENSION = 8;
 Board* Board::_instance;
-Square Board::_squares[DIMENSION][DIMENSION];
+Square* Board::_squares[DIMENSION][DIMENSION];
 
 Board::Board() {
 
@@ -20,12 +21,11 @@ Board::Board() {
 
     /* todo */
 
-
     // todo check if this is a dangling reference
     // creates a Square for all spots on the Board
     for (int i = 0; i < DIMENSION; i++) {
         for (int j = 0; j < DIMENSION; j++) {
-            _squares[i][j] = Square(i, j);
+            _squares[i][j] = new Square(i, j);
         }
     }
 }
@@ -40,8 +40,7 @@ Board* Board::getInstance() {
 }
 
 Square& Board::getSquareAt(int rank, int file) {
-    /* todo */
-    //return nullptr;
+    return *_squares[rank][file];
 }
 
 bool Board::isClearRank(Square& from, Square& to) {
@@ -63,23 +62,36 @@ void Board::display() {
     for (int i = 0; i < DIMENSION; i++) {
 
         if (i == 0 || i == DIMENSION) {
-            cout << "     a     b     c     d     e     f     g     h\n";
+            cout << "\n     a    b    c    d    e    f    g    h\n";
         }
 
         if (i == 0) {
-            cout << "  +-----+-----+-----+-----+-----+-----+-----+-----+\n";
+            cout << "  +----+----+----+----+----+----+----+----+\n";
         }
 
         for (int j = 0; j < DIMENSION; j++) {
+
             if (j == 0) {
                 cout << (i + 1) << " |";
             }
-            cout << "  " << this->getInstance()->getSquareAt(i, j).getOccupant() << " |";
+
+            Square& square = getSquareAt(i, j);
+
+            if (square.getOccupant() != nullptr) {
+                cout << " " << square.getOccupant()->getColor() << square.getOccupant()->toString() << " |";
+            }
+            else {
+                cout << "    |";
+            }
+
+
             if (j == DIMENSION) {
                 cout << " " << j << "\n";
             }
+
         }
 
-        cout << "\n  +-----+-----+-----+-----+-----+-----+-----+-----+\n";
+        cout << " " << (i + 1) << "\n  +----+----+----+----+----+----+----+----+\n";
+
     }
 }

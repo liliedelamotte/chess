@@ -9,6 +9,7 @@ CMakeFiles/chess.dir/Bishop.cpp.o
 CMakeFiles/chess.dir/Board.cpp.o
  /Users/liliedelamotte/dev/csis370/chess/Board.cpp
  /Users/liliedelamotte/dev/csis370/chess/Board.h
+ /Users/liliedelamotte/dev/csis370/chess/Piece.h
  /Users/liliedelamotte/dev/csis370/chess/Square.h
 CMakeFiles/chess.dir/Game.cpp.o
  /Users/liliedelamotte/dev/csis370/chess/Bishop.h
@@ -78,6 +79,7 @@ CMakeFiles/chess.dir/Square.cpp.o
 CMakeFiles/chess.dir/chess.cpp.o
  /Users/liliedelamotte/dev/csis370/chess/Game.h
  /Users/liliedelamotte/dev/csis370/chess/King.h
+ /Users/liliedelamotte/dev/csis370/chess/Pawn.h
  /Users/liliedelamotte/dev/csis370/chess/Piece.h
  /Users/liliedelamotte/dev/csis370/chess/Player.h
  /Users/liliedelamotte/dev/csis370/chess/RestrictedPiece.h

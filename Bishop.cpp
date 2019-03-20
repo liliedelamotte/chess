@@ -1,6 +1,6 @@
 // ldelamotte17@georgefox.edu
 // Assignment 7
-// 2019-03-19
+// 2019-03-23
 
 
 #include "Bishop.h"
@@ -9,4 +9,8 @@
 bool Bishop::canMoveTo(Square& location) {
     /* todo */
     return false;
+}
+
+string Bishop::toString() {
+    return "B";
 }

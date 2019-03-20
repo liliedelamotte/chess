@@ -1,6 +1,6 @@
 // ldelamotte17@georgefox.edu
 // Assignment 7
-// 2019-03-19
+// 2019-03-23
 
 
 #ifndef _PIECE_H
@@ -76,11 +76,11 @@ class Piece {
         bool moveTo(Square& location, Player& byPlayer);
 
         /**
-         * Displays the Piece using a terminal-based figurine.
+         * Returns a string version of a Piece.
          *
-         * @param os an output stream.
+         * @return a string version of a Piece.
          */
-        void display(ostream& os);
+        virtual string toString() = 0;
 
     private:
 

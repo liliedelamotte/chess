@@ -1,6 +1,6 @@
 // ldelamotte17@georgefox.edu
 // Assignment 7
-// 2019-03-19
+// 2019-03-23
 
 
 #ifndef _KNIGHT_H
@@ -27,6 +27,13 @@ class Knight: public Piece {
          * @return whether or not the Knight can move to the given location.
          */
         bool canMoveTo(Square& location);
+
+        /**
+         * Returns a string version of a Knight.
+         *
+         * @return a string version of a Knight.
+         */
+        string toString();
 
 };
 

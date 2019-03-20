@@ -1,6 +1,6 @@
 // ldelamotte17@georgefox.edu
 // Assignment 7
-// 2019-03-19
+// 2019-03-23
 
 
 #ifndef _PAWN_H
@@ -30,11 +30,11 @@ class Pawn: public RestrictedPiece {
         bool canMoveTo(Square& location);
 
         /**
-         * Displays the Pawn using a terminal-based figurine.
-         *
-         * @param os an output stream.
-         */
-        void display(ostream& os);
+          * Returns a string version of a Pawn.
+          *
+          * @return a string version of a Pawn.
+          */
+        string toString();
 
 };
 

@@ -1,6 +1,6 @@
 // ldelamotte17@georgefox.edu
 // Assignment 7
-// 2019-03-19
+// 2019-03-23
 
 
 #include <iostream>
@@ -12,7 +12,11 @@ using namespace std;
 
 
 Piece::Piece(Square* location, string color)
-: _location(location), _color(color) {};
+: _location(location), _color(color) {
+    if (_location != nullptr) {
+        location->setOccupant(this);
+    }
+}
 
 string Piece::getColor() {
     return _color;
@@ -24,7 +28,9 @@ Square* Piece::getLocation() {
 
 void Piece::setLocation(Square* location) {
     _location = location;
-    location->setOccupant(this);
+    if (_location != nullptr) {
+        location->setOccupant(this);
+    }
 }
 
 bool Piece::isOnSquare() {
@@ -35,8 +41,4 @@ bool Piece::isOnSquare() {
 bool Piece::moveTo(Square& location, Player& byPlayer) {
     /* todo */
     return false;
-}
-
-void Piece::display(ostream& os) {
-    /* todo */
 }

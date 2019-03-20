@@ -1,6 +1,6 @@
 // ldelamotte17@georgefox.edu
 // Assignment 7
-// 2019-03-19
+// 2019-03-23
 
 
 #ifndef _QUEEN_H
@@ -26,6 +26,13 @@ class Queen: public Piece {
          * @return whether or not the Queen can move to the given location.
          */
         bool canMoveTo(Square& location);
+
+        /**
+         * Returns a string version of a Queen.
+         *
+         * @return a string version of a Queen.
+         */
+        string toString();
 
 };
 

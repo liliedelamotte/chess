@@ -1,6 +1,6 @@
 // ldelamotte17@georgefox.edu
 // Assignment 7
-// 2019-03-19
+// 2019-03-23
 
 
 #include "Square.h"
@@ -28,5 +28,5 @@ Piece* Square::getOccupant() {
 
 void Square::setOccupant(Piece* occupant) {
     _occupant = occupant;
-    occupant->setLocation(this);
+//    occupant->setLocation(this);
 }
