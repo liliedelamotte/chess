@@ -6,7 +6,7 @@
 #include "Square.h"
 #include "Piece.h"
 
-Square::Square(int rank, int file) : _rank(rank), _file(file) { }
+Square::Square(int rank, int file) : _rank(rank), _file(file) {}
 
 Square::Square() {}
 
@@ -28,5 +28,4 @@ Piece* Square::getOccupant() {
 
 void Square::setOccupant(Piece* occupant) {
     _occupant = occupant;
-//    occupant->setLocation(this);
 }

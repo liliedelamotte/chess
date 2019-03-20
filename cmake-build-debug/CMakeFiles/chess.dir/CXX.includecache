@@ -6,25 +6,25 @@
 
 #IncludeRegexTransform: 
 
-/Users/liliedelamotte/dev/csis370/chess/King.cpp
-King.h
-/Users/liliedelamotte/dev/csis370/chess/King.h
+/Users/liliedelamotte/dev/csis370/chess/Board.cpp
+iostream
+-
+Board.h
+/Users/liliedelamotte/dev/csis370/chess/Board.h
 Square.h
 /Users/liliedelamotte/dev/csis370/chess/Square.h
+Piece.h
+/Users/liliedelamotte/dev/csis370/chess/Piece.h
 
-/Users/liliedelamotte/dev/csis370/chess/King.h
-RestrictedPiece.h
-/Users/liliedelamotte/dev/csis370/chess/RestrictedPiece.h
+/Users/liliedelamotte/dev/csis370/chess/Board.h
+iostream
+-
 
 /Users/liliedelamotte/dev/csis370/chess/Piece.h
 iostream
 -
 string
 -
-
-/Users/liliedelamotte/dev/csis370/chess/RestrictedPiece.h
-Piece.h
-/Users/liliedelamotte/dev/csis370/chess/Piece.h
 
 /Users/liliedelamotte/dev/csis370/chess/Square.h
 
