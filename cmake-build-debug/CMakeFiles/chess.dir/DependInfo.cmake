@@ -6,7 +6,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/liliedelamotte/dev/csis370/chess/Bishop.cpp" "/Users/liliedelamotte/dev/csis370/chess/cmake-build-debug/CMakeFiles/chess.dir/Bishop.cpp.o"
   "/Users/liliedelamotte/dev/csis370/chess/Board.cpp" "/Users/liliedelamotte/dev/csis370/chess/cmake-build-debug/CMakeFiles/chess.dir/Board.cpp.o"
-  "/Users/liliedelamotte/dev/csis370/chess/Chess.cpp" "/Users/liliedelamotte/dev/csis370/chess/cmake-build-debug/CMakeFiles/chess.dir/Chess.cpp.o"
   "/Users/liliedelamotte/dev/csis370/chess/Game.cpp" "/Users/liliedelamotte/dev/csis370/chess/cmake-build-debug/CMakeFiles/chess.dir/Game.cpp.o"
   "/Users/liliedelamotte/dev/csis370/chess/King.cpp" "/Users/liliedelamotte/dev/csis370/chess/cmake-build-debug/CMakeFiles/chess.dir/King.cpp.o"
   "/Users/liliedelamotte/dev/csis370/chess/Knight.cpp" "/Users/liliedelamotte/dev/csis370/chess/cmake-build-debug/CMakeFiles/chess.dir/Knight.cpp.o"
@@ -17,7 +16,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/liliedelamotte/dev/csis370/chess/RestrictedPiece.cpp" "/Users/liliedelamotte/dev/csis370/chess/cmake-build-debug/CMakeFiles/chess.dir/RestrictedPiece.cpp.o"
   "/Users/liliedelamotte/dev/csis370/chess/Rook.cpp" "/Users/liliedelamotte/dev/csis370/chess/cmake-build-debug/CMakeFiles/chess.dir/Rook.cpp.o"
   "/Users/liliedelamotte/dev/csis370/chess/Square.cpp" "/Users/liliedelamotte/dev/csis370/chess/cmake-build-debug/CMakeFiles/chess.dir/Square.cpp.o"
-  "/Users/liliedelamotte/dev/csis370/chess/main.cpp" "/Users/liliedelamotte/dev/csis370/chess/cmake-build-debug/CMakeFiles/chess.dir/main.cpp.o"
+  "/Users/liliedelamotte/dev/csis370/chess/chess.cpp" "/Users/liliedelamotte/dev/csis370/chess/cmake-build-debug/CMakeFiles/chess.dir/chess.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

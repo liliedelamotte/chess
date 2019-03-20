@@ -177,33 +177,6 @@ Board.cpp.s:
 	$(MAKE) -f CMakeFiles/chess.dir/build.make CMakeFiles/chess.dir/Board.cpp.s
 .PHONY : Board.cpp.s
 
-Chess.o: Chess.cpp.o
-
-.PHONY : Chess.o
-
-# target to build an object file
-Chess.cpp.o:
-	$(MAKE) -f CMakeFiles/chess.dir/build.make CMakeFiles/chess.dir/Chess.cpp.o
-.PHONY : Chess.cpp.o
-
-Chess.i: Chess.cpp.i
-
-.PHONY : Chess.i
-
-# target to preprocess a source file
-Chess.cpp.i:
-	$(MAKE) -f CMakeFiles/chess.dir/build.make CMakeFiles/chess.dir/Chess.cpp.i
-.PHONY : Chess.cpp.i
-
-Chess.s: Chess.cpp.s
-
-.PHONY : Chess.s
-
-# target to generate assembly for a file
-Chess.cpp.s:
-	$(MAKE) -f CMakeFiles/chess.dir/build.make CMakeFiles/chess.dir/Chess.cpp.s
-.PHONY : Chess.cpp.s
-
 Game.o: Game.cpp.o
 
 .PHONY : Game.o
@@ -474,32 +447,32 @@ Square.cpp.s:
 	$(MAKE) -f CMakeFiles/chess.dir/build.make CMakeFiles/chess.dir/Square.cpp.s
 .PHONY : Square.cpp.s
 
-main.o: main.cpp.o
+chess.o: chess.cpp.o
 
-.PHONY : main.o
+.PHONY : chess.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/chess.dir/build.make CMakeFiles/chess.dir/main.cpp.o
-.PHONY : main.cpp.o
+chess.cpp.o:
+	$(MAKE) -f CMakeFiles/chess.dir/build.make CMakeFiles/chess.dir/chess.cpp.o
+.PHONY : chess.cpp.o
 
-main.i: main.cpp.i
+chess.i: chess.cpp.i
 
-.PHONY : main.i
+.PHONY : chess.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/chess.dir/build.make CMakeFiles/chess.dir/main.cpp.i
-.PHONY : main.cpp.i
+chess.cpp.i:
+	$(MAKE) -f CMakeFiles/chess.dir/build.make CMakeFiles/chess.dir/chess.cpp.i
+.PHONY : chess.cpp.i
 
-main.s: main.cpp.s
+chess.s: chess.cpp.s
 
-.PHONY : main.s
+.PHONY : chess.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/chess.dir/build.make CMakeFiles/chess.dir/main.cpp.s
-.PHONY : main.cpp.s
+chess.cpp.s:
+	$(MAKE) -f CMakeFiles/chess.dir/build.make CMakeFiles/chess.dir/chess.cpp.s
+.PHONY : chess.cpp.s
 
 # Help Target
 help:
@@ -516,9 +489,6 @@ help:
 	@echo "... Board.o"
 	@echo "... Board.i"
 	@echo "... Board.s"
-	@echo "... Chess.o"
-	@echo "... Chess.i"
-	@echo "... Chess.s"
 	@echo "... Game.o"
 	@echo "... Game.i"
 	@echo "... Game.s"
@@ -549,9 +519,9 @@ help:
 	@echo "... Square.o"
 	@echo "... Square.i"
 	@echo "... Square.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... chess.o"
+	@echo "... chess.i"
+	@echo "... chess.s"
 .PHONY : help
 
 

@@ -27,7 +27,7 @@ class RestrictedPiece: public Piece {
          * @param byPlayer the Player that is to make the move.
          * @return whether or not the move was successful.
          */
-        virtual bool moveTo(Square& location, Player& byPlayer) = 0;
+        virtual bool moveTo(Square& location, Player& byPlayer);
 
     protected:
 

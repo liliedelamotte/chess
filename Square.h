@@ -24,6 +24,11 @@ class Square {
         Square(int rank, int file);
 
         /**
+         * Constructs a Square.
+         */
+        Square();
+
+        /**
          * Returns the rank of the Square.
          *
          * @return the rank of the Square.

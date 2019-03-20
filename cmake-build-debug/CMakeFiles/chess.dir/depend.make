@@ -10,17 +10,18 @@ CMakeFiles/chess.dir/Board.cpp.o: ../Board.cpp
 CMakeFiles/chess.dir/Board.cpp.o: ../Board.h
 CMakeFiles/chess.dir/Board.cpp.o: ../Square.h
 
-CMakeFiles/chess.dir/Chess.cpp.o: ../Chess.cpp
-
 CMakeFiles/chess.dir/Game.cpp.o: ../Bishop.h
 CMakeFiles/chess.dir/Game.cpp.o: ../Board.h
 CMakeFiles/chess.dir/Game.cpp.o: ../Game.cpp
 CMakeFiles/chess.dir/Game.cpp.o: ../Game.h
 CMakeFiles/chess.dir/Game.cpp.o: ../King.h
+CMakeFiles/chess.dir/Game.cpp.o: ../Knight.h
 CMakeFiles/chess.dir/Game.cpp.o: ../Pawn.h
 CMakeFiles/chess.dir/Game.cpp.o: ../Piece.h
 CMakeFiles/chess.dir/Game.cpp.o: ../Player.h
+CMakeFiles/chess.dir/Game.cpp.o: ../Queen.h
 CMakeFiles/chess.dir/Game.cpp.o: ../RestrictedPiece.h
+CMakeFiles/chess.dir/Game.cpp.o: ../Rook.h
 CMakeFiles/chess.dir/Game.cpp.o: ../Square.h
 
 CMakeFiles/chess.dir/King.cpp.o: ../King.cpp
@@ -38,7 +39,6 @@ CMakeFiles/chess.dir/Pawn.cpp.o: ../Pawn.cpp
 CMakeFiles/chess.dir/Pawn.cpp.o: ../Pawn.h
 CMakeFiles/chess.dir/Pawn.cpp.o: ../Piece.h
 CMakeFiles/chess.dir/Pawn.cpp.o: ../RestrictedPiece.h
-CMakeFiles/chess.dir/Pawn.cpp.o: ../Square.h
 
 CMakeFiles/chess.dir/Piece.cpp.o: ../King.h
 CMakeFiles/chess.dir/Piece.cpp.o: ../Piece.cpp
@@ -75,5 +75,10 @@ CMakeFiles/chess.dir/Square.cpp.o: ../Piece.h
 CMakeFiles/chess.dir/Square.cpp.o: ../Square.cpp
 CMakeFiles/chess.dir/Square.cpp.o: ../Square.h
 
-CMakeFiles/chess.dir/main.cpp.o: ../main.cpp
+CMakeFiles/chess.dir/chess.cpp.o: ../Game.h
+CMakeFiles/chess.dir/chess.cpp.o: ../King.h
+CMakeFiles/chess.dir/chess.cpp.o: ../Piece.h
+CMakeFiles/chess.dir/chess.cpp.o: ../Player.h
+CMakeFiles/chess.dir/chess.cpp.o: ../RestrictedPiece.h
+CMakeFiles/chess.dir/chess.cpp.o: ../chess.cpp
 

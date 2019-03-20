@@ -10,18 +10,19 @@ CMakeFiles/chess.dir/Board.cpp.o
  /Users/liliedelamotte/dev/csis370/chess/Board.cpp
  /Users/liliedelamotte/dev/csis370/chess/Board.h
  /Users/liliedelamotte/dev/csis370/chess/Square.h
-CMakeFiles/chess.dir/Chess.cpp.o
- /Users/liliedelamotte/dev/csis370/chess/Chess.cpp
 CMakeFiles/chess.dir/Game.cpp.o
  /Users/liliedelamotte/dev/csis370/chess/Bishop.h
  /Users/liliedelamotte/dev/csis370/chess/Board.h
  /Users/liliedelamotte/dev/csis370/chess/Game.cpp
  /Users/liliedelamotte/dev/csis370/chess/Game.h
  /Users/liliedelamotte/dev/csis370/chess/King.h
+ /Users/liliedelamotte/dev/csis370/chess/Knight.h
  /Users/liliedelamotte/dev/csis370/chess/Pawn.h
  /Users/liliedelamotte/dev/csis370/chess/Piece.h
  /Users/liliedelamotte/dev/csis370/chess/Player.h
+ /Users/liliedelamotte/dev/csis370/chess/Queen.h
  /Users/liliedelamotte/dev/csis370/chess/RestrictedPiece.h
+ /Users/liliedelamotte/dev/csis370/chess/Rook.h
  /Users/liliedelamotte/dev/csis370/chess/Square.h
 CMakeFiles/chess.dir/King.cpp.o
  /Users/liliedelamotte/dev/csis370/chess/King.cpp
@@ -39,7 +40,6 @@ CMakeFiles/chess.dir/Pawn.cpp.o
  /Users/liliedelamotte/dev/csis370/chess/Pawn.h
  /Users/liliedelamotte/dev/csis370/chess/Piece.h
  /Users/liliedelamotte/dev/csis370/chess/RestrictedPiece.h
- /Users/liliedelamotte/dev/csis370/chess/Square.h
 CMakeFiles/chess.dir/Piece.cpp.o
  /Users/liliedelamotte/dev/csis370/chess/King.h
  /Users/liliedelamotte/dev/csis370/chess/Piece.cpp
@@ -75,5 +75,10 @@ CMakeFiles/chess.dir/Square.cpp.o
  /Users/liliedelamotte/dev/csis370/chess/Piece.h
  /Users/liliedelamotte/dev/csis370/chess/Square.cpp
  /Users/liliedelamotte/dev/csis370/chess/Square.h
-CMakeFiles/chess.dir/main.cpp.o
- /Users/liliedelamotte/dev/csis370/chess/main.cpp
+CMakeFiles/chess.dir/chess.cpp.o
+ /Users/liliedelamotte/dev/csis370/chess/Game.h
+ /Users/liliedelamotte/dev/csis370/chess/King.h
+ /Users/liliedelamotte/dev/csis370/chess/Piece.h
+ /Users/liliedelamotte/dev/csis370/chess/Player.h
+ /Users/liliedelamotte/dev/csis370/chess/RestrictedPiece.h
+ /Users/liliedelamotte/dev/csis370/chess/chess.cpp

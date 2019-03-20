@@ -57,22 +57,9 @@ include CMakeFiles/chess.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/chess.dir/flags.make
 
-CMakeFiles/chess.dir/main.cpp.o: CMakeFiles/chess.dir/flags.make
-CMakeFiles/chess.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/liliedelamotte/dev/csis370/chess/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/chess.dir/main.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/chess.dir/main.cpp.o -c /Users/liliedelamotte/dev/csis370/chess/main.cpp
-
-CMakeFiles/chess.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/chess.dir/main.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/liliedelamotte/dev/csis370/chess/main.cpp > CMakeFiles/chess.dir/main.cpp.i
-
-CMakeFiles/chess.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/chess.dir/main.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/liliedelamotte/dev/csis370/chess/main.cpp -o CMakeFiles/chess.dir/main.cpp.s
-
 CMakeFiles/chess.dir/Bishop.cpp.o: CMakeFiles/chess.dir/flags.make
 CMakeFiles/chess.dir/Bishop.cpp.o: ../Bishop.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/liliedelamotte/dev/csis370/chess/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/chess.dir/Bishop.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/liliedelamotte/dev/csis370/chess/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/chess.dir/Bishop.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/chess.dir/Bishop.cpp.o -c /Users/liliedelamotte/dev/csis370/chess/Bishop.cpp
 
 CMakeFiles/chess.dir/Bishop.cpp.i: cmake_force
@@ -85,7 +72,7 @@ CMakeFiles/chess.dir/Bishop.cpp.s: cmake_force
 
 CMakeFiles/chess.dir/Board.cpp.o: CMakeFiles/chess.dir/flags.make
 CMakeFiles/chess.dir/Board.cpp.o: ../Board.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/liliedelamotte/dev/csis370/chess/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/chess.dir/Board.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/liliedelamotte/dev/csis370/chess/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/chess.dir/Board.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/chess.dir/Board.cpp.o -c /Users/liliedelamotte/dev/csis370/chess/Board.cpp
 
 CMakeFiles/chess.dir/Board.cpp.i: cmake_force
@@ -98,7 +85,7 @@ CMakeFiles/chess.dir/Board.cpp.s: cmake_force
 
 CMakeFiles/chess.dir/Game.cpp.o: CMakeFiles/chess.dir/flags.make
 CMakeFiles/chess.dir/Game.cpp.o: ../Game.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/liliedelamotte/dev/csis370/chess/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/chess.dir/Game.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/liliedelamotte/dev/csis370/chess/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/chess.dir/Game.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/chess.dir/Game.cpp.o -c /Users/liliedelamotte/dev/csis370/chess/Game.cpp
 
 CMakeFiles/chess.dir/Game.cpp.i: cmake_force
@@ -111,7 +98,7 @@ CMakeFiles/chess.dir/Game.cpp.s: cmake_force
 
 CMakeFiles/chess.dir/King.cpp.o: CMakeFiles/chess.dir/flags.make
 CMakeFiles/chess.dir/King.cpp.o: ../King.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/liliedelamotte/dev/csis370/chess/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/chess.dir/King.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/liliedelamotte/dev/csis370/chess/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/chess.dir/King.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/chess.dir/King.cpp.o -c /Users/liliedelamotte/dev/csis370/chess/King.cpp
 
 CMakeFiles/chess.dir/King.cpp.i: cmake_force
@@ -124,7 +111,7 @@ CMakeFiles/chess.dir/King.cpp.s: cmake_force
 
 CMakeFiles/chess.dir/Knight.cpp.o: CMakeFiles/chess.dir/flags.make
 CMakeFiles/chess.dir/Knight.cpp.o: ../Knight.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/liliedelamotte/dev/csis370/chess/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/chess.dir/Knight.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/liliedelamotte/dev/csis370/chess/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/chess.dir/Knight.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/chess.dir/Knight.cpp.o -c /Users/liliedelamotte/dev/csis370/chess/Knight.cpp
 
 CMakeFiles/chess.dir/Knight.cpp.i: cmake_force
@@ -137,7 +124,7 @@ CMakeFiles/chess.dir/Knight.cpp.s: cmake_force
 
 CMakeFiles/chess.dir/Pawn.cpp.o: CMakeFiles/chess.dir/flags.make
 CMakeFiles/chess.dir/Pawn.cpp.o: ../Pawn.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/liliedelamotte/dev/csis370/chess/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/chess.dir/Pawn.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/liliedelamotte/dev/csis370/chess/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/chess.dir/Pawn.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/chess.dir/Pawn.cpp.o -c /Users/liliedelamotte/dev/csis370/chess/Pawn.cpp
 
 CMakeFiles/chess.dir/Pawn.cpp.i: cmake_force
@@ -150,7 +137,7 @@ CMakeFiles/chess.dir/Pawn.cpp.s: cmake_force
 
 CMakeFiles/chess.dir/Piece.cpp.o: CMakeFiles/chess.dir/flags.make
 CMakeFiles/chess.dir/Piece.cpp.o: ../Piece.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/liliedelamotte/dev/csis370/chess/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/chess.dir/Piece.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/liliedelamotte/dev/csis370/chess/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/chess.dir/Piece.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/chess.dir/Piece.cpp.o -c /Users/liliedelamotte/dev/csis370/chess/Piece.cpp
 
 CMakeFiles/chess.dir/Piece.cpp.i: cmake_force
@@ -163,7 +150,7 @@ CMakeFiles/chess.dir/Piece.cpp.s: cmake_force
 
 CMakeFiles/chess.dir/Player.cpp.o: CMakeFiles/chess.dir/flags.make
 CMakeFiles/chess.dir/Player.cpp.o: ../Player.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/liliedelamotte/dev/csis370/chess/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/chess.dir/Player.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/liliedelamotte/dev/csis370/chess/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/chess.dir/Player.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/chess.dir/Player.cpp.o -c /Users/liliedelamotte/dev/csis370/chess/Player.cpp
 
 CMakeFiles/chess.dir/Player.cpp.i: cmake_force
@@ -176,7 +163,7 @@ CMakeFiles/chess.dir/Player.cpp.s: cmake_force
 
 CMakeFiles/chess.dir/Queen.cpp.o: CMakeFiles/chess.dir/flags.make
 CMakeFiles/chess.dir/Queen.cpp.o: ../Queen.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/liliedelamotte/dev/csis370/chess/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/chess.dir/Queen.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/liliedelamotte/dev/csis370/chess/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/chess.dir/Queen.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/chess.dir/Queen.cpp.o -c /Users/liliedelamotte/dev/csis370/chess/Queen.cpp
 
 CMakeFiles/chess.dir/Queen.cpp.i: cmake_force
@@ -189,7 +176,7 @@ CMakeFiles/chess.dir/Queen.cpp.s: cmake_force
 
 CMakeFiles/chess.dir/RestrictedPiece.cpp.o: CMakeFiles/chess.dir/flags.make
 CMakeFiles/chess.dir/RestrictedPiece.cpp.o: ../RestrictedPiece.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/liliedelamotte/dev/csis370/chess/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/chess.dir/RestrictedPiece.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/liliedelamotte/dev/csis370/chess/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/chess.dir/RestrictedPiece.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/chess.dir/RestrictedPiece.cpp.o -c /Users/liliedelamotte/dev/csis370/chess/RestrictedPiece.cpp
 
 CMakeFiles/chess.dir/RestrictedPiece.cpp.i: cmake_force
@@ -202,7 +189,7 @@ CMakeFiles/chess.dir/RestrictedPiece.cpp.s: cmake_force
 
 CMakeFiles/chess.dir/Rook.cpp.o: CMakeFiles/chess.dir/flags.make
 CMakeFiles/chess.dir/Rook.cpp.o: ../Rook.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/liliedelamotte/dev/csis370/chess/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/chess.dir/Rook.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/liliedelamotte/dev/csis370/chess/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/chess.dir/Rook.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/chess.dir/Rook.cpp.o -c /Users/liliedelamotte/dev/csis370/chess/Rook.cpp
 
 CMakeFiles/chess.dir/Rook.cpp.i: cmake_force
@@ -215,7 +202,7 @@ CMakeFiles/chess.dir/Rook.cpp.s: cmake_force
 
 CMakeFiles/chess.dir/Square.cpp.o: CMakeFiles/chess.dir/flags.make
 CMakeFiles/chess.dir/Square.cpp.o: ../Square.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/liliedelamotte/dev/csis370/chess/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/chess.dir/Square.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/liliedelamotte/dev/csis370/chess/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/chess.dir/Square.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/chess.dir/Square.cpp.o -c /Users/liliedelamotte/dev/csis370/chess/Square.cpp
 
 CMakeFiles/chess.dir/Square.cpp.i: cmake_force
@@ -226,22 +213,21 @@ CMakeFiles/chess.dir/Square.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/chess.dir/Square.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/liliedelamotte/dev/csis370/chess/Square.cpp -o CMakeFiles/chess.dir/Square.cpp.s
 
-CMakeFiles/chess.dir/Chess.cpp.o: CMakeFiles/chess.dir/flags.make
-CMakeFiles/chess.dir/Chess.cpp.o: ../Chess.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/liliedelamotte/dev/csis370/chess/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/chess.dir/Chess.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/chess.dir/Chess.cpp.o -c /Users/liliedelamotte/dev/csis370/chess/Chess.cpp
+CMakeFiles/chess.dir/chess.cpp.o: CMakeFiles/chess.dir/flags.make
+CMakeFiles/chess.dir/chess.cpp.o: ../chess.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/liliedelamotte/dev/csis370/chess/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/chess.dir/chess.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/chess.dir/chess.cpp.o -c /Users/liliedelamotte/dev/csis370/chess/chess.cpp
 
-CMakeFiles/chess.dir/Chess.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/chess.dir/Chess.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/liliedelamotte/dev/csis370/chess/Chess.cpp > CMakeFiles/chess.dir/Chess.cpp.i
+CMakeFiles/chess.dir/chess.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/chess.dir/chess.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/liliedelamotte/dev/csis370/chess/chess.cpp > CMakeFiles/chess.dir/chess.cpp.i
 
-CMakeFiles/chess.dir/Chess.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/chess.dir/Chess.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/liliedelamotte/dev/csis370/chess/Chess.cpp -o CMakeFiles/chess.dir/Chess.cpp.s
+CMakeFiles/chess.dir/chess.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/chess.dir/chess.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/liliedelamotte/dev/csis370/chess/chess.cpp -o CMakeFiles/chess.dir/chess.cpp.s
 
 # Object files for target chess
 chess_OBJECTS = \
-"CMakeFiles/chess.dir/main.cpp.o" \
 "CMakeFiles/chess.dir/Bishop.cpp.o" \
 "CMakeFiles/chess.dir/Board.cpp.o" \
 "CMakeFiles/chess.dir/Game.cpp.o" \
@@ -254,12 +240,11 @@ chess_OBJECTS = \
 "CMakeFiles/chess.dir/RestrictedPiece.cpp.o" \
 "CMakeFiles/chess.dir/Rook.cpp.o" \
 "CMakeFiles/chess.dir/Square.cpp.o" \
-"CMakeFiles/chess.dir/Chess.cpp.o"
+"CMakeFiles/chess.dir/chess.cpp.o"
 
 # External object files for target chess
 chess_EXTERNAL_OBJECTS =
 
-chess: CMakeFiles/chess.dir/main.cpp.o
 chess: CMakeFiles/chess.dir/Bishop.cpp.o
 chess: CMakeFiles/chess.dir/Board.cpp.o
 chess: CMakeFiles/chess.dir/Game.cpp.o
@@ -272,10 +257,10 @@ chess: CMakeFiles/chess.dir/Queen.cpp.o
 chess: CMakeFiles/chess.dir/RestrictedPiece.cpp.o
 chess: CMakeFiles/chess.dir/Rook.cpp.o
 chess: CMakeFiles/chess.dir/Square.cpp.o
-chess: CMakeFiles/chess.dir/Chess.cpp.o
+chess: CMakeFiles/chess.dir/chess.cpp.o
 chess: CMakeFiles/chess.dir/build.make
 chess: CMakeFiles/chess.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/liliedelamotte/dev/csis370/chess/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable chess"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/liliedelamotte/dev/csis370/chess/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable chess"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/chess.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -8,24 +8,34 @@
 #include "Square.h"
 using namespace std;
 
+// const int Board::DIMENSION = 8;
+Board* Board::_instance;
+Square Board::_squares[DIMENSION][DIMENSION];
+
 Board::Board() {
 
-    Square* _instance[8][8]; // put in class Board
+    // Square* _instance[8][8]; // put in class Board
 
     // _squares[1][2] = Square(1, 2);
 
     /* todo */
 
+
+    // todo check if this is a dangling reference
     // creates a Square for all spots on the Board
     for (int i = 0; i < DIMENSION; i++) {
         for (int j = 0; j < DIMENSION; j++) {
-            Square square = Square(i, j);
-            _instance[i][j] = &square;
+            _squares[i][j] = Square(i, j);
         }
     }
 }
 
 Board* Board::getInstance() {
+
+    if (_instance == nullptr) {
+        _instance = new Board();
+    }
+
     return _instance;
 }
 
@@ -65,7 +75,7 @@ void Board::display() {
                 cout << (i + 1) << " |";
             }
             cout << "  " << this->getInstance()->getSquareAt(i, j).getOccupant() << " |";
-            if (j == 8) {
+            if (j == DIMENSION) {
                 cout << " " << j << "\n";
             }
         }

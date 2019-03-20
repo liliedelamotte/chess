@@ -6,32 +6,22 @@
 
 #IncludeRegexTransform: 
 
-/Users/liliedelamotte/dev/csis370/chess/Bishop.cpp
-Bishop.h
-/Users/liliedelamotte/dev/csis370/chess/Bishop.h
-Square.h
-/Users/liliedelamotte/dev/csis370/chess/Square.h
-
 /Users/liliedelamotte/dev/csis370/chess/Bishop.h
 Piece.h
 /Users/liliedelamotte/dev/csis370/chess/Piece.h
 
-/Users/liliedelamotte/dev/csis370/chess/Board.cpp
+/Users/liliedelamotte/dev/csis370/chess/Board.h
 iostream
 -
-Board.h
-/Users/liliedelamotte/dev/csis370/chess/Board.h
-Square.h
-/Users/liliedelamotte/dev/csis370/chess/Square.h
-
-/Users/liliedelamotte/dev/csis370/chess/Board.h
-iostream
+array
 -
 
 /Users/liliedelamotte/dev/csis370/chess/Game.cpp
 iostream
 -
 string
+-
+set
 -
 Game.h
 /Users/liliedelamotte/dev/csis370/chess/Game.h
@@ -47,38 +37,26 @@ Board.h
 /Users/liliedelamotte/dev/csis370/chess/Board.h
 Bishop.h
 /Users/liliedelamotte/dev/csis370/chess/Bishop.h
+Rook.h
+/Users/liliedelamotte/dev/csis370/chess/Rook.h
+RestrictedPiece.h
+/Users/liliedelamotte/dev/csis370/chess/RestrictedPiece.h
+Knight.h
+/Users/liliedelamotte/dev/csis370/chess/Knight.h
+Queen.h
+/Users/liliedelamotte/dev/csis370/chess/Queen.h
 
 /Users/liliedelamotte/dev/csis370/chess/Game.h
 Player.h
 /Users/liliedelamotte/dev/csis370/chess/Player.h
 
-/Users/liliedelamotte/dev/csis370/chess/King.cpp
-King.h
-/Users/liliedelamotte/dev/csis370/chess/King.h
-Square.h
-/Users/liliedelamotte/dev/csis370/chess/Square.h
-
 /Users/liliedelamotte/dev/csis370/chess/King.h
 RestrictedPiece.h
 /Users/liliedelamotte/dev/csis370/chess/RestrictedPiece.h
 
-/Users/liliedelamotte/dev/csis370/chess/Knight.cpp
-Knight.h
-/Users/liliedelamotte/dev/csis370/chess/Knight.h
-Square.h
-/Users/liliedelamotte/dev/csis370/chess/Square.h
-
 /Users/liliedelamotte/dev/csis370/chess/Knight.h
 Piece.h
 /Users/liliedelamotte/dev/csis370/chess/Piece.h
-
-/Users/liliedelamotte/dev/csis370/chess/Pawn.cpp
-iostream
--
-Pawn.h
-/Users/liliedelamotte/dev/csis370/chess/Pawn.h
-Square.h
-/Users/liliedelamotte/dev/csis370/chess/Square.h
 
 /Users/liliedelamotte/dev/csis370/chess/Pawn.h
 iostream
@@ -86,35 +64,11 @@ iostream
 RestrictedPiece.h
 /Users/liliedelamotte/dev/csis370/chess/RestrictedPiece.h
 
-/Users/liliedelamotte/dev/csis370/chess/Piece.cpp
-iostream
--
-string
--
-Piece.h
-/Users/liliedelamotte/dev/csis370/chess/Piece.h
-Player.h
-/Users/liliedelamotte/dev/csis370/chess/Player.h
-Square.h
-/Users/liliedelamotte/dev/csis370/chess/Square.h
-
 /Users/liliedelamotte/dev/csis370/chess/Piece.h
 iostream
 -
 string
 -
-
-/Users/liliedelamotte/dev/csis370/chess/Player.cpp
-string
--
-set
--
-Player.h
-/Users/liliedelamotte/dev/csis370/chess/Player.h
-King.h
-/Users/liliedelamotte/dev/csis370/chess/King.h
-Piece.h
-/Users/liliedelamotte/dev/csis370/chess/Piece.h
 
 /Users/liliedelamotte/dev/csis370/chess/Player.h
 string
@@ -124,43 +78,17 @@ set
 King.h
 /Users/liliedelamotte/dev/csis370/chess/King.h
 
-/Users/liliedelamotte/dev/csis370/chess/Queen.cpp
-Queen.h
-/Users/liliedelamotte/dev/csis370/chess/Queen.h
-Square.h
-/Users/liliedelamotte/dev/csis370/chess/Square.h
-
 /Users/liliedelamotte/dev/csis370/chess/Queen.h
 Piece.h
 /Users/liliedelamotte/dev/csis370/chess/Piece.h
 
-/Users/liliedelamotte/dev/csis370/chess/RestrictedPiece.cpp
-RestrictedPiece.h
-/Users/liliedelamotte/dev/csis370/chess/RestrictedPiece.h
-Player.h
-/Users/liliedelamotte/dev/csis370/chess/Player.h
-Square.h
-/Users/liliedelamotte/dev/csis370/chess/Square.h
-
 /Users/liliedelamotte/dev/csis370/chess/RestrictedPiece.h
 Piece.h
 /Users/liliedelamotte/dev/csis370/chess/Piece.h
 
-/Users/liliedelamotte/dev/csis370/chess/Rook.cpp
-Rook.h
-/Users/liliedelamotte/dev/csis370/chess/Rook.h
-Square.h
-/Users/liliedelamotte/dev/csis370/chess/Square.h
-
 /Users/liliedelamotte/dev/csis370/chess/Rook.h
 RestrictedPiece.h
 /Users/liliedelamotte/dev/csis370/chess/RestrictedPiece.h
-
-/Users/liliedelamotte/dev/csis370/chess/Square.cpp
-Square.h
-/Users/liliedelamotte/dev/csis370/chess/Square.h
-Piece.h
-/Users/liliedelamotte/dev/csis370/chess/Piece.h
 
 /Users/liliedelamotte/dev/csis370/chess/Square.h
 

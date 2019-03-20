@@ -5,8 +5,12 @@
 
 #include <iostream>
 #include "Pawn.h"
-#include "Square.h"
 using namespace std;
+
+bool Pawn::canMoveTo(Square& location) {
+    /* todo */
+    return false;
+}
 
 void Pawn::display(ostream& os) {
     /* todo */
