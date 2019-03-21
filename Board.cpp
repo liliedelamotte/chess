@@ -92,6 +92,6 @@ void Board::display() {
 
     }
 
-    cout << "     a    b    c    d    e    f    g    h";
+    cout << "     a    b    c    d    e    f    g    h\n";
 
 }
