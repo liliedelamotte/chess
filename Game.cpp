@@ -32,6 +32,9 @@ void Game::initialize() {
 
     board = board->getInstance();
 
+    // note that I plan on deleting each piece after it
+    // has been captured, it is just not implemented yet
+
     // creates all the pieces
     Piece *blackRook1 = new Rook(&board->getSquareAt(0, 0), BLACK);
     Piece *blackRook2 = new Rook(&board->getSquareAt(0, 7), BLACK);

@@ -4,6 +4,8 @@
 
 #ifndef _GAME_H
 #define _GAME_H
+
+#include <set>
 #include "Player.h"
 
 /**
@@ -32,6 +34,8 @@ class Game {
          * @return a reference to the opponent of a given Player.
          */
         static Player& getOpponentOf(Player& player);
+
+        static void endGame();
 
 };
 
