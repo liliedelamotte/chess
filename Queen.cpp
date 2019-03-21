@@ -6,6 +6,10 @@
 #include "Queen.h"
 #include "Square.h"
 
+Queen::~Queen() {
+    delete this;
+};
+
 bool Queen::canMoveTo(Square& location) {
     /* todo */
     return false;

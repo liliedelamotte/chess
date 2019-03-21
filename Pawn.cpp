@@ -7,6 +7,10 @@
 #include "Pawn.h"
 using namespace std;
 
+Pawn::~Pawn() {
+    delete this;
+}
+
 bool Pawn::canMoveTo(Square& location) {
     /* todo */
     return false;

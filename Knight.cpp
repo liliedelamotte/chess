@@ -6,6 +6,10 @@
 #include "Knight.h"
 #include "Square.h"
 
+Knight::~Knight() {
+    delete this;
+}
+
 bool Knight::canMoveTo(Square& location) {
     /* todo */
     return false;

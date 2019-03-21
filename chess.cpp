@@ -8,7 +8,12 @@ using namespace std;
 
 int main(int argc, char* argv[]) {
 
-    Game::initialize();
+    set<Piece*> whitePieces;
+    set<Piece*> blackPieces;
+
+    Game::initialize(whitePieces, blackPieces);
+
+    Game::endGame(whitePieces, blackPieces);
 
     return 0;
 

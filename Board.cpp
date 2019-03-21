@@ -9,7 +9,6 @@
 #include "Piece.h"
 using namespace std;
 
-// const int Board::DIMENSION = 8;
 Board* Board::_instance;
 Square* Board::_squares[DIMENSION][DIMENSION];
 

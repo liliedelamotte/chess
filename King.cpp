@@ -6,6 +6,10 @@
 #include "King.h"
 #include "Square.h"
 
+King::~King() {
+    delete this;
+}
+
 bool King::canMoveTo(Square& location) {
     /* todo */
     return false;

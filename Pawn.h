@@ -22,6 +22,11 @@ class Pawn: public RestrictedPiece {
     public:
 
         /**
+         * A Pawn destructor.
+         */
+        ~Pawn();
+
+        /**
          * Determines whether or not the Pawn can move to a given location.
          *
          * @param location the Square in which the Pawn is to be moved to.

@@ -20,6 +20,11 @@ class Queen: public Piece {
     public:
 
         /**
+         * A Queen destructor.
+         */
+        ~Queen();
+
+        /**
          * Determines whether or not the Queen can move to a given location.
          *
          * @param location the Square in which the Queen is to be moved to.

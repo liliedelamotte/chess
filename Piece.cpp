@@ -18,6 +18,10 @@ Piece::Piece(Square* location, string color)
     }
 }
 
+Piece::~Piece() {
+    delete this;
+}
+
 string Piece::getColor() {
     return _color;
 }

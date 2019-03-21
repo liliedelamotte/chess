@@ -6,6 +6,10 @@
 #include "Rook.h"
 #include "Square.h"
 
+Rook::~Rook() {
+    delete this;
+}
+
 bool Rook::canMoveTo(Square& location) {
     /* todo */
     return false;

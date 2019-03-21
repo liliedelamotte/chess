@@ -23,11 +23,11 @@ using namespace std;
 const string BLACK = "B";
 const string WHITE = "W";
 
-void Game::initialize() {
+void Game::initialize(set<Piece*> whitePieces, set<Piece*> blackPieces) {
     /* todo */
 
-    set<Piece*> whitePieces;
-    set<Piece*> blackPieces;
+//    set<Piece*> whitePieces;
+//    set<Piece*> blackPieces;
     Board* board = nullptr;
 
     board = board->getInstance();
@@ -117,4 +117,16 @@ Player& Game::getNextPlayer() {
 Player& Game::getOpponentOf(Player& player) {
     /* todo */
 //    return nullptr;
+}
+
+void Game::endGame(set<Piece*>& whitePieces, set<Piece*>& blackPieces) {
+
+    for (auto &piece : whitePieces) {
+        delete piece;
+    }
+
+    for (auto &piece : blackPieces) {
+        delete piece;
+    }
+
 }

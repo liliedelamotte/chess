@@ -20,6 +20,11 @@ class Bishop: public Piece {
     public:
 
         /**
+         * A Piece destructor.
+         */
+        ~Bishop();
+
+        /**
          * Determines whether or not the Bishop can move to a given location.
          *
          * @param location the Square in which the Bishop is to be moved to.

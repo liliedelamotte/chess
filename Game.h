@@ -18,7 +18,7 @@ class Game {
         /**
          * Initializes the game.
          */
-        static void initialize();
+        static void initialize(set<Piece*> whitePieces, set<Piece*> blackPieces);
 
         /**
          * Returns a reference to the Player whose turn is next.
@@ -35,7 +35,14 @@ class Game {
          */
         static Player& getOpponentOf(Player& player);
 
-        static void endGame();
+
+        /**
+         * Ends the game by cleaning up the mess on the heap.
+         *
+         * @param whitePieces a set of Pieces.
+         * @param blackPieces a set of Pieces.
+         */
+        static void endGame(set<Piece*>& whitePieces, set<Piece*>& blackPieces);
 
 };
 
