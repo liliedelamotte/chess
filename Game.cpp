@@ -24,16 +24,10 @@ const string BLACK = "B";
 const string WHITE = "W";
 
 void Game::initialize(set<Piece*> whitePieces, set<Piece*> blackPieces) {
-    /* todo */
 
-//    set<Piece*> whitePieces;
-//    set<Piece*> blackPieces;
     Board* board = nullptr;
 
     board = board->getInstance();
-
-    // note that I plan on deleting each piece after it
-    // has been captured, it is just not implemented yet
 
     // creates all the pieces
     Piece *blackRook1 = new Rook(&board->getSquareAt(0, 0), BLACK);
@@ -72,40 +66,16 @@ void Game::initialize(set<Piece*> whitePieces, set<Piece*> blackPieces) {
 
     board->display();
 
-    // adds pieces to corresponding set
-    blackPieces.insert(blackRook1);
-    blackPieces.insert(blackRook2);
-    blackPieces.insert(blackKnight1);
-    blackPieces.insert(blackKnight2);
-    blackPieces.insert(blackBishop1);
-    blackPieces.insert(blackBishop2);
-    blackPieces.insert(blackQueen);
-    blackPieces.insert(blackKing);
-    blackPieces.insert(blackPawn1);
-    blackPieces.insert(blackPawn2);
-    blackPieces.insert(blackPawn3);
-    blackPieces.insert(blackPawn4);
-    blackPieces.insert(blackPawn5);
-    blackPieces.insert(blackPawn6);
-    blackPieces.insert(blackPawn7);
-    blackPieces.insert(blackPawn8);
+    //adds pieces to corresponding set
+    blackPieces = {blackRook1, blackRook2, blackKnight1, blackKnight2,
+                   blackBishop1, blackBishop2, blackQueen, blackKing,
+                   blackPawn1, blackPawn2, blackPawn3, blackPawn4,
+                   blackPawn5, blackPawn6, blackPawn7, blackPawn8};
 
-    whitePieces.insert(whiteRook1);
-    whitePieces.insert(whiteRook2);
-    whitePieces.insert(whiteKnight1);
-    whitePieces.insert(whiteKnight2);
-    whitePieces.insert(whiteBishop1);
-    whitePieces.insert(whiteBishop2);
-    whitePieces.insert(whiteQueen);
-    whitePieces.insert(whiteKing);
-    whitePieces.insert(whitePawn1);
-    whitePieces.insert(whitePawn2);
-    whitePieces.insert(whitePawn3);
-    whitePieces.insert(whitePawn4);
-    whitePieces.insert(whitePawn5);
-    whitePieces.insert(whitePawn6);
-    whitePieces.insert(whitePawn7);
-    whitePieces.insert(whitePawn8);
+    whitePieces = {whiteRook1, whiteRook2, whiteKnight1, whiteKnight2,
+                   whiteBishop1, whiteBishop2, whiteQueen, whiteKing,
+                   whitePawn1, whitePawn2, whitePawn3, whitePawn4,
+                   whitePawn5, whitePawn6, whitePawn7, whitePawn8};
 
 }
 
