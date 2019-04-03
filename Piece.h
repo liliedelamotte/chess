@@ -30,11 +30,6 @@ class Piece {
         Piece(Square* location, string color);
 
         /**
-         * A Piece destructor.
-         */
-        virtual ~Piece();
-
-        /**
          * Returns the color of the Piece.
          *
          * @return the color of the Piece.

@@ -21,11 +21,6 @@ class Knight: public Piece {
     public:
 
         /**
-         * A Knight destructor.
-         */
-        ~Knight();
-
-        /**
          * Determines whether or not the Knight can move to a given space.
          *
          * @param location the Square in which the Knight is to be moved to.

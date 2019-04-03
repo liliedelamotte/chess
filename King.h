@@ -20,11 +20,6 @@ class King: public RestrictedPiece {
     public:
 
         /**
-         * A King destructor.
-         */
-        ~King();
-
-        /**
          * Determines whether or not the King can move to a given location.
          *
          * @param location the Square in which the King is to be moved to.

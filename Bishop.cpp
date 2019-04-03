@@ -11,10 +11,6 @@ bool Bishop::canMoveTo(Square& location) {
     return false;
 }
 
-Bishop::~Bishop() {
-    delete this;
-}
-
 string Bishop::toString() {
     return "B";
 }

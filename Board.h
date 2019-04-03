@@ -19,6 +19,11 @@ class Board {
     public:
 
         /**
+         * A Board deconstructor.
+         */
+        ~Board();
+
+        /**
          * Returns a reference to the Board object.
          *
          * @return a reference to the Board object.

@@ -3,17 +3,15 @@
 // 2019-03-23
 
 #include "Game.h"
+#import <string>
 
 using namespace std;
 
 int main(int argc, char* argv[]) {
 
-    set<Piece*> whitePieces;
-    set<Piece*> blackPieces;
+    Game::initialize();
 
-    Game::initialize(whitePieces, blackPieces);
-
-    Game::endGame(whitePieces, blackPieces);
+    Game::playGame();
 
     return 0;
 

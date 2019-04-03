@@ -18,10 +18,6 @@ Piece::Piece(Square* location, string color)
     }
 }
 
-Piece::~Piece() {
-    delete this;
-}
-
 string Piece::getColor() {
     return _color;
 }
@@ -38,7 +34,6 @@ void Piece::setLocation(Square* location) {
 }
 
 bool Piece::isOnSquare() {
-    /* todo */
     return (_location != nullptr);
 }
 

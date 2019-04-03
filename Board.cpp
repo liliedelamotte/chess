@@ -12,6 +12,10 @@ using namespace std;
 Board* Board::_instance;
 Square* Board::_squares[DIMENSION][DIMENSION];
 
+Board::~Board() {
+    delete this;
+}
+
 Board::Board() {
 
     // creates a Square for all spots on the Board
@@ -67,7 +71,7 @@ void Board::display() {
         for (int j = 0; j < DIMENSION; j++) {
 
             if (j == 0) {
-                cout << (i + 1) << " |";
+                cout << (DIMENSION - i) << " |";
             }
 
             Square& square = getSquareAt(i, j);
@@ -87,7 +91,7 @@ void Board::display() {
 
         }
 
-        cout << " " << (i + 1) << "\n  +----+----+----+----+----+----+----+----+\n";
+        cout << " " << (DIMENSION - i) << "\n  +----+----+----+----+----+----+----+----+\n";
 
     }
 

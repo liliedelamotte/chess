@@ -20,11 +20,6 @@ class Rook: public RestrictedPiece {
     public:
 
         /**
-         * A Rook destructor.
-         */
-        ~Rook();
-
-        /**
          * Determines whether or not the Rook can move to a given space.
          *
          * @param location the Square in which the Rook is to be moved to.
