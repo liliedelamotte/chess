@@ -5,6 +5,7 @@
 
 #include <string>
 #include <set>
+#include <regex>
 #include "Player.h"
 #include "King.h"
 #include "Piece.h"
@@ -35,6 +36,9 @@ bool Player::makeMove() {
     bool validStartingFile;
     bool validEndingRank;
     bool validEndingFile;
+    bool pieceOnSquare = true;
+    bool isRightColor = true;
+    bool canMoveTo = true;
     int startingRank;
     int startingFile;
     int endingRank;
@@ -45,41 +49,28 @@ bool Player::makeMove() {
     set<char> validFiles = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'};
     Square* startingSquare;
     Square* endingSquare;
+    regex r("([a-h][1-8])\\s+([a-h][1-8])");
+    string move;
+
 
     Board* board = board->getInstance();
 
     while (!validMove) {
 
-        // resets all variables to ensure proper move validation
-        validStartingFile = true;
-        validStartingRank = true;
-        validEndingFile = true;
-        validEndingRank = true;
+        // resets validMove to ensure proper move validation
+        validMove = true;
 
         // gets the players move
         cout << this->getName() << ", enter your move: ";
-        cin >> startingLocation >> endingLocation;
 
-        // accesses the starting an ending file from input
-        startingRank = (int)startingLocation[1] - '0';
-        endingRank = (int)endingLocation[1] - '0';
+        getline(cin, move);
 
-        // todo I should probably check for extra characters and whitespace
-        // checks that both ranks and files are actually on the board
-        if (!validFiles.count(startingLocation[0])) {
-            validStartingFile = false;
-        }
-        if (!validFiles.count(endingLocation[0])) {
-            validEndingFile = false;
-        }
-        if (startingRank < 1 || startingRank > 8) {
-            validStartingRank = false;
-        }
-        if (endingRank < 1 || endingRank > 8) {
-            validEndingRank = false;
-        }
+        if (regex_match(move.begin(), move.end(), r)) {
 
-        if (validStartingFile && validEndingFile && validStartingRank && validEndingRank) {
+            startingLocation = move.substr(0, 2);
+            endingLocation = move.substr(3, 5);
+            startingRank = (int)startingLocation[1] - '0';
+            endingRank = (int)endingLocation[1] - '0';
 
             // changes the alphabetical rank to a numerical one
             if (startingLocation[0] == 'a') {
@@ -139,26 +130,29 @@ bool Player::makeMove() {
             // checks to see if there is actually a piece at the starting location
             if (!startingSquare->isOccupied()) {
                 validStartingFile = false;
+                pieceOnSquare = false;
             }
             else {
                 // checks to see that the piece the player wants to move is actually their own
                 if (startingSquare->getOccupant()->getColor() != this->getKing().getColor()) {
                     validStartingFile = false;
+                    isRightColor = false;
                 }
                 // calls the Piece's own method to see if it can legally
                 // move to that space based on the kind of Piece that it is
                 if (!pieceToMove->canMoveTo(*endingSquare)) {
                     validEndingFile = false;
+                    canMoveTo = false;
                 }
             }
 
-        }
+            validMove = pieceOnSquare && isRightColor && canMoveTo;
 
-        validMove = validStartingRank && validEndingRank && validStartingFile && validEndingFile;
-        if (!validMove) {
+        }
+        else {
+            validMove = false;
             cout << "Invalid move." << endl;
         }
-
     }
 
     // removes the captured Piece (if any) from the owner's set as well as from the board

@@ -6,7 +6,6 @@
 #include <iostream>
 #include <string>
 #include <set>
-#include <regex>
 #include "Game.h"
 #include "Player.h"
 #include "King.h"
