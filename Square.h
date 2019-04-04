@@ -30,6 +30,11 @@ class Square {
         Square();
 
         /**
+         * A Square deconstructor.
+         */
+        ~Square();
+
+        /**
          * Returns the rank of the Square.
          *
          * @return the rank of the Square.

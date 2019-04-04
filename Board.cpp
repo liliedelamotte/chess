@@ -12,18 +12,26 @@ using namespace std;
 Board* Board::_instance;
 Square* Board::_squares[DIMENSION][DIMENSION];
 
-Board::~Board() {
-    delete this;
-}
-
 Board::Board() {
 
     // creates a Square for all spots on the Board
     for (int i = 0; i < DIMENSION; i++) {
         for (int j = 0; j < DIMENSION; j++) {
-            _squares[i][j] = new Square(i, j);
+            _squares[j][i] = new Square(j, i);
         }
     }
+
+}
+
+Board::~Board() {
+
+    for (int i = 0; i < DIMENSION; i++) {
+        for (int j = 0; j < DIMENSION; j++) {
+            delete &getSquareAt(j, i);
+        }
+    }
+
+    delete _instance;
 
 }
 
@@ -37,8 +45,8 @@ Board* Board::getInstance() {
 
 }
 
-Square& Board::getSquareAt(int rank, int file) {
-    return *_squares[rank][file];
+Square& Board::getSquareAt(int file, int rank) {
+    return *_squares[file][rank];
 }
 
 bool Board::isClearRank(Square& from, Square& to) {
@@ -58,32 +66,33 @@ bool Board::isClearDiagonal(Square& from, Square& to) {
 
 void Board::display() {
 
-    for (int i = 0; i < DIMENSION; i++) {
+    for (int i = DIMENSION - 1; i >= 0; i--) {
 
-        if (i == 0 || i == DIMENSION) {
+        if (i == DIMENSION - 1) {
             cout << "\n     a    b    c    d    e    f    g    h\n";
         }
 
-        if (i == 0) {
+        if (i == DIMENSION - 1) {
             cout << "  +----+----+----+----+----+----+----+----+\n";
         }
 
         for (int j = 0; j < DIMENSION; j++) {
 
             if (j == 0) {
-                cout << (DIMENSION - i) << " |";
+                cout << i + 1 << " |";
             }
 
-            Square& square = getSquareAt(i, j);
+            Square& square = getSquareAt(j, i);
 
-            if (square.getOccupant() != nullptr) {
+            if (square.isOccupied()) {
                 cout << " " << square.getOccupant()->getColor()
                 << square.getOccupant()->toString() << " |";
+//                cout << "  "
+//                     << square.getOccupant()->toString() << " |";
             }
             else {
                 cout << "    |";
             }
-
 
             if (j == DIMENSION) {
                 cout << " " << j << "\n";
@@ -91,7 +100,7 @@ void Board::display() {
 
         }
 
-        cout << " " << (DIMENSION - i) << "\n  +----+----+----+----+----+----+----+----+\n";
+        cout << " " << i + 1 << "\n  +----+----+----+----+----+----+----+----+\n";
 
     }
 

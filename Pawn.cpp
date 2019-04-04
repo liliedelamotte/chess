@@ -15,17 +15,17 @@ bool Pawn::canMoveTo(Square& location) {
     /* todo */
     Square *currentLocation = this->getLocation();
     bool hasMoved = this->hasMoved();
-    int currentRank = currentLocation->getRank();
     int currentFile = currentLocation->getFile();
-    int futureRank = location.getRank();
+    int currentRank = currentLocation->getRank();
     int futureFile = location.getFile();
+    int futureRank = location.getRank();
 
     bool canMoveToGivenLocation = false;
 
     if (this->getColor() == "W") {
         // checks to see if the Pawn can simply move forward
         if ((!hasMoved && (futureRank == currentRank + 2))
-            || (hasMoved && futureRank == currentRank + 1)) {
+            || (futureRank == currentRank + 1)) {
             canMoveToGivenLocation = true;
         }
         // checks to see if the Pawn can capture a piece

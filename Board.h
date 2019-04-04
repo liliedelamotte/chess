@@ -37,7 +37,7 @@ class Board {
          * @param file vertical columns of Squares, labeled a through h.
          * @return a reference to the Square at a given rank and file.
          */
-        Square& getSquareAt(int rank, int file);
+        Square& getSquareAt(int file, int rank);
 
         /**
          * Determines whether or not a set of horizontal Squares is clear.
