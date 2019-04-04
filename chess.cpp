@@ -13,6 +13,8 @@ int main(int argc, char* argv[]) {
 
     Game::playGame();
 
+    Game::endGame();
+
     return 0;
 
 }

@@ -12,7 +12,6 @@ using namespace std;
 
 bool Pawn::canMoveTo(Square& location) {
 
-    /* todo */
     Square *currentLocation = this->getLocation();
     bool hasMoved = this->hasMoved();
     int currentFile = currentLocation->getFile();
@@ -27,8 +26,8 @@ bool Pawn::canMoveTo(Square& location) {
 
         if (!location.isOccupied()) {
             // checks to see if the Pawn can simply move forward
-            if ((!hasMoved && (futureRank == currentRank + 2))
-                || (futureRank == currentRank + 1)) {
+            if ((!hasMoved && (futureRank == currentRank + 2) && (currentFile == futureFile))
+                || ((futureRank == currentRank + 1) && (currentFile == futureFile))) {
                 canMoveToGivenLocation = true;
             }
         }
@@ -38,23 +37,12 @@ bool Pawn::canMoveTo(Square& location) {
             canMoveToGivenLocation = true;
         }
 
-//        // checks to see if the Pawn can simply move forward
-//        if ((!hasMoved && (futureRank == currentRank + 2))
-//            || (futureRank == currentRank + 1)) {
-//            canMoveToGivenLocation = true;
-//        }
-        // checks to see if the Pawn can capture a piece
-//        else if (location.getOccupant() != nullptr && location.getOccupant()->getColor() == "B"
-//        && location.getRank() == currentRank + 1
-//        && ((currentFile == futureFile - 1) || (currentFile == futureFile + 1))) {
-//            canMoveToGivenLocation = true;
-//        }
     }
     else {
         if (!location.isOccupied()) {
             // checks to see if the Pawn can simply move forward
-            if ((!hasMoved && (futureRank != currentRank - 2))
-                || (hasMoved && futureRank == currentRank - 1)) {
+            if ((!hasMoved && (futureRank == currentRank - 2) && (currentFile == futureFile))
+                || ((futureRank == currentRank - 1) && (currentFile == futureFile))) {
                 canMoveToGivenLocation = true;
             }
         }

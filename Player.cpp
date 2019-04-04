@@ -32,10 +32,6 @@ set<Piece*>& Player::getPieces() {
 bool Player::makeMove() {
 
     bool validMove = false;
-    bool validStartingRank;
-    bool validStartingFile;
-    bool validEndingRank;
-    bool validEndingFile;
     bool pieceOnSquare = true;
     bool isRightColor = true;
     bool canMoveTo = true;
@@ -46,19 +42,21 @@ bool Player::makeMove() {
     Piece* pieceToMove;
     string startingLocation;
     string endingLocation;
-    set<char> validFiles = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'};
+    string move;
     Square* startingSquare;
     Square* endingSquare;
     regex r("([a-h][1-8])\\s+([a-h][1-8])");
-    string move;
 
 
     Board* board = board->getInstance();
 
     while (!validMove) {
 
-        // resets validMove to ensure proper move validation
+        // resets variables to ensure proper move validation
         validMove = true;
+        pieceOnSquare = true;
+        isRightColor = true;
+        canMoveTo = true;
 
         // gets the players move
         cout << this->getName() << ", enter your move: ";
@@ -129,24 +127,24 @@ bool Player::makeMove() {
 
             // checks to see if there is actually a piece at the starting location
             if (!startingSquare->isOccupied()) {
-                validStartingFile = false;
                 pieceOnSquare = false;
             }
             else {
                 // checks to see that the piece the player wants to move is actually their own
                 if (startingSquare->getOccupant()->getColor() != this->getKing().getColor()) {
-                    validStartingFile = false;
                     isRightColor = false;
                 }
                 // calls the Piece's own method to see if it can legally
                 // move to that space based on the kind of Piece that it is
                 if (!pieceToMove->canMoveTo(*endingSquare)) {
-                    validEndingFile = false;
                     canMoveTo = false;
                 }
             }
 
             validMove = pieceOnSquare && isRightColor && canMoveTo;
+            if (!validMove) {
+                cout << "Invalid move." << endl;
+            }
 
         }
         else {

@@ -178,6 +178,7 @@ Player& Game::getOpponentOf(Player& player) {
     return *opponent;
 }
 
-void endGame() {
+void Game::endGame() {
+    cout << "\nThanks for playing!";
     /* todo */
 }
