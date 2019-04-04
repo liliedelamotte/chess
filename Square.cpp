@@ -7,9 +7,9 @@
 #include "Piece.h"
 
 //Square::Square(int rank, int file) : _rank(rank), _file(file) {}
-Square::Square(int file, int rank) : _rank(rank), _file(file) {}
+Square::Square(int file, int rank) : _rank(rank), _file(file), _occupant(nullptr) {}
 
-Square::Square() {}
+//Square::Square() {}
 
 Square::~Square() {
     delete this;

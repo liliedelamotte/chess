@@ -10,16 +10,6 @@
 Piece.h
 /Users/liliedelamotte/dev/csis370/chess/Piece.h
 
-/Users/liliedelamotte/dev/csis370/chess/Board.cpp
-iostream
--
-Board.h
-/Users/liliedelamotte/dev/csis370/chess/Board.h
-Square.h
-/Users/liliedelamotte/dev/csis370/chess/Square.h
-Piece.h
-/Users/liliedelamotte/dev/csis370/chess/Piece.h
-
 /Users/liliedelamotte/dev/csis370/chess/Board.h
 iostream
 -
@@ -99,12 +89,6 @@ Piece.h
 /Users/liliedelamotte/dev/csis370/chess/Rook.h
 RestrictedPiece.h
 /Users/liliedelamotte/dev/csis370/chess/RestrictedPiece.h
-
-/Users/liliedelamotte/dev/csis370/chess/Square.cpp
-Square.h
-/Users/liliedelamotte/dev/csis370/chess/Square.h
-Piece.h
-/Users/liliedelamotte/dev/csis370/chess/Piece.h
 
 /Users/liliedelamotte/dev/csis370/chess/Square.h
 

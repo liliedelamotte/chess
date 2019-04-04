@@ -144,8 +144,8 @@ void Game::playGame() {
     int endingRank;
     int endingFile;
     Piece* pieceToMove;
-    Square startingSquare;
-    Square endingSquare;
+    Square* startingSquare;
+    Square* endingSquare;
     set<char> validFiles = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'};
 
     Board* board = board->getInstance();
@@ -293,31 +293,26 @@ void Game::playGame() {
                     endingFile = 7;
                 }
 
-                // todo revert these
-                startingSquare = board->getSquareAt(startingFile, startingRank - 1);
-                endingSquare = board->getSquareAt(endingFile, endingRank - 1);
-                pieceToMove = startingSquare.getOccupant();
-                cout << "occupant: " << startingSquare.getOccupant()->getColor() << startingSquare.getOccupant()->toString() << endl;
+                startingSquare = &board->getSquareAt(startingFile, startingRank - 1);
+                endingSquare = &board->getSquareAt(endingFile, endingRank - 1);
+                pieceToMove = startingSquare->getOccupant();
+//                cout << "occupant: " << startingSquare->getOccupant()->getColor() << startingSquare->getOccupant()->toString() << endl;
 
-                cout << "hello";
 
                 // checks to see if there is actually a piece at the starting location
-                if (!startingSquare.isOccupied()) {
+                if (!startingSquare->isOccupied()) {
                     validStartingFile = false;
-                    cout << "sup1";
                 }
-                cout << "so far so good";
-                // checks to see that the piece the player wants to move is actually their own
-                if (startingSquare.getOccupant()->getColor() != currentPlayer->getKing().getColor()) {
-                    validStartingFile = false;
-                    cout << "sup2";
-                }
-                cout << "also good";
-                // calls the Piece's own method to see if it can legally
-                // move to that space based on the kind of Piece that it is
-                if (!pieceToMove->canMoveTo(endingSquare)) {
-                    validEndingFile = false;
-                    cout << "sup3";
+                else {
+                    // checks to see that the piece the player wants to move is actually their own
+                    if (startingSquare->getOccupant()->getColor() != currentPlayer->getKing().getColor()) {
+                        validStartingFile = false;
+                    }
+                    // calls the Piece's own method to see if it can legally
+                    // move to that space based on the kind of Piece that it is
+                    if (!pieceToMove->canMoveTo(*endingSquare)) {
+                        validEndingFile = false;
+                    }
                 }
 
             }
@@ -330,12 +325,14 @@ void Game::playGame() {
         }
 
         // removes the captured Piece (if any) from the owner's set as well as from the board
-        if (endingSquare.isOccupied()) {
-            getOpponentOf(*currentPlayer).getPieces().erase(endingSquare.getOccupant());
-            endingSquare.setOccupant(nullptr);
+        if (endingSquare->isOccupied()) {
+            cout << "hi";
+            getOpponentOf(*currentPlayer).getPieces().erase(endingSquare->getOccupant());
+            endingSquare->setOccupant(nullptr);
         }
 
         // moves the Piece chosen to its destination
+        cout << board->getSquareAt(startingFile, startingRank).getOccupant()->toString();
         board->getSquareAt(startingFile, startingRank).getOccupant()->setLocation(&board->getSquareAt(endingFile, endingRank));
 
         board->display();

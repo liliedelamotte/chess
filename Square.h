@@ -24,10 +24,10 @@ class Square {
         Square(int rank, int file);
 
 
-        /**
-         * Constructs a Square.
-         */
-        Square();
+//        /**
+//         * Constructs a Square.
+//         */
+//        Square();
 
         /**
          * A Square deconstructor.

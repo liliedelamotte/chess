@@ -66,6 +66,8 @@ bool Board::isClearDiagonal(Square& from, Square& to) {
 
 void Board::display() {
 
+    Square* currentSquare;
+
     for (int i = DIMENSION - 1; i >= 0; i--) {
 
         if (i == DIMENSION - 1) {
@@ -82,13 +84,11 @@ void Board::display() {
                 cout << i + 1 << " |";
             }
 
-            Square& square = getSquareAt(j, i);
+            currentSquare = &getSquareAt(j, i);
 
-            if (square.isOccupied()) {
-                cout << " " << square.getOccupant()->getColor()
-                << square.getOccupant()->toString() << " |";
-//                cout << "  "
-//                     << square.getOccupant()->toString() << " |";
+            if (currentSquare->isOccupied()) {
+                cout << " " << currentSquare->getOccupant()->getColor()
+                << currentSquare->getOccupant()->toString() << " |";
             }
             else {
                 cout << "    |";

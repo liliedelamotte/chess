@@ -22,28 +22,45 @@ bool Pawn::canMoveTo(Square& location) {
 
     bool canMoveToGivenLocation = false;
 
+    // runs a series of can move to tests based on the Pawn's color
     if (this->getColor() == "W") {
-        // checks to see if the Pawn can simply move forward
-        if ((!hasMoved && (futureRank == currentRank + 2))
-            || (futureRank == currentRank + 1)) {
+
+        if (!location.isOccupied()) {
+            // checks to see if the Pawn can simply move forward
+            if ((!hasMoved && (futureRank == currentRank + 2))
+                || (futureRank == currentRank + 1)) {
+                canMoveToGivenLocation = true;
+            }
+        }
+        else if (location.isOccupied() && location.getOccupant()->getColor() == "B"
+                 && location.getRank() == currentRank + 1
+                 && ((currentFile == futureFile - 1) || (currentFile == futureFile + 1))) {
             canMoveToGivenLocation = true;
         }
+
+//        // checks to see if the Pawn can simply move forward
+//        if ((!hasMoved && (futureRank == currentRank + 2))
+//            || (futureRank == currentRank + 1)) {
+//            canMoveToGivenLocation = true;
+//        }
         // checks to see if the Pawn can capture a piece
-        else if (location.getOccupant() != nullptr && location.getOccupant()->getColor() == "B"
-        && location.getRank() == currentRank + 1
-        && ((currentFile == futureFile - 1) || (currentFile == futureFile + 1))) {
-            canMoveToGivenLocation = true;
-        }
+//        else if (location.getOccupant() != nullptr && location.getOccupant()->getColor() == "B"
+//        && location.getRank() == currentRank + 1
+//        && ((currentFile == futureFile - 1) || (currentFile == futureFile + 1))) {
+//            canMoveToGivenLocation = true;
+//        }
     }
     else {
-        // checks to see if the Pawn can simply move forward
-        if ((!hasMoved && (futureRank != currentRank - 2))
-            || (hasMoved && futureRank == currentRank - 1)) {
-            canMoveToGivenLocation = true;
+        if (!location.isOccupied()) {
+            // checks to see if the Pawn can simply move forward
+            if ((!hasMoved && (futureRank != currentRank - 2))
+                || (hasMoved && futureRank == currentRank - 1)) {
+                canMoveToGivenLocation = true;
+            }
         }
         // checks to see if the pawn can capture a piece
-        else if (location.getOccupant() != nullptr && location.getOccupant()->getColor() == "W"
-                 && location.getRank() == currentRank + 1
+        else if (location.isOccupied() && location.getOccupant()->getColor() == "W"
+                 && location.getRank() == currentRank - 1
                  && ((currentFile == futureFile - 1) || (currentFile == futureFile + 1))) {
             canMoveToGivenLocation = true;
         }
