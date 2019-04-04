@@ -1,15 +1,12 @@
 // ldelamotte17@georgefox.edu
-// Assignment 7
-// 2019-03-23
+// Assignment 8
+// 2019-04-06
 
 
 #include "Square.h"
 #include "Piece.h"
 
-//Square::Square(int rank, int file) : _rank(rank), _file(file) {}
 Square::Square(int file, int rank) : _rank(rank), _file(file), _occupant(nullptr) {}
-
-//Square::Square() {}
 
 Square::~Square() {
     delete this;
