@@ -21,6 +21,8 @@ string
 -
 set
 -
+regex
+-
 Game.h
 /Users/liliedelamotte/dev/csis370/chess/Game.h
 Player.h

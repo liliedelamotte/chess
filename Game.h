@@ -40,6 +40,11 @@ class Game {
          */
         static Player& getOpponentOf(Player& player);
 
+        /**
+         * Ends the game.
+         */
+        static void endGame();
+
     private:
 
         static Player* player1;
