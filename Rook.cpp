@@ -38,7 +38,6 @@ bool Rook::canMoveTo(Square& location) {
         }
     }
 
-
     return canMoveToGivenLocation;
 
 }
