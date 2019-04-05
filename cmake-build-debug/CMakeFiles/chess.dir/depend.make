@@ -60,6 +60,7 @@ CMakeFiles/chess.dir/Player.cpp.o: ../Player.h
 CMakeFiles/chess.dir/Player.cpp.o: ../RestrictedPiece.h
 CMakeFiles/chess.dir/Player.cpp.o: ../Square.h
 
+CMakeFiles/chess.dir/Queen.cpp.o: ../Board.h
 CMakeFiles/chess.dir/Queen.cpp.o: ../Piece.h
 CMakeFiles/chess.dir/Queen.cpp.o: ../Queen.cpp
 CMakeFiles/chess.dir/Queen.cpp.o: ../Queen.h

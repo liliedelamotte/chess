@@ -52,7 +52,6 @@ Square& Board::getSquareAt(int file, int rank) {
 
 bool Board::isClearRank(Square& from, Square& to) {
 
-    /* todo do I need to check whether or not from and to are in the same rank? */
     int fromFile = from.getFile();
     int toFile = to.getFile();
     int toRank = to.getRank();
@@ -63,7 +62,7 @@ bool Board::isClearRank(Square& from, Square& to) {
         currentFile = fromFile - 1;
     }
 
-    while (currentFile != toFile || isClearRank) {
+    while (currentFile != toFile && isClearRank) {
 
         if (getSquareAt(currentFile, toRank).isOccupied()) {
             isClearRank = false;
@@ -85,7 +84,6 @@ bool Board::isClearRank(Square& from, Square& to) {
 
 bool Board::isClearFile(Square& from, Square& to) {
 
-    /* todo do I need to check whether or not from and to are in the same file? */
     int fromRank = from.getRank();
     int toFile = to.getFile();
     int toRank = to.getRank();
@@ -96,7 +94,7 @@ bool Board::isClearFile(Square& from, Square& to) {
         currentRank = fromRank - 1;
     }
 
-    while (currentRank != toRank || isClearFile) {
+    while (currentRank != toRank && isClearFile) {
 
         if (getSquareAt(toFile, currentRank).isOccupied()) {
             isClearFile = false;
@@ -118,7 +116,6 @@ bool Board::isClearFile(Square& from, Square& to) {
 
 bool Board::isClearDiagonal(Square& from, Square& to) {
 
-    /* todo do I need to check whether or not from and to are in the same diagonal */
     int fromFile = from.getFile();
     int fromRank = from.getRank();
     int toFile = to.getFile();
@@ -134,7 +131,7 @@ bool Board::isClearDiagonal(Square& from, Square& to) {
         currentRank = fromRank - 1;
     }
 
-    while ((currentFile != toFile && currentRank != toRank) || isClearDiagonal) {
+    while ((currentFile != toFile && currentRank != toRank) && isClearDiagonal) {
 
         if (getSquareAt(currentFile, currentRank).isOccupied()) {
             isClearDiagonal = false;

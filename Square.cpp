@@ -6,7 +6,7 @@
 #include "Square.h"
 #include "Piece.h"
 
-Square::Square(int file, int rank) : _rank(rank), _file(file), _occupant(nullptr) {}
+Square::Square(int file, int rank) :_file(file), _rank(rank), _occupant(nullptr) {}
 
 int Square::getRank() {
     return _rank;
