@@ -24,11 +24,6 @@ class Square {
         Square(int rank, int file);
 
         /**
-         * A Square deconstructor.
-         */
-        ~Square();
-
-        /**
          * Returns the rank of the Square.
          *
          * @return the rank of the Square.

@@ -17,14 +17,15 @@ class Game {
     public:
 
         /**
-         * Initializes the game.
+         * Initializes the game and begins running the game.
          */
         static void initialize();
 
+
         /**
-         * Runs through the game.
+         * A Game destructor.
          */
-        static void playGame();
+        ~Game();
 
         /**
          * Returns a reference to the Player whose turn is next.

@@ -8,10 +8,6 @@
 
 Square::Square(int file, int rank) : _rank(rank), _file(file), _occupant(nullptr) {}
 
-Square::~Square() {
-    delete this;
-}
-
 int Square::getRank() {
     return _rank;
 }

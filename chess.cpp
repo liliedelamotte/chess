@@ -11,10 +11,6 @@ int main(int argc, char* argv[]) {
 
     Game::initialize();
 
-    Game::playGame();
-
-    Game::endGame();
-
     return 0;
 
 }
