@@ -1,6 +1,6 @@
 // ldelamotte17@georgefox.edu
-// Assignment 7
-// 2019-03-23
+// Assignment 8
+// 2019-04-06
 
 
 #include <iostream>
@@ -20,83 +20,106 @@
 
 using namespace std;
 
+Player* Game::player1 = nullptr;
+Player* Game::player2 = nullptr;
+Player* Game::currentPlayer = nullptr;
+set<Piece*> Game::whitePieces;
+set<Piece*> Game::blackPieces;
+
 const string BLACK = "B";
 const string WHITE = "W";
 
-void Game::initialize(set<Piece*> whitePieces, set<Piece*> blackPieces) {
+void Game::initialize() {
 
-    Board* board = nullptr;
+    const string player1Name = "White";
+    const string player2Name = "Black";
 
-    board = board->getInstance();
+    cout << "Welcome to Chess!\n";
+    cout << "Moves should be entered like so: \'a2 a3\'.\n";
+
+    Board* board = board->getInstance();
 
     // creates all the pieces
-    Piece *blackRook1 = new Rook(&board->getSquareAt(0, 0), BLACK);
-    Piece *blackRook2 = new Rook(&board->getSquareAt(0, 7), BLACK);
-    Piece *blackKnight1 = new Knight(&board->getSquareAt(0, 1), BLACK);
-    Piece *blackKnight2 = new Knight(&board->getSquareAt(0, 6), BLACK);
-    Piece *blackBishop1 = new Bishop(&board->getSquareAt(0, 2), BLACK);
-    Piece *blackBishop2 = new Bishop(&board->getSquareAt(0, 5), BLACK);
-    Piece *blackQueen = new Queen(&board->getSquareAt(0, 4), BLACK);
-    Piece *blackKing = new King(&board->getSquareAt(0, 3), BLACK);
-    Piece *blackPawn1 = new Pawn(&board->getSquareAt(1, 0), BLACK);
-    Piece *blackPawn2 = new Pawn(&board->getSquareAt(1, 1), BLACK);
-    Piece *blackPawn3 = new Pawn(&board->getSquareAt(1, 2), BLACK);
-    Piece *blackPawn4 = new Pawn(&board->getSquareAt(1, 3), BLACK);
-    Piece *blackPawn5 = new Pawn(&board->getSquareAt(1, 4), BLACK);
-    Piece *blackPawn6 = new Pawn(&board->getSquareAt(1, 5), BLACK);
-    Piece *blackPawn7 = new Pawn(&board->getSquareAt(1, 6), BLACK);
-    Piece *blackPawn8 = new Pawn(&board->getSquareAt(1, 7), BLACK);
+    Rook whiteRook1 = Rook(&board->getSquareAt(0, 0), WHITE);
+    Rook whiteRook2 = Rook(&board->getSquareAt(7, 0), WHITE);
+    Knight whiteKnight1 = Knight(&board->getSquareAt(1, 0), WHITE);
+    Knight whiteKnight2 = Knight(&board->getSquareAt(6, 0), WHITE);
+    Bishop whiteBishop1 = Bishop(&board->getSquareAt(2, 0), WHITE);
+    Bishop whiteBishop2 = Bishop(&board->getSquareAt(5, 0), WHITE);
+    Queen whiteQueen = Queen(&board->getSquareAt(3, 0), WHITE);
+    King whiteKing = King(&board->getSquareAt(4, 0), WHITE);
+    Pawn whitePawn1 = Pawn(&board->getSquareAt(0, 1), WHITE);
+    Pawn whitePawn2 = Pawn(&board->getSquareAt(1, 1), WHITE);
+    Pawn whitePawn3 = Pawn(&board->getSquareAt(2, 1), WHITE);
+    Pawn whitePawn4 = Pawn(&board->getSquareAt(3, 1), WHITE);
+    Pawn whitePawn5 = Pawn(&board->getSquareAt(4, 1), WHITE);
+    Pawn whitePawn6 = Pawn(&board->getSquareAt(5, 1), WHITE);
+    Pawn whitePawn7 = Pawn(&board->getSquareAt(6, 1), WHITE);
+    Pawn whitePawn8 = Pawn(&board->getSquareAt(7, 1), WHITE);
 
-    Piece *whiteRook1 = new Rook(&board->getSquareAt(7, 0), WHITE);
-    Piece *whiteRook2 = new Rook(&board->getSquareAt(7, 7), WHITE);
-    Piece *whiteKnight1 = new Knight(&board->getSquareAt(7, 1), WHITE);
-    Piece *whiteKnight2 = new Knight(&board->getSquareAt(7, 6), WHITE);
-    Piece *whiteBishop1 = new Bishop(&board->getSquareAt(7, 2), WHITE);
-    Piece *whiteBishop2 = new Bishop(&board->getSquareAt(7, 5), WHITE);
-    Piece *whiteQueen = new Queen(&board->getSquareAt(7, 3), WHITE);
-    Piece *whiteKing = new King(&board->getSquareAt(7, 4), WHITE);
-    Piece *whitePawn1 = new Pawn(&board->getSquareAt(6, 0), WHITE);
-    Piece *whitePawn2 = new Pawn(&board->getSquareAt(6, 1), WHITE);
-    Piece *whitePawn3 = new Pawn(&board->getSquareAt(6, 2), WHITE);
-    Piece *whitePawn4 = new Pawn(&board->getSquareAt(6, 3), WHITE);
-    Piece *whitePawn5 = new Pawn(&board->getSquareAt(6, 4), WHITE);
-    Piece *whitePawn6 = new Pawn(&board->getSquareAt(6, 5), WHITE);
-    Piece *whitePawn7 = new Pawn(&board->getSquareAt(6, 6), WHITE);
-    Piece *whitePawn8 = new Pawn(&board->getSquareAt(6, 7), WHITE);
+    Rook blackRook1 = Rook(&board->getSquareAt(0, 7), BLACK);
+    Rook blackRook2 = Rook(&board->getSquareAt(7, 7), BLACK);
+    Knight blackKnight1 = Knight(&board->getSquareAt(1, 7), BLACK);
+    Knight blackKnight2 = Knight(&board->getSquareAt(6, 7), BLACK);
+    Bishop blackBishop1 = Bishop(&board->getSquareAt(2, 7), BLACK);
+    Bishop blackBishop2 = Bishop(&board->getSquareAt(5, 7), BLACK);
+    Queen blackQueen = Queen(&board->getSquareAt(3, 7), BLACK);
+    King blackKing = King(&board->getSquareAt(4, 7), BLACK);
+    Pawn blackPawn1 = Pawn(&board->getSquareAt(0, 6), BLACK);
+    Pawn blackPawn2 = Pawn(&board->getSquareAt(1, 6), BLACK);
+    Pawn blackPawn3 = Pawn(&board->getSquareAt(2, 6), BLACK);
+    Pawn blackPawn4 = Pawn(&board->getSquareAt(3, 6), BLACK);
+    Pawn blackPawn5 = Pawn(&board->getSquareAt(4, 6), BLACK);
+    Pawn blackPawn6 = Pawn(&board->getSquareAt(5, 6), BLACK);
+    Pawn blackPawn7 = Pawn(&board->getSquareAt(6, 6), BLACK);
+    Pawn blackPawn8 = Pawn(&board->getSquareAt(7, 6), BLACK);
+
+    // assigns all Pieces to their set
+    blackPieces = {&blackRook1, &blackRook2, &blackKnight1, &blackKnight2,
+                   &blackBishop1, &blackBishop2, &blackQueen, &blackKing,
+                   &blackPawn1, &blackPawn2, &blackPawn3, &blackPawn4,
+                   &blackPawn5, &blackPawn6, &blackPawn7, &blackPawn8};
+
+    whitePieces = {&whiteRook1, &whiteRook2, &whiteKnight1, &whiteKnight2,
+                   &whiteBishop1, &whiteBishop2, &whiteQueen, &whiteKing,
+                   &whitePawn1, &whitePawn2, &whitePawn3, &whitePawn4,
+                   &whitePawn5, &whitePawn6, &whitePawn7, &whitePawn8};
+
+    // creates the Players
+    Player p1 = Player(player1Name, whiteKing, whitePieces);
+    Player p2 = Player(player2Name, blackKing, blackPieces);
+    player1 = &p1;
+    player2 = &p2;
+
+    currentPlayer = player1;
 
     board->display();
 
-    //adds pieces to corresponding set
-    blackPieces = {blackRook1, blackRook2, blackKnight1, blackKnight2,
-                   blackBishop1, blackBishop2, blackQueen, blackKing,
-                   blackPawn1, blackPawn2, blackPawn3, blackPawn4,
-                   blackPawn5, blackPawn6, blackPawn7, blackPawn8};
+    // runs through the game for 10 valid turns
+    for(int i = 0; i < 10; i++) {
 
-    whitePieces = {whiteRook1, whiteRook2, whiteKnight1, whiteKnight2,
-                   whiteBishop1, whiteBishop2, whiteQueen, whiteKing,
-                   whitePawn1, whitePawn2, whitePawn3, whitePawn4,
-                   whitePawn5, whitePawn6, whitePawn7, whitePawn8};
+        currentPlayer->makeMove();
+        board->display();
+        currentPlayer = &getNextPlayer();
+
+    }
+
+    cout << "\nThanks for playing!";
 
 }
 
 Player& Game::getNextPlayer() {
-    /* todo */
-//    return nullptr;
+    return getOpponentOf(*currentPlayer);
 }
 
 Player& Game::getOpponentOf(Player& player) {
-    /* todo */
-//    return nullptr;
-}
 
-void Game::endGame(set<Piece*>& whitePieces, set<Piece*>& blackPieces) {
+    Player* opponent = player1;
 
-    for (auto &piece : whitePieces) {
-        delete piece;
+    if (&player == player1) {
+        opponent = player2;
     }
 
-    for (auto &piece : blackPieces) {
-        delete piece;
-    }
+    return *opponent;
 
 }

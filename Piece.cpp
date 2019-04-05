@@ -1,6 +1,6 @@
 // ldelamotte17@georgefox.edu
-// Assignment 7
-// 2019-03-23
+// Assignment 8
+// 2019-04-06
 
 
 #include <iostream>
@@ -16,10 +16,6 @@ Piece::Piece(Square* location, string color)
     if (_location != nullptr) {
         location->setOccupant(this);
     }
-}
-
-Piece::~Piece() {
-    delete this;
 }
 
 string Piece::getColor() {
@@ -38,7 +34,6 @@ void Piece::setLocation(Square* location) {
 }
 
 bool Piece::isOnSquare() {
-    /* todo */
     return (_location != nullptr);
 }
 

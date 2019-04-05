@@ -4,6 +4,7 @@
 CMakeFiles/chess.dir/Bishop.cpp.o
  /Users/liliedelamotte/dev/csis370/chess/Bishop.cpp
  /Users/liliedelamotte/dev/csis370/chess/Bishop.h
+ /Users/liliedelamotte/dev/csis370/chess/Board.h
  /Users/liliedelamotte/dev/csis370/chess/Piece.h
  /Users/liliedelamotte/dev/csis370/chess/Square.h
 CMakeFiles/chess.dir/Board.cpp.o
@@ -37,10 +38,12 @@ CMakeFiles/chess.dir/Knight.cpp.o
  /Users/liliedelamotte/dev/csis370/chess/Piece.h
  /Users/liliedelamotte/dev/csis370/chess/Square.h
 CMakeFiles/chess.dir/Pawn.cpp.o
+ /Users/liliedelamotte/dev/csis370/chess/Board.h
  /Users/liliedelamotte/dev/csis370/chess/Pawn.cpp
  /Users/liliedelamotte/dev/csis370/chess/Pawn.h
  /Users/liliedelamotte/dev/csis370/chess/Piece.h
  /Users/liliedelamotte/dev/csis370/chess/RestrictedPiece.h
+ /Users/liliedelamotte/dev/csis370/chess/Square.h
 CMakeFiles/chess.dir/Piece.cpp.o
  /Users/liliedelamotte/dev/csis370/chess/King.h
  /Users/liliedelamotte/dev/csis370/chess/Piece.cpp
@@ -49,11 +52,14 @@ CMakeFiles/chess.dir/Piece.cpp.o
  /Users/liliedelamotte/dev/csis370/chess/RestrictedPiece.h
  /Users/liliedelamotte/dev/csis370/chess/Square.h
 CMakeFiles/chess.dir/Player.cpp.o
+ /Users/liliedelamotte/dev/csis370/chess/Board.h
+ /Users/liliedelamotte/dev/csis370/chess/Game.h
  /Users/liliedelamotte/dev/csis370/chess/King.h
  /Users/liliedelamotte/dev/csis370/chess/Piece.h
  /Users/liliedelamotte/dev/csis370/chess/Player.cpp
  /Users/liliedelamotte/dev/csis370/chess/Player.h
  /Users/liliedelamotte/dev/csis370/chess/RestrictedPiece.h
+ /Users/liliedelamotte/dev/csis370/chess/Square.h
 CMakeFiles/chess.dir/Queen.cpp.o
  /Users/liliedelamotte/dev/csis370/chess/Piece.h
  /Users/liliedelamotte/dev/csis370/chess/Queen.cpp
@@ -67,6 +73,7 @@ CMakeFiles/chess.dir/RestrictedPiece.cpp.o
  /Users/liliedelamotte/dev/csis370/chess/RestrictedPiece.h
  /Users/liliedelamotte/dev/csis370/chess/Square.h
 CMakeFiles/chess.dir/Rook.cpp.o
+ /Users/liliedelamotte/dev/csis370/chess/Board.h
  /Users/liliedelamotte/dev/csis370/chess/Piece.h
  /Users/liliedelamotte/dev/csis370/chess/RestrictedPiece.h
  /Users/liliedelamotte/dev/csis370/chess/Rook.cpp

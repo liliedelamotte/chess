@@ -1,6 +1,6 @@
 // ldelamotte17@georgefox.edu
-// Assignment 7
-// 2019-03-23
+// Assignment 8
+// 2019-04-06
 
 
 #ifndef _BISHOP_H
@@ -18,11 +18,6 @@ class Bishop: public Piece {
     using Piece::Piece;
 
     public:
-
-        /**
-         * A Piece destructor.
-         */
-        ~Bishop();
 
         /**
          * Determines whether or not the Bishop can move to a given location.

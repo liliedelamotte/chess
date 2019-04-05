@@ -1,6 +1,6 @@
 // ldelamotte17@georgefox.edu
-// Assignment 7
-// 2019-03-23
+// Assignment 8
+// 2019-04-06
 
 
 #ifndef _PAWN_H
@@ -20,11 +20,6 @@ class Pawn: public RestrictedPiece {
     using RestrictedPiece::RestrictedPiece;
 
     public:
-
-        /**
-         * A Pawn destructor.
-         */
-        ~Pawn();
 
         /**
          * Determines whether or not the Pawn can move to a given location.

@@ -1,6 +1,7 @@
 // ldelamotte17@georgefox.edu
-// Assignment 7
-// 2019-03-23
+// Assignment 8
+// 2019-04-06
+
 
 #ifndef _GAME_H
 #define _GAME_H
@@ -16,9 +17,9 @@ class Game {
     public:
 
         /**
-         * Initializes the game.
+         * Initializes the game and begins running the game.
          */
-        static void initialize(set<Piece*> whitePieces, set<Piece*> blackPieces);
+        static void initialize();
 
         /**
          * Returns a reference to the Player whose turn is next.
@@ -35,14 +36,19 @@ class Game {
          */
         static Player& getOpponentOf(Player& player);
 
-
         /**
-         * Ends the game by cleaning up the mess on the heap.
-         *
-         * @param whitePieces a set of Pieces.
-         * @param blackPieces a set of Pieces.
+         * Ends the game.
          */
-        static void endGame(set<Piece*>& whitePieces, set<Piece*>& blackPieces);
+        static void endGame();
+
+    private:
+
+        static Player* player1;
+        static Player* player2;
+        static Player* currentPlayer;
+
+        static set<Piece*> whitePieces;
+        static set<Piece*> blackPieces;
 
 };
 

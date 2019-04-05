@@ -1,6 +1,6 @@
 // ldelamotte17@georgefox.edu
-// Assignment 7
-// 2019-03-23
+// Assignment 8
+// 2019-04-06
 
 
 #ifndef _PIECE_H
@@ -28,11 +28,6 @@ class Piece {
          * @param location the Square the Piece begins on.
          */
         Piece(Square* location, string color);
-
-        /**
-         * A Piece destructor.
-         */
-        virtual ~Piece();
 
         /**
          * Returns the color of the Piece.

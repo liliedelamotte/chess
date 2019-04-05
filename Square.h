@@ -1,6 +1,6 @@
 // ldelamotte17@georgefox.edu
-// Assignment 7
-// 2019-03-23
+// Assignment 8
+// 2019-04-06
 
 
 #ifndef _SQUARE_H
@@ -22,12 +22,6 @@ class Square {
          * @param file vertical columns of Squares, labeled a through h.
          */
         Square(int rank, int file);
-
-
-        /**
-         * Constructs a Square.
-         */
-        Square();
 
         /**
          * Returns the rank of the Square.

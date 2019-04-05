@@ -1,6 +1,6 @@
 // ldelamotte17@georgefox.edu
-// Assignment 7
-// 2019-03-23
+// Assignment 8
+// 2019-04-06
 
 
 #ifndef _KNIGHT_H
@@ -19,11 +19,6 @@ class Knight: public Piece {
     using Piece::Piece;
 
     public:
-
-        /**
-         * A Knight destructor.
-         */
-        ~Knight();
 
         /**
          * Determines whether or not the Knight can move to a given space.
