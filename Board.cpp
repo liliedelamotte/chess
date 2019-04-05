@@ -50,18 +50,113 @@ Square& Board::getSquareAt(int file, int rank) {
 }
 
 bool Board::isClearRank(Square& from, Square& to) {
-    /* todo */
-    return false;
+
+    /* todo do I need to check whether or not from and to are in the same rank? */
+    int fromFile = from.getFile();
+    int toFile = to.getFile();
+    int toRank = to.getRank();
+    int currentFile = fromFile + 1;
+    bool isClearRank = true;
+
+    if (fromFile > toFile) {
+        currentFile = fromFile - 1;
+    }
+
+    while (currentFile != toFile || isClearRank) {
+
+        if (getSquareAt(currentFile, toRank).isOccupied()) {
+            isClearRank = false;
+        }
+
+        // increments file according to
+        // where it is supposed to approach
+        if (fromFile > toFile) {
+            currentFile--;
+        }
+        else {
+            currentFile++;
+        }
+
+    }
+
+    return isClearRank;
 }
 
 bool Board::isClearFile(Square& from, Square& to) {
-    /* todo */
-    return false;
+
+    /* todo do I need to check whether or not from and to are in the same file? */
+    int fromRank = from.getRank();
+    int toFile = to.getFile();
+    int toRank = to.getRank();
+    int currentRank = fromRank + 1;
+    bool isClearFile = true;
+
+    if (fromRank > toRank) {
+        currentRank = fromRank - 1;
+    }
+
+    while (currentRank != toRank || isClearFile) {
+
+        if (getSquareAt(toFile, currentRank).isOccupied()) {
+            isClearFile = false;
+        }
+
+        // increments rank according to
+        // where it is supposed to approach
+        if (fromRank > toRank) {
+            currentRank--;
+        }
+        else {
+            currentRank++;
+        }
+
+    }
+
+    return isClearFile;
 }
 
 bool Board::isClearDiagonal(Square& from, Square& to) {
-    /* todo */
-    return false;
+
+    /* todo do I need to check whether or not from and to are in the same diagonal */
+    int fromFile = from.getFile();
+    int fromRank = from.getRank();
+    int toFile = to.getFile();
+    int toRank = to.getRank();
+    int currentFile = fromFile + 1;
+    int currentRank = fromRank + 1;
+    bool isClearDiagonal = true;
+
+    if (fromFile > toFile) {
+        currentFile = fromFile - 1;
+    }
+    if (fromRank > toRank) {
+        currentRank = fromRank - 1;
+    }
+
+    while ((currentFile != toFile && currentRank != toRank) || isClearDiagonal) {
+
+        if (getSquareAt(currentFile, currentRank).isOccupied()) {
+            isClearDiagonal = false;
+        }
+
+        // increments file and rank according to
+        // where they are supposed to approach
+        if (fromFile > toFile) {
+            currentFile --;
+        }
+        else {
+            currentFile++;
+        }
+
+        if (fromRank > toRank) {
+            currentRank--;
+        }
+        else {
+            currentRank++;
+        }
+    }
+
+    return isClearDiagonal;
 }
 
 void Board::display() {
