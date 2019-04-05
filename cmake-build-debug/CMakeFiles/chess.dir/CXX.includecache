@@ -6,13 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/Users/liliedelamotte/dev/csis370/chess/Board.cpp
-iostream
--
-Board.h
-/Users/liliedelamotte/dev/csis370/chess/Board.h
+/Users/liliedelamotte/dev/csis370/chess/Bishop.cpp
+Bishop.h
+/Users/liliedelamotte/dev/csis370/chess/Bishop.h
 Square.h
 /Users/liliedelamotte/dev/csis370/chess/Square.h
+Board.h
+/Users/liliedelamotte/dev/csis370/chess/Board.h
+
+/Users/liliedelamotte/dev/csis370/chess/Bishop.h
 Piece.h
 /Users/liliedelamotte/dev/csis370/chess/Piece.h
 
@@ -20,53 +22,27 @@ Piece.h
 iostream
 -
 
-/Users/liliedelamotte/dev/csis370/chess/Game.h
-set
+/Users/liliedelamotte/dev/csis370/chess/Piece.h
+iostream
 -
-Player.h
-/Users/liliedelamotte/dev/csis370/chess/Player.h
+string
+-
 
-/Users/liliedelamotte/dev/csis370/chess/King.h
+/Users/liliedelamotte/dev/csis370/chess/RestrictedPiece.h
+Piece.h
+/Users/liliedelamotte/dev/csis370/chess/Piece.h
+
+/Users/liliedelamotte/dev/csis370/chess/Rook.cpp
+Rook.h
+/Users/liliedelamotte/dev/csis370/chess/Rook.h
+Square.h
+/Users/liliedelamotte/dev/csis370/chess/Square.h
+Board.h
+/Users/liliedelamotte/dev/csis370/chess/Board.h
+
+/Users/liliedelamotte/dev/csis370/chess/Rook.h
 RestrictedPiece.h
 /Users/liliedelamotte/dev/csis370/chess/RestrictedPiece.h
-
-/Users/liliedelamotte/dev/csis370/chess/Piece.h
-iostream
--
-string
--
-
-/Users/liliedelamotte/dev/csis370/chess/Player.cpp
-string
--
-set
--
-regex
--
-Player.h
-/Users/liliedelamotte/dev/csis370/chess/Player.h
-King.h
-/Users/liliedelamotte/dev/csis370/chess/King.h
-Piece.h
-/Users/liliedelamotte/dev/csis370/chess/Piece.h
-Board.h
-/Users/liliedelamotte/dev/csis370/chess/Board.h
-Square.h
-/Users/liliedelamotte/dev/csis370/chess/Square.h
-Game.h
-/Users/liliedelamotte/dev/csis370/chess/Game.h
-
-/Users/liliedelamotte/dev/csis370/chess/Player.h
-string
--
-set
--
-King.h
-/Users/liliedelamotte/dev/csis370/chess/King.h
-
-/Users/liliedelamotte/dev/csis370/chess/RestrictedPiece.h
-Piece.h
-/Users/liliedelamotte/dev/csis370/chess/Piece.h
 
 /Users/liliedelamotte/dev/csis370/chess/Square.h
 
