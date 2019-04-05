@@ -27,6 +27,7 @@ Board::~Board() {
 
     for (int i = 0; i < DIMENSION; i++) {
         for (int j = 0; j < DIMENSION; j++) {
+            getSquareAt(j, i).setOccupant(nullptr);
             delete &getSquareAt(j, i);
         }
     }

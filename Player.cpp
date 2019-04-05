@@ -143,13 +143,13 @@ bool Player::makeMove() {
 
             validMove = pieceOnSquare && isRightColor && canMoveTo;
             if (!validMove) {
-                cout << "Invalid move." << endl;
+                cout << "Invalid move.\n" << endl;
             }
 
         }
         else {
             validMove = false;
-            cout << "Invalid move." << endl;
+            cout << "Invalid move.\n" << endl;
         }
     }
 

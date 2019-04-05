@@ -35,6 +35,7 @@ void Game::initialize() {
     const string player2Name = "Black";
 
     cout << "Welcome to Chess!\n";
+    cout << "Moves should be entered like so: \'a2 a3\'.\n";
 
     Board* board = board->getInstance();
 
@@ -73,6 +74,7 @@ void Game::initialize() {
     Pawn blackPawn7 = Pawn(&board->getSquareAt(6, 6), BLACK);
     Pawn blackPawn8 = Pawn(&board->getSquareAt(7, 6), BLACK);
 
+    // assigns all Pieces to their set
     blackPieces = {&blackRook1, &blackRook2, &blackKnight1, &blackKnight2,
                    &blackBishop1, &blackBishop2, &blackQueen, &blackKing,
                    &blackPawn1, &blackPawn2, &blackPawn3, &blackPawn4,
@@ -83,9 +85,9 @@ void Game::initialize() {
                    &whitePawn1, &whitePawn2, &whitePawn3, &whitePawn4,
                    &whitePawn5, &whitePawn6, &whitePawn7, &whitePawn8};
 
+    // creates the Players
     Player p1 = Player(player1Name, whiteKing, whitePieces);
     Player p2 = Player(player2Name, blackKing, blackPieces);
-
     player1 = &p1;
     player2 = &p2;
 
@@ -93,6 +95,7 @@ void Game::initialize() {
 
     board->display();
 
+    // runs through the game for 10 valid turns
     for(int i = 0; i < 10; i++) {
 
         currentPlayer->makeMove();
