@@ -31,6 +31,7 @@ bool Pawn::canMoveTo(Square& location) {
                 canMoveToGivenLocation = true;
             }
         }
+        // checks to see if the pawn can capture a Piece
         else if (location.isOccupied() && location.getOccupant()->getColor() == "B"
                  && location.getRank() == currentRank + 1
                  && ((currentFile == futureFile - 1) || (currentFile == futureFile + 1))) {
@@ -46,7 +47,7 @@ bool Pawn::canMoveTo(Square& location) {
                 canMoveToGivenLocation = true;
             }
         }
-        // checks to see if the pawn can capture a piece
+        // checks to see if the pawn can capture a Piece
         else if (location.isOccupied() && location.getOccupant()->getColor() == "W"
                  && location.getRank() == currentRank - 1
                  && ((currentFile == futureFile - 1) || (currentFile == futureFile + 1))) {

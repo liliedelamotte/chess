@@ -21,12 +21,6 @@ class Game {
          */
         static void initialize();
 
-
-        /**
-         * A Game destructor.
-         */
-        ~Game();
-
         /**
          * Returns a reference to the Player whose turn is next.
          *

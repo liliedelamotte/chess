@@ -83,11 +83,11 @@ void Game::initialize() {
                    &whitePawn1, &whitePawn2, &whitePawn3, &whitePawn4,
                    &whitePawn5, &whitePawn6, &whitePawn7, &whitePawn8};
 
-    Player* p1 = new Player(player1Name, whiteKing, whitePieces);
-    Player* p2 = new Player(player2Name, blackKing, blackPieces);
+    Player p1 = Player(player1Name, whiteKing, whitePieces);
+    Player p2 = Player(player2Name, blackKing, blackPieces);
 
-    player1 = p1;
-    player2 = p2;
+    player1 = &p1;
+    player2 = &p2;
 
     currentPlayer = player1;
 
@@ -110,6 +110,7 @@ Player& Game::getNextPlayer() {
 }
 
 Player& Game::getOpponentOf(Player& player) {
+
     Player* opponent = player1;
 
     if (&player == player1) {
@@ -117,11 +118,5 @@ Player& Game::getOpponentOf(Player& player) {
     }
 
     return *opponent;
-}
-
-Game::~Game() {
-
-    delete player1;
-    delete player2;
 
 }

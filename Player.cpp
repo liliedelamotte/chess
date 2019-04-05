@@ -60,9 +60,9 @@ bool Player::makeMove() {
 
         // gets the players move
         cout << this->getName() << ", enter your move: ";
-
         getline(cin, move);
 
+        // determines if the format of the input is valid
         if (regex_match(move.begin(), move.end(), r)) {
 
             startingLocation = move.substr(0, 2);
@@ -125,12 +125,12 @@ bool Player::makeMove() {
             endingSquare = &board->getSquareAt(endingFile, endingRank - 1);
             pieceToMove = startingSquare->getOccupant();
 
-            // checks to see if there is actually a piece at the starting location
+            // checks to see if there is actually a Piece at the starting location
             if (!startingSquare->isOccupied()) {
                 pieceOnSquare = false;
             }
             else {
-                // checks to see that the piece the player wants to move is actually their own
+                // checks to see that the Piece the player wants to move is actually their own
                 if (startingSquare->getOccupant()->getColor() != this->getKing().getColor()) {
                     isRightColor = false;
                 }
@@ -165,6 +165,8 @@ bool Player::makeMove() {
 }
 
 void Player::capture(Piece& piece) {
+
     Game::getOpponentOf(*this).getPieces().erase(&piece);
     piece.getLocation()->setOccupant(nullptr);
+
 }

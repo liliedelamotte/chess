@@ -11,6 +11,8 @@ Bishop.h
 /Users/liliedelamotte/dev/csis370/chess/Bishop.h
 Square.h
 /Users/liliedelamotte/dev/csis370/chess/Square.h
+Board.h
+/Users/liliedelamotte/dev/csis370/chess/Board.h
 
 /Users/liliedelamotte/dev/csis370/chess/Bishop.h
 Piece.h
@@ -177,6 +179,8 @@ Rook.h
 /Users/liliedelamotte/dev/csis370/chess/Rook.h
 Square.h
 /Users/liliedelamotte/dev/csis370/chess/Square.h
+Board.h
+/Users/liliedelamotte/dev/csis370/chess/Board.h
 
 /Users/liliedelamotte/dev/csis370/chess/Rook.h
 RestrictedPiece.h
