@@ -4,6 +4,7 @@
 
 
 #include <iostream>
+#include <cstdlib>
 #include "Board.h"
 #include "Square.h"
 #include "Piece.h"
@@ -129,6 +130,10 @@ bool Board::isClearDiagonal(Square& from, Square& to) {
     }
     if (fromRank > toRank) {
         currentRank = fromRank - 1;
+    }
+
+    if (abs(fromFile - toFile) != abs(fromRank - toRank)) {
+        isClearDiagonal = false;
     }
 
     while ((currentFile != toFile && currentRank != toRank) && isClearDiagonal) {

@@ -16,7 +16,10 @@ bool King::canMoveTo(Square& location) {
     int futureFile = location.getFile();
     int futureRank = location.getRank();
 
-    if (location.isOccupied()) {
+    if (currentFile == futureFile && currentRank == futureRank) {
+        canMoveToGivenLocation = true;
+    }
+    else if (location.isOccupied()) {
         if (!(location.getOccupant()->getColor() == this->getColor())) {
             if (futureFile + 1 == currentFile) {
                 if (futureRank + 1 == currentRank) {
@@ -47,6 +50,38 @@ bool King::canMoveTo(Square& location) {
                 if (futureRank - 1 == currentRank) {
                     canMoveToGivenLocation = true;
                 }
+            }
+        }
+    }
+    else {
+        if (futureFile + 1 == currentFile) {
+            if (futureRank + 1 == currentRank) {
+                canMoveToGivenLocation = true;
+            }
+            if (futureRank == currentRank) {
+                canMoveToGivenLocation = true;
+            }
+            if (futureRank - 1 == currentRank) {
+                canMoveToGivenLocation = true;
+            }
+        }
+        if (futureFile == currentFile) {
+            if (futureRank + 1 == currentRank) {
+                canMoveToGivenLocation = true;
+            }
+            if (futureRank - 1 == currentRank) {
+                canMoveToGivenLocation = true;
+            }
+        }
+        if (futureFile - 1 == currentFile) {
+            if (futureRank + 1 == currentRank) {
+                canMoveToGivenLocation = true;
+            }
+            if (futureRank == currentRank) {
+                canMoveToGivenLocation = true;
+            }
+            if (futureRank - 1 == currentRank) {
+                canMoveToGivenLocation = true;
             }
         }
     }

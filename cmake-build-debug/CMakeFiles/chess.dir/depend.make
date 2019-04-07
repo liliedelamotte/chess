@@ -26,6 +26,7 @@ CMakeFiles/chess.dir/Game.cpp.o: ../RestrictedPiece.h
 CMakeFiles/chess.dir/Game.cpp.o: ../Rook.h
 CMakeFiles/chess.dir/Game.cpp.o: ../Square.h
 
+CMakeFiles/chess.dir/King.cpp.o: ../Board.h
 CMakeFiles/chess.dir/King.cpp.o: ../King.cpp
 CMakeFiles/chess.dir/King.cpp.o: ../King.h
 CMakeFiles/chess.dir/King.cpp.o: ../Piece.h

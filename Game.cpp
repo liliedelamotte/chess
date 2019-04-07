@@ -33,6 +33,8 @@ void Game::initialize() {
 
     const string player1Name = "White";
     const string player2Name = "Black";
+    bool kingIsInCheck = false;
+    bool gameIsInPlay = true;
 
     cout << "Welcome to Chess!\n";
     cout << "Moves should be entered like so: \'a2 a3\'.\n";
@@ -95,12 +97,28 @@ void Game::initialize() {
 
     board->display();
 
-    // runs through the game for 10 valid turns
-    for(int i = 0; i < 10; i++) {
+    // runs through the game until there is a winner
+    while (gameIsInPlay) {
 
-        currentPlayer->makeMove();
-        board->display();
-        currentPlayer = &getNextPlayer();
+        gameIsInPlay = currentPlayer->makeMove();
+
+        if (gameIsInPlay) {
+            board->display();
+
+            // determines if the opposing player's King is in check
+            for (Piece *piece: currentPlayer->getPieces()) {
+                if (piece->canMoveTo(*getOpponentOf(*currentPlayer).getKing().getLocation())) {
+                    kingIsInCheck = true;
+                }
+            }
+
+            // lets the opposing player know that their King is in check
+            if (kingIsInCheck) {
+                cout << getOpponentOf(*currentPlayer).getName() << ", your King is in check!" << endl;
+            }
+
+            currentPlayer = &getNextPlayer();
+        }
 
     }
 

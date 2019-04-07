@@ -35,6 +35,7 @@ bool Player::makeMove() {
     bool pieceOnSquare = true;
     bool isRightColor = true;
     bool canMoveTo = true;
+    bool gameIsInPlay = true;
     int startingRank;
     int startingFile;
     int endingRank;
@@ -45,7 +46,8 @@ bool Player::makeMove() {
     string move;
     Square* startingSquare;
     Square* endingSquare;
-    regex r("([a-h][1-8])\\s+([a-h][1-8])");
+    regex validRe("([a-h][1-8])\\s+([a-h][1-8])");
+    regex checkmateRe("(#)");
 
 
     Board* board = board->getInstance();
@@ -63,7 +65,7 @@ bool Player::makeMove() {
         getline(cin, move);
 
         // determines if the format of the input is valid
-        if (regex_match(move.begin(), move.end(), r)) {
+        if (regex_match(move.begin(), move.end(), validRe)) {
 
             startingLocation = move.substr(0, 2);
             endingLocation = move.substr(3, 5);
@@ -141,11 +143,24 @@ bool Player::makeMove() {
                 }
             }
 
-            validMove = pieceOnSquare && isRightColor && canMoveTo;
+            if (startingSquare->getRank() != endingSquare->getRank()
+            && startingSquare->getFile() != endingSquare->getFile()) {
+                validMove = pieceOnSquare && isRightColor && canMoveTo;
+            }
+            // if the starting square is the same as the ending square, a king has been tipped over
+            else {
+                gameIsInPlay = false;
+                validMove = true;
+            }
             if (!validMove) {
                 cout << "Invalid move.\n" << endl;
             }
 
+        }
+        // determines if player decides they are in checkmate
+        else if (move == "#") {
+            gameIsInPlay = false;
+            validMove = true;
         }
         else {
             validMove = false;
@@ -153,14 +168,18 @@ bool Player::makeMove() {
         }
     }
 
-    // removes the captured Piece (if any) from the owner's set as well as from the board
-    if (endingSquare->isOccupied()) {
-        capture(*endingSquare->getOccupant());
+    if (gameIsInPlay) {
+        // removes the captured Piece (if any) from the owner's set as well as from the board
+        if (endingSquare->isOccupied()) {
+            capture(*endingSquare->getOccupant());
+        }
+
+        // moves the Piece chosen to its destination
+        startingSquare->getOccupant()->setLocation(endingSquare);
+        startingSquare->setOccupant(nullptr);
     }
 
-    // moves the Piece chosen to its destination
-    startingSquare->getOccupant()->setLocation(endingSquare);
-    startingSquare->setOccupant(nullptr);
+    return gameIsInPlay;
 
 }
 

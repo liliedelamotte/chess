@@ -6,25 +6,57 @@
 
 #IncludeRegexTransform: 
 
-/Users/liliedelamotte/dev/csis370/chess/Board.cpp
+/Users/liliedelamotte/dev/csis370/chess/Board.h
 iostream
 -
-Board.h
-/Users/liliedelamotte/dev/csis370/chess/Board.h
-Square.h
-/Users/liliedelamotte/dev/csis370/chess/Square.h
-Piece.h
-/Users/liliedelamotte/dev/csis370/chess/Piece.h
 
-/Users/liliedelamotte/dev/csis370/chess/Board.h
-iostream
+/Users/liliedelamotte/dev/csis370/chess/Game.h
+set
 -
+Player.h
+/Users/liliedelamotte/dev/csis370/chess/Player.h
+
+/Users/liliedelamotte/dev/csis370/chess/King.h
+RestrictedPiece.h
+/Users/liliedelamotte/dev/csis370/chess/RestrictedPiece.h
 
 /Users/liliedelamotte/dev/csis370/chess/Piece.h
 iostream
 -
 string
 -
+
+/Users/liliedelamotte/dev/csis370/chess/Player.cpp
+string
+-
+set
+-
+regex
+-
+Player.h
+/Users/liliedelamotte/dev/csis370/chess/Player.h
+King.h
+/Users/liliedelamotte/dev/csis370/chess/King.h
+Piece.h
+/Users/liliedelamotte/dev/csis370/chess/Piece.h
+Board.h
+/Users/liliedelamotte/dev/csis370/chess/Board.h
+Square.h
+/Users/liliedelamotte/dev/csis370/chess/Square.h
+Game.h
+/Users/liliedelamotte/dev/csis370/chess/Game.h
+
+/Users/liliedelamotte/dev/csis370/chess/Player.h
+string
+-
+set
+-
+King.h
+/Users/liliedelamotte/dev/csis370/chess/King.h
+
+/Users/liliedelamotte/dev/csis370/chess/RestrictedPiece.h
+Piece.h
+/Users/liliedelamotte/dev/csis370/chess/Piece.h
 
 /Users/liliedelamotte/dev/csis370/chess/Square.h
 
