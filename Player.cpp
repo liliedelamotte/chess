@@ -143,8 +143,10 @@ bool Player::makeMove() {
                 }
             }
 
+            // only evaluates for a valid move with the given parameters
+            // if the beginning square is the same as the ending square
             if (startingSquare->getRank() != endingSquare->getRank()
-            && startingSquare->getFile() != endingSquare->getFile()) {
+            || startingSquare->getFile() != endingSquare->getFile()) {
                 validMove = pieceOnSquare && isRightColor && canMoveTo;
             }
             // if the starting square is the same as the ending square, a king has been tipped over

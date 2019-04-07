@@ -24,6 +24,9 @@ bool Queen::canMoveTo(Square& location) {
             canMoveToGivenLocationDiagonal = board->isClearDiagonal(*currentLocation, location);
         }
     }
+    else {
+        canMoveToGivenLocationDiagonal = true;
+    }
 
     if (!(currentFile == futureFile && currentRank == futureRank)) {
         if (location.isOccupied()) {

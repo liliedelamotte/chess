@@ -102,7 +102,9 @@ void Game::initialize() {
 
         gameIsInPlay = currentPlayer->makeMove();
 
+        // only moves the piece and gets the next player if the game isn't over
         if (gameIsInPlay) {
+
             board->display();
 
             // determines if the opposing player's King is in check
@@ -118,6 +120,9 @@ void Game::initialize() {
             }
 
             currentPlayer = &getNextPlayer();
+            // resets that the king is in check
+            kingIsInCheck = false;
+
         }
 
     }
