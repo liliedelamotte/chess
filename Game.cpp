@@ -20,11 +20,11 @@
 
 using namespace std;
 
-Player* Game::player1 = nullptr;
-Player* Game::player2 = nullptr;
-Player* Game::currentPlayer = nullptr;
-set<Piece*> Game::whitePieces;
-set<Piece*> Game::blackPieces;
+Player* Game::_player1 = nullptr;
+Player* Game::_player2 = nullptr;
+Player* Game::_currentPlayer = nullptr;
+set<Piece*> Game::_whitePieces;
+set<Piece*> Game::_blackPieces;
 
 const string BLACK = "B";
 const string WHITE = "W";
@@ -33,7 +33,6 @@ void Game::initialize() {
 
     const string player1Name = "White";
     const string player2Name = "Black";
-    bool kingIsInCheck = false;
     bool gameIsInPlay = true;
 
     cout << "Welcome to Chess!\n";
@@ -77,52 +76,35 @@ void Game::initialize() {
     Pawn blackPawn8 = Pawn(&board->getSquareAt(7, 6), BLACK);
 
     // assigns all Pieces to their set
-    blackPieces = {&blackRook1, &blackRook2, &blackKnight1, &blackKnight2,
+    _blackPieces = {&blackRook1, &blackRook2, &blackKnight1, &blackKnight2,
                    &blackBishop1, &blackBishop2, &blackQueen, &blackKing,
                    &blackPawn1, &blackPawn2, &blackPawn3, &blackPawn4,
                    &blackPawn5, &blackPawn6, &blackPawn7, &blackPawn8};
 
-    whitePieces = {&whiteRook1, &whiteRook2, &whiteKnight1, &whiteKnight2,
+    _whitePieces = {&whiteRook1, &whiteRook2, &whiteKnight1, &whiteKnight2,
                    &whiteBishop1, &whiteBishop2, &whiteQueen, &whiteKing,
                    &whitePawn1, &whitePawn2, &whitePawn3, &whitePawn4,
                    &whitePawn5, &whitePawn6, &whitePawn7, &whitePawn8};
 
     // creates the Players
-    Player p1 = Player(player1Name, whiteKing, whitePieces);
-    Player p2 = Player(player2Name, blackKing, blackPieces);
-    player1 = &p1;
-    player2 = &p2;
+    Player p1 = Player(player1Name, whiteKing, _whitePieces);
+    Player p2 = Player(player2Name, blackKing, _blackPieces);
+    _player1 = &p1;
+    _player2 = &p2;
 
-    currentPlayer = player1;
+    _currentPlayer = _player1;
 
     board->display();
 
     // runs through the game until there is a winner
     while (gameIsInPlay) {
 
-        gameIsInPlay = currentPlayer->makeMove();
+        gameIsInPlay = _currentPlayer->makeMove();
 
         // only moves the piece and gets the next player if the game isn't over
         if (gameIsInPlay) {
-
             board->display();
-
-            // determines if the opposing player's King is in check
-            for (Piece *piece: currentPlayer->getPieces()) {
-                if (piece->canMoveTo(*getOpponentOf(*currentPlayer).getKing().getLocation())) {
-                    kingIsInCheck = true;
-                }
-            }
-
-            // lets the opposing player know that their King is in check
-            if (kingIsInCheck) {
-                cout << getOpponentOf(*currentPlayer).getName() << ", your King is in check!" << endl;
-            }
-
-            currentPlayer = &getNextPlayer();
-            // resets that the king is in check
-            kingIsInCheck = false;
-
+            _currentPlayer = &getNextPlayer();
         }
 
     }
@@ -132,15 +114,15 @@ void Game::initialize() {
 }
 
 Player& Game::getNextPlayer() {
-    return getOpponentOf(*currentPlayer);
+    return getOpponentOf(*_currentPlayer);
 }
 
 Player& Game::getOpponentOf(Player& player) {
 
-    Player* opponent = player1;
+    Player* opponent = _player1;
 
-    if (&player == player1) {
-        opponent = player2;
+    if (&player == _player1) {
+        opponent = _player2;
     }
 
     return *opponent;

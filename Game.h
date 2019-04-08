@@ -36,19 +36,14 @@ class Game {
          */
         static Player& getOpponentOf(Player& player);
 
-        /**
-         * Ends the game.
-         */
-        static void endGame();
-
     private:
 
-        static Player* player1;
-        static Player* player2;
-        static Player* currentPlayer;
+        static Player* _player1;
+        static Player* _player2;
+        static Player* _currentPlayer;
 
-        static set<Piece*> whitePieces;
-        static set<Piece*> blackPieces;
+        static set<Piece*> _whitePieces;
+        static set<Piece*> _blackPieces;
 
 };
 

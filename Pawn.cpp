@@ -10,6 +10,8 @@
 #include "Board.h"
 using namespace std;
 
+//Piece* Pawn::_delegate = nullptr;
+
 bool Pawn::canMoveTo(Square& location) {
 
     Square *currentLocation = this->getLocation();
@@ -58,6 +60,14 @@ bool Pawn::canMoveTo(Square& location) {
 
     return canMoveToGivenLocation;
 }
+
+//bool hasDelegate() {
+//    return (_delegate != nullptr);
+//}
+//
+//void setDelegate(Piece& delegate) {
+//    _delegate = delegate;
+//}
 
 string Pawn::toString() {
     return "P";

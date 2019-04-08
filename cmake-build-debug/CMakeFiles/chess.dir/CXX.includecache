@@ -6,9 +6,43 @@
 
 #IncludeRegexTransform: 
 
+/Users/liliedelamotte/dev/csis370/chess/Bishop.h
+Piece.h
+/Users/liliedelamotte/dev/csis370/chess/Piece.h
+
 /Users/liliedelamotte/dev/csis370/chess/Board.h
 iostream
 -
+
+/Users/liliedelamotte/dev/csis370/chess/Game.cpp
+iostream
+-
+string
+-
+set
+-
+Game.h
+/Users/liliedelamotte/dev/csis370/chess/Game.h
+Player.h
+/Users/liliedelamotte/dev/csis370/chess/Player.h
+King.h
+/Users/liliedelamotte/dev/csis370/chess/King.h
+Pawn.h
+/Users/liliedelamotte/dev/csis370/chess/Pawn.h
+Square.h
+/Users/liliedelamotte/dev/csis370/chess/Square.h
+Board.h
+/Users/liliedelamotte/dev/csis370/chess/Board.h
+Bishop.h
+/Users/liliedelamotte/dev/csis370/chess/Bishop.h
+Rook.h
+/Users/liliedelamotte/dev/csis370/chess/Rook.h
+RestrictedPiece.h
+/Users/liliedelamotte/dev/csis370/chess/RestrictedPiece.h
+Knight.h
+/Users/liliedelamotte/dev/csis370/chess/Knight.h
+Queen.h
+/Users/liliedelamotte/dev/csis370/chess/Queen.h
 
 /Users/liliedelamotte/dev/csis370/chess/Game.h
 set
@@ -20,17 +54,27 @@ Player.h
 RestrictedPiece.h
 /Users/liliedelamotte/dev/csis370/chess/RestrictedPiece.h
 
-/Users/liliedelamotte/dev/csis370/chess/Piece.cpp
+/Users/liliedelamotte/dev/csis370/chess/Knight.h
+Piece.h
+/Users/liliedelamotte/dev/csis370/chess/Piece.h
+
+/Users/liliedelamotte/dev/csis370/chess/Pawn.cpp
 iostream
 -
 string
 -
-Piece.h
-/Users/liliedelamotte/dev/csis370/chess/Piece.h
-Player.h
-/Users/liliedelamotte/dev/csis370/chess/Player.h
+Pawn.h
+/Users/liliedelamotte/dev/csis370/chess/Pawn.h
 Square.h
 /Users/liliedelamotte/dev/csis370/chess/Square.h
+Board.h
+/Users/liliedelamotte/dev/csis370/chess/Board.h
+
+/Users/liliedelamotte/dev/csis370/chess/Pawn.h
+iostream
+-
+RestrictedPiece.h
+/Users/liliedelamotte/dev/csis370/chess/RestrictedPiece.h
 
 /Users/liliedelamotte/dev/csis370/chess/Piece.h
 iostream
@@ -66,9 +110,23 @@ set
 King.h
 /Users/liliedelamotte/dev/csis370/chess/King.h
 
+/Users/liliedelamotte/dev/csis370/chess/Queen.h
+Piece.h
+/Users/liliedelamotte/dev/csis370/chess/Piece.h
+
 /Users/liliedelamotte/dev/csis370/chess/RestrictedPiece.h
 Piece.h
 /Users/liliedelamotte/dev/csis370/chess/Piece.h
 
+/Users/liliedelamotte/dev/csis370/chess/Rook.h
+RestrictedPiece.h
+/Users/liliedelamotte/dev/csis370/chess/RestrictedPiece.h
+
 /Users/liliedelamotte/dev/csis370/chess/Square.h
+
+/Users/liliedelamotte/dev/csis370/chess/chess.cpp
+Game.h
+/Users/liliedelamotte/dev/csis370/chess/Game.h
+string
+-
 

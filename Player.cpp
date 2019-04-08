@@ -36,6 +36,7 @@ bool Player::makeMove() {
     bool isRightColor = true;
     bool canMoveTo = true;
     bool gameIsInPlay = true;
+    bool kingIsInCheck = false;
     int startingRank;
     int startingFile;
     int endingRank;
@@ -59,6 +60,18 @@ bool Player::makeMove() {
         pieceOnSquare = true;
         isRightColor = true;
         canMoveTo = true;
+
+        // determines if the opposing player's King is in check
+        for (Piece *piece: Game::getOpponentOf(*this).getPieces()) {
+            if (piece->canMoveTo(*getKing().getLocation())) {
+                kingIsInCheck = true;
+            }
+        }
+
+        // lets the opposing player know that their King is in check
+        if (kingIsInCheck) {
+            cout << getName() << ", your King is in check!" << endl;
+        }
 
         // gets the players move
         cout << this->getName() << ", enter your move: ";
@@ -160,7 +173,7 @@ bool Player::makeMove() {
 
         }
         // determines if player decides they are in checkmate
-        else if (move == "#") {
+        else if (move == "#" && kingIsInCheck) {
             gameIsInPlay = false;
             validMove = true;
         }

@@ -29,12 +29,21 @@ class Pawn: public RestrictedPiece {
          */
         bool canMoveTo(Square& location);
 
+        static bool hasDelegate();
+
+        static void setDelegate(Piece& delegate);
+
         /**
           * Returns a string version of a Pawn.
           *
           * @return a string version of a Pawn.
           */
         string toString();
+
+    private:
+
+//        static Piece* _delegate;
+
 
 };
 
