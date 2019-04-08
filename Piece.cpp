@@ -38,6 +38,7 @@ bool Piece::isOnSquare() {
 }
 
 bool Piece::moveTo(Square& location, Player& byPlayer) {
-    /* todo */
-    return false;
+    this->getLocation()->setOccupant(nullptr);
+    this->setLocation(&location);
+    return true;
 }

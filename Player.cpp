@@ -177,8 +177,7 @@ bool Player::makeMove() {
         }
 
         // moves the Piece chosen to its destination
-        startingSquare->getOccupant()->setLocation(endingSquare);
-        startingSquare->setOccupant(nullptr);
+        startingSquare->getOccupant()->moveTo(*endingSquare, *this);
     }
 
     return gameIsInPlay;
