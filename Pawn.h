@@ -7,6 +7,7 @@
 #define _PAWN_H
 #include <iostream>
 #include "RestrictedPiece.h"
+#include "Queen.h"
 using namespace std;
 
 class Square;
@@ -42,7 +43,7 @@ class Pawn: public RestrictedPiece {
 
     private:
 
-//        static Piece* _delegate;
+        static Queen* _delegate;
 
 
 };
