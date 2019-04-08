@@ -32,6 +32,8 @@ class Pawn: public RestrictedPiece {
 
         static bool hasDelegate();
 
+        Queen& getDelegate();
+
         static void setDelegate(Piece& delegate);
 
         /**

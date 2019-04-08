@@ -81,6 +81,10 @@ bool hasDelegate() {
     return (_delegate != nullptr);
 }
 
+Queen& getDelegate() {
+    return *_delegate;
+}
+
 void setDelegate(Queen& delegate) {
     _delegate = &delegate;
 }
@@ -90,7 +94,7 @@ string Pawn::toString() {
     string pieceType = "P";
 
     if (hasDelegate()) {
-        pieceType = _delegate->toString();
+        pieceType = getDelegate().toString();
     }
 
     return pieceType;
