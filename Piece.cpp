@@ -13,7 +13,7 @@ using namespace std;
 
 Piece::Piece(Square* location, string color)
 : _location(location), _color(color) {
-    if (_location != nullptr) {
+    if (isOnSquare()) {
         location->setOccupant(this);
     }
 }
@@ -28,7 +28,7 @@ Square* Piece::getLocation() {
 
 void Piece::setLocation(Square* location) {
     _location = location;
-    if (_location != nullptr) {
+    if (isOnSquare()) {
         location->setOccupant(this);
     }
 }
