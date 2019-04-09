@@ -105,10 +105,10 @@ void Game::initialize() {
         if (gameIsInPlay) {
             board->display();
             _currentPlayer = &getNextPlayer();
+            // determines if both Kings are still in play
+            gameIsInPlay = (_currentPlayer->getKing().isOnSquare())
+                           && (getOpponentOf(*_currentPlayer).getKing().isOnSquare());
         }
-
-        gameIsInPlay = (_currentPlayer->getKing().isOnSquare())
-            && (getOpponentOf(*_currentPlayer).getKing().isOnSquare());
 
     }
 

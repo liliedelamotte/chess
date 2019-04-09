@@ -65,6 +65,8 @@ class Player {
          */
         void capture(Piece& piece);
 
+        bool isOfferingDraw();
+
     private:
 
         /**
@@ -81,6 +83,8 @@ class Player {
          * The Player's set of Pieces.
          */
         set<Piece*>& _pieces;
+
+        bool _isOfferingDraw = false;
 
 };
 
