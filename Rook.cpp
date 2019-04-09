@@ -11,13 +11,14 @@ bool Rook::canMoveTo(Square& location) {
 
     Board* board = board->getInstance();
     bool canMoveToGivenLocation = false;
-    Square *currentLocation = this->getLocation();
+    Square *currentLocation = getLocation();
     int currentFile = currentLocation->getFile();
     int currentRank = currentLocation->getRank();
     int futureFile = location.getFile();
     int futureRank = location.getRank();
 
-    if (!(currentFile == futureFile && currentRank == futureRank)) {
+    if ((currentFile == futureFile && currentRank != futureRank)
+    || (currentFile != futureFile && currentRank == futureRank)) {
         if (location.isOccupied()) {
             if (this->getColor() != location.getOccupant()->getColor()) {
                 if (currentFile == futureFile) {

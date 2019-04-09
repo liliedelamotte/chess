@@ -64,7 +64,6 @@ bool Player::makeMove() {
         // determines if the opposing player's King is in check
         for (Piece *piece: Game::getOpponentOf(*this).getPieces()) {
             if (piece->canMoveTo(*getKing().getLocation())) {
-                cout << piece->toString() << piece->getColor() << endl;
                 kingIsInCheck = true;
             }
         }
@@ -190,9 +189,6 @@ bool Player::makeMove() {
             capture(*endingSquare->getOccupant());
         }
 
-        cout << "startingSquare: " << startingSquare->getFile() << "," << startingSquare->getRank() << endl;
-        cout << "occupant at startingSquare: " << startingSquare->getOccupant()->getColor() << startingSquare->getOccupant()->toString() << endl;
-        cout << "endingSquare: " << endingSquare->getFile() << "," << endingSquare->getRank() << endl;
         // moves the Piece chosen to its destination
         startingSquare->getOccupant()->moveTo(*endingSquare, *this);
     }

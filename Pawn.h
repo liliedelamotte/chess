@@ -37,19 +37,6 @@ class Pawn: public RestrictedPiece {
          */
         bool hasDelegate();
 
-//        /**
-//         * Returns a Pawn's Queen delegate.
-//         *
-//         * @return a Pawn's Queen delegate.
-//         */
-//        Queen& getDelegate();
-//
-//        /**
-//         * Sets a Pawns delegate when it reaches the opposite end of the board.
-//         * @param delegate the Piece a Pawn will now reference.
-//         */
-//        void setDelegate(Queen& delegate);
-
         /**
           * Returns a string version of a Pawn.
           *

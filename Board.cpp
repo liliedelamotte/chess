@@ -55,6 +55,7 @@ bool Board::isClearRank(Square& from, Square& to) {
 
     int fromFile = from.getFile();
     int toFile = to.getFile();
+    int fromRank = from.getRank();
     int toRank = to.getRank();
     int currentFile = fromFile + 1;
     bool isClearRank = true;

@@ -13,10 +13,6 @@
 
 using namespace std;
 
-
-// todo shouldn't this be `Queen* Queen::_delegate = nullptr`?
-//Queen* _delegate = nullptr;
-
 bool Pawn::canMoveTo(Square& location) {
 
     Square *currentLocation = this->getLocation();
@@ -27,15 +23,15 @@ bool Pawn::canMoveTo(Square& location) {
     int futureFile = location.getFile();
     int futureRank = location.getRank();
 
-//    if (hasDelegate()) {
-//        // temporarily creates a Queen at the current position
-//        // to see if they could move to the desired spot
-//        Queen delegate = Queen(getLocation(), getColor());
-//        canMoveToGivenLocation = delegate.canMoveTo(location);
-//        // places the Pawn back to where it currently is
-//        this->setLocation(delegate.getLocation());
-//    }
-//    else {
+    if (hasDelegate()) {
+        // temporarily creates a Queen at the current position
+        // just to see if it could move to the desired spot
+        Queen delegate = Queen(getLocation(), getColor());
+        canMoveToGivenLocation = delegate.canMoveTo(location);
+        // places the Pawn back to where it currently is
+        this->setLocation(delegate.getLocation());
+    }
+    else {
         // runs a series of can move to tests based on the Pawn's color
         if (getColor() == "W") {
 
@@ -53,10 +49,12 @@ bool Pawn::canMoveTo(Square& location) {
                 canMoveToGivenLocation = true;
             }
 
-//            if (canMoveToGivenLocation && futureRank == 7 && !hasDelegate()) {
-//                cout << "there's a delegate, yay";
-//                _hasDelegate = true;
-//            }
+            // sets the delegate flag to true if the Piece makes it
+            // to the end of the board and isn't a delegate already
+            if (canMoveToGivenLocation && futureRank == 7 && !hasDelegate()) {
+                cout << "there's a delegate, yay";
+                _hasDelegate = true;
+            }
 
 
         } else {
@@ -74,12 +72,14 @@ bool Pawn::canMoveTo(Square& location) {
                 canMoveToGivenLocation = true;
             }
 
-//            if (canMoveToGivenLocation && futureRank == 0 && !hasDelegate()) {
-//                _hasDelegate = true;
-//            }
+            // sets the delegate flag to true if the Piece makes it
+            // to the end of the board and isn't a delegate already
+            if (canMoveToGivenLocation && futureRank == 0 && !hasDelegate()) {
+                _hasDelegate = true;
+            }
 
         }
-//    }
+    }
 
     return canMoveToGivenLocation;
 }
@@ -88,19 +88,11 @@ bool Pawn::hasDelegate() {
     return _hasDelegate;
 }
 
-//Queen& Pawn::getDelegate() {
-//    return *_delegate;
-//}
-//
-//void Pawn::setDelegate(Queen& delegate) {
-//    _hasDelegate = true;
-//    _delegate = &delegate;
-//}
-
 string Pawn::toString() {
 
     string pieceType = "P";
 
+    // returns a 'Q' instead of a 'P' if the Piece has been promoted
     if (hasDelegate()) {
         Queen delegate = Queen(getLocation(), getColor());
         pieceType = delegate.toString();
