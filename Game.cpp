@@ -107,6 +107,9 @@ void Game::initialize() {
             _currentPlayer = &getNextPlayer();
         }
 
+        gameIsInPlay = (_currentPlayer->getKing().isOnSquare())
+            && (getOpponentOf(*_currentPlayer).getKing().isOnSquare());
+
     }
 
     cout << "\nThanks for playing!";

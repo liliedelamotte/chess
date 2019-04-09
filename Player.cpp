@@ -64,6 +64,7 @@ bool Player::makeMove() {
         // determines if the opposing player's King is in check
         for (Piece *piece: Game::getOpponentOf(*this).getPieces()) {
             if (piece->canMoveTo(*getKing().getLocation())) {
+                cout << piece->toString() << piece->getColor() << endl;
                 kingIsInCheck = true;
             }
         }
@@ -203,6 +204,6 @@ bool Player::makeMove() {
 void Player::capture(Piece& piece) {
 
     Game::getOpponentOf(*this).getPieces().erase(&piece);
-    piece.getLocation()->setOccupant(nullptr);
+    piece.setLocation(nullptr);
 
 }

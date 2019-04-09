@@ -27,15 +27,15 @@ bool Pawn::canMoveTo(Square& location) {
     int futureFile = location.getFile();
     int futureRank = location.getRank();
 
-    if (hasDelegate()) {
-        // temporarily creates a Queen at the current position
-        // to see if they could move to the desired spot
-        Queen delegate = Queen(getLocation(), getColor());
-        canMoveToGivenLocation = delegate.canMoveTo(location);
-        // places the Pawn back to where it currently is
-        this->setLocation(delegate.getLocation());
-    }
-    else {
+//    if (hasDelegate()) {
+//        // temporarily creates a Queen at the current position
+//        // to see if they could move to the desired spot
+//        Queen delegate = Queen(getLocation(), getColor());
+//        canMoveToGivenLocation = delegate.canMoveTo(location);
+//        // places the Pawn back to where it currently is
+//        this->setLocation(delegate.getLocation());
+//    }
+//    else {
         // runs a series of can move to tests based on the Pawn's color
         if (getColor() == "W") {
 
@@ -53,10 +53,10 @@ bool Pawn::canMoveTo(Square& location) {
                 canMoveToGivenLocation = true;
             }
 
-            if (canMoveToGivenLocation && futureRank == 7 && !hasDelegate()) {
-                cout << "there's a delegate, yay";
-                _hasDelegate = true;
-            }
+//            if (canMoveToGivenLocation && futureRank == 7 && !hasDelegate()) {
+//                cout << "there's a delegate, yay";
+//                _hasDelegate = true;
+//            }
 
 
         } else {
@@ -74,12 +74,12 @@ bool Pawn::canMoveTo(Square& location) {
                 canMoveToGivenLocation = true;
             }
 
-            if (canMoveToGivenLocation && futureRank == 0 && !hasDelegate()) {
-                _hasDelegate = true;
-            }
+//            if (canMoveToGivenLocation && futureRank == 0 && !hasDelegate()) {
+//                _hasDelegate = true;
+//            }
 
         }
-    }
+//    }
 
     return canMoveToGivenLocation;
 }
