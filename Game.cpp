@@ -34,6 +34,9 @@ void Game::initialize() {
     const string player1Name = "White";
     const string player2Name = "Black";
     bool gameIsInPlay = true;
+    long currentSizeOfWhitePieces;
+    long currentSizeOfBlackPieces;
+    int numRoundsWithoutACapture = 0;
 
     cout << "Welcome to Chess!\n";
     cout << "Moves should be entered like so: \'a2 a3\'.\n";
@@ -96,8 +99,11 @@ void Game::initialize() {
 
     board->display();
 
+    currentSizeOfWhitePieces = _whitePieces.size();
+    currentSizeOfBlackPieces = _blackPieces.size();
+
     // runs through the game until there is a winner
-    while (gameIsInPlay) {
+    while (gameIsInPlay && numRoundsWithoutACapture < 50) {
 
         gameIsInPlay = _currentPlayer->makeMove();
 
@@ -108,6 +114,17 @@ void Game::initialize() {
             // determines if both Kings are still in play
             gameIsInPlay = (_currentPlayer->getKing().isOnSquare())
                            && (getOpponentOf(*_currentPlayer).getKing().isOnSquare());
+        }
+
+        // if the piece sets are still the same size as they were the previous round, a tally is incremented.
+        if (currentSizeOfWhitePieces == _whitePieces.size() && currentSizeOfBlackPieces == _blackPieces.size()) {
+            numRoundsWithoutACapture++;
+        }
+        // if the piece sets have changed since the previous round, the variables are reset
+        else {
+            currentSizeOfWhitePieces = _whitePieces.size();
+            currentSizeOfBlackPieces = _blackPieces.size();
+            numRoundsWithoutACapture = 0;
         }
 
     }
