@@ -189,6 +189,9 @@ bool Player::makeMove() {
             capture(*endingSquare->getOccupant());
         }
 
+        cout << "startingSquare: " << startingSquare->getFile() << "," << startingSquare->getRank() << endl;
+        cout << "occupant at startingSquare: " << startingSquare->getOccupant()->getColor() << startingSquare->getOccupant()->toString() << endl;
+        cout << "endingSquare: " << endingSquare->getFile() << "," << endingSquare->getRank() << endl;
         // moves the Piece chosen to its destination
         startingSquare->getOccupant()->moveTo(*endingSquare, *this);
     }

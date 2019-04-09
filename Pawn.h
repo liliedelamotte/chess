@@ -30,11 +30,25 @@ class Pawn: public RestrictedPiece {
          */
         bool canMoveTo(Square& location);
 
-        static bool hasDelegate();
+        /**
+         * Returns whether or not the Pawn has a delegate.
+         *
+         * @return whether or not the Pawn has a delegate.
+         */
+        bool hasDelegate();
 
-        Queen& getDelegate();
-
-        static void setDelegate(Piece& delegate);
+//        /**
+//         * Returns a Pawn's Queen delegate.
+//         *
+//         * @return a Pawn's Queen delegate.
+//         */
+//        Queen& getDelegate();
+//
+//        /**
+//         * Sets a Pawns delegate when it reaches the opposite end of the board.
+//         * @param delegate the Piece a Pawn will now reference.
+//         */
+//        void setDelegate(Queen& delegate);
 
         /**
           * Returns a string version of a Pawn.
@@ -45,7 +59,10 @@ class Pawn: public RestrictedPiece {
 
     private:
 
-        static Queen* _delegate;
+        /**
+         * Whether or not a Pawn has a delegate yet.
+         */
+        bool _hasDelegate = false;
 
 
 };

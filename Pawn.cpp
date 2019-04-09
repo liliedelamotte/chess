@@ -8,11 +8,14 @@
 #include "Pawn.h"
 #include "Square.h"
 #include "Board.h"
+#include "Queen.h"
+#include "Game.h"
+
 using namespace std;
 
 
 // todo shouldn't this be `Queen* Queen::_delegate = nullptr`?
-Queen* _delegate = nullptr;
+//Queen* _delegate = nullptr;
 
 bool Pawn::canMoveTo(Square& location) {
 
@@ -25,7 +28,12 @@ bool Pawn::canMoveTo(Square& location) {
     int futureRank = location.getRank();
 
     if (hasDelegate()) {
-        canMoveToGivenLocation = _delegate->canMoveTo(location);
+        // temporarily creates a Queen at the current position
+        // to see if they could move to the desired spot
+        Queen delegate = Queen(getLocation(), getColor());
+        canMoveToGivenLocation = delegate.canMoveTo(location);
+        // places the Pawn back to where it currently is
+        this->setLocation(delegate.getLocation());
     }
     else {
         // runs a series of can move to tests based on the Pawn's color
@@ -45,9 +53,9 @@ bool Pawn::canMoveTo(Square& location) {
                 canMoveToGivenLocation = true;
             }
 
-            if (getLocation()->getRank() == 7) {
-                Queen delegate = Queen(getLocation(), getColor());
-                setDelegate(delegate);
+            if (canMoveToGivenLocation && futureRank == 7 && !hasDelegate()) {
+                cout << "there's a delegate, yay";
+                _hasDelegate = true;
             }
 
 
@@ -66,9 +74,8 @@ bool Pawn::canMoveTo(Square& location) {
                 canMoveToGivenLocation = true;
             }
 
-            if (getLocation()->getRank() == 0) {
-                Queen delegate = Queen(getLocation(), getColor());
-                setDelegate(delegate);
+            if (canMoveToGivenLocation && futureRank == 0 && !hasDelegate()) {
+                _hasDelegate = true;
             }
 
         }
@@ -77,24 +84,27 @@ bool Pawn::canMoveTo(Square& location) {
     return canMoveToGivenLocation;
 }
 
-bool hasDelegate() {
-    return (_delegate != nullptr);
+bool Pawn::hasDelegate() {
+    return _hasDelegate;
 }
 
-Queen& getDelegate() {
-    return *_delegate;
-}
-
-void setDelegate(Queen& delegate) {
-    _delegate = &delegate;
-}
+//Queen& Pawn::getDelegate() {
+//    return *_delegate;
+//}
+//
+//void Pawn::setDelegate(Queen& delegate) {
+//    _hasDelegate = true;
+//    _delegate = &delegate;
+//}
 
 string Pawn::toString() {
 
     string pieceType = "P";
 
     if (hasDelegate()) {
-        pieceType = getDelegate().toString();
+        Queen delegate = Queen(getLocation(), getColor());
+        pieceType = delegate.toString();
+        this->setLocation(delegate.getLocation());
     }
 
     return pieceType;
