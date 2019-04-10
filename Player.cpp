@@ -187,6 +187,22 @@ bool Player::makeMove() {
                 validMove = true;
             }
 
+            // determines if potential move will put their own player in check
+            if (gameIsInPlay && validMove) {
+
+                startingSquare->setOccupant(nullptr);
+
+                // determines if the opposing player's King is in check
+                for (Piece *piece: Game::getOpponentOf(*this).getPieces()) {
+                    if (piece->canMoveTo(*getKing().getLocation())) {
+                        validMove = false;
+                    }
+                }
+
+                startingSquare->setOccupant(pieceToMove);
+
+            }
+
         }
         else if (move == "=" && Game::getOpponentOf(*this).isOfferingDraw()) {
             gameIsInPlay = false;
