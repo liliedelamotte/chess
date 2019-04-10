@@ -126,7 +126,7 @@ bool Player::makeMove() {
             else if (startingLocation[0] == 'g') {
                 startingFile = 6;
             }
-            else if (startingLocation[0] == 'h') {
+            else {
                 startingFile = 7;
             }
 
@@ -151,7 +151,7 @@ bool Player::makeMove() {
             else if (endingLocation[0] == 'g') {
                 endingFile = 6;
             }
-            else if (endingLocation[0] == 'h') {
+            else {
                 endingFile = 7;
             }
 
@@ -217,6 +217,7 @@ bool Player::makeMove() {
             validMove = false;
         }
 
+        // lets the user know if they
         if (!validMove) {
             cout << "Invalid move.\n" << endl;
         }

@@ -18,17 +18,6 @@ class RestrictedPiece: public Piece {
     /** Lift base constructors into scope. */
     using Piece::Piece;
 
-    public:
-
-        /**
-         * Moves a Piece to a given location.
-         *
-         * @param location the Square in which the Piece is to be moved to.
-         * @param byPlayer the Player that is to make the move.
-         * @return whether or not the move was successful.
-         */
-        virtual bool moveTo(Square& location, Player& byPlayer);
-
     protected:
 
         /**
