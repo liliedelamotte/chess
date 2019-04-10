@@ -1,6 +1,6 @@
 // ldelamotte17@georgefox.edu
-// Assignment 8
-// 2019-04-06
+// Assignment 10
+// 2019-04-20
 
 
 #ifndef _GAME_H
@@ -36,19 +36,14 @@ class Game {
          */
         static Player& getOpponentOf(Player& player);
 
-        /**
-         * Ends the game.
-         */
-        static void endGame();
-
     private:
 
-        static Player* player1;
-        static Player* player2;
-        static Player* currentPlayer;
+        static Player* _player1;
+        static Player* _player2;
+        static Player* _currentPlayer;
 
-        static set<Piece*> whitePieces;
-        static set<Piece*> blackPieces;
+        static set<Piece*> _whitePieces;
+        static set<Piece*> _blackPieces;
 
 };
 

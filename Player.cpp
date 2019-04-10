@@ -1,6 +1,6 @@
 // ldelamotte17@georgefox.edu
-// Assignment 8
-// 2019-04-06
+// Assignment 10
+// 2019-04-20
 
 
 #include <string>
@@ -35,6 +35,8 @@ bool Player::makeMove() {
     bool pieceOnSquare = true;
     bool isRightColor = true;
     bool canMoveTo = true;
+    bool gameIsInPlay = true;
+    bool kingIsInCheck = false;
     int startingRank;
     int startingFile;
     int endingRank;
@@ -45,10 +47,16 @@ bool Player::makeMove() {
     string move;
     Square* startingSquare;
     Square* endingSquare;
-    regex r("([a-h][1-8])\\s+([a-h][1-8])");
+    regex validRe("([a-h][1-8])\\s+([a-h][1-8])");
+    regex offeringDrawRe("([a-h][1-8])\\s+([a-h][1-8])(=)");
+    regex checkmateRe("(#)");
 
 
     Board* board = board->getInstance();
+
+    // resets this variable because if it's this player's turn again,
+    // it means that their opponent did not accept their draw
+    _isOfferingDraw = false;
 
     while (!validMove) {
 
@@ -58,12 +66,38 @@ bool Player::makeMove() {
         isRightColor = true;
         canMoveTo = true;
 
+        // determines if the opposing player's King is in check
+        for (Piece *piece: Game::getOpponentOf(*this).getPieces()) {
+            if (piece->canMoveTo(*getKing().getLocation())) {
+                kingIsInCheck = true;
+            }
+        }
+
+        // lets the player know if their opponent is offering a draw
+        if (Game::getOpponentOf(*this).isOfferingDraw()) {
+            cout << getName() << ", " << Game::getOpponentOf(*this).getName()
+            << " is offering a draw. If you would like to accept, enter '='. If not, play a move as usual." << endl;
+        }
+
+        // lets the opposing player know that their King is in check
+        if (kingIsInCheck) {
+            cout << getName() << ", your King is in check!\n" << endl;
+        }
+
         // gets the players move
         cout << this->getName() << ", enter your move: ";
         getline(cin, move);
 
+        // checks to see if the player is offering a draw.
+        // if so, a flag is set and move is now set to
+        // their move without the equal sign
+        if (regex_match(move.begin(), move.end(), offeringDrawRe)) {
+            _isOfferingDraw = true;
+            move = move.substr(0, 5);
+        }
+
         // determines if the format of the input is valid
-        if (regex_match(move.begin(), move.end(), r)) {
+        if (regex_match(move.begin(), move.end(), validRe)) {
 
             startingLocation = move.substr(0, 2);
             endingLocation = move.substr(3, 5);
@@ -92,7 +126,7 @@ bool Player::makeMove() {
             else if (startingLocation[0] == 'g') {
                 startingFile = 6;
             }
-            else if (startingLocation[0] == 'h') {
+            else {
                 startingFile = 7;
             }
 
@@ -117,7 +151,7 @@ bool Player::makeMove() {
             else if (endingLocation[0] == 'g') {
                 endingFile = 6;
             }
-            else if (endingLocation[0] == 'h') {
+            else {
                 endingFile = 7;
             }
 
@@ -141,32 +175,73 @@ bool Player::makeMove() {
                 }
             }
 
-            validMove = pieceOnSquare && isRightColor && canMoveTo;
-            if (!validMove) {
-                cout << "Invalid move.\n" << endl;
+            // only evaluates for a valid move with the given parameters
+            // if the beginning square is the same as the ending square
+            if (startingSquare->getRank() != endingSquare->getRank()
+            || startingSquare->getFile() != endingSquare->getFile()) {
+                validMove = pieceOnSquare && isRightColor && canMoveTo;
+            }
+            // if the starting square is the same as the ending square, a king has been tipped over
+            else {
+                gameIsInPlay = false;
+                validMove = true;
+            }
+
+            // determines if potential move will put their own player in check
+            if (gameIsInPlay && validMove) {
+
+                startingSquare->setOccupant(nullptr);
+
+                // determines if the opposing player's King is in check
+                for (Piece *piece: Game::getOpponentOf(*this).getPieces()) {
+                    if (piece->canMoveTo(*getKing().getLocation())) {
+                        validMove = false;
+                    }
+                }
+
+                startingSquare->setOccupant(pieceToMove);
+
             }
 
         }
+        else if (move == "=" && Game::getOpponentOf(*this).isOfferingDraw()) {
+            gameIsInPlay = false;
+            validMove = true;
+        }
+        // determines if player decides they are in checkmate
+        else if (move == "#" && kingIsInCheck) {
+            gameIsInPlay = false;
+            validMove = true;
+        }
         else {
             validMove = false;
+        }
+
+        // lets the user know if they
+        if (!validMove) {
             cout << "Invalid move.\n" << endl;
         }
+
     }
 
-    // removes the captured Piece (if any) from the owner's set as well as from the board
-    if (endingSquare->isOccupied()) {
-        capture(*endingSquare->getOccupant());
+    if (gameIsInPlay) {
+        // removes the captured Piece (if any) from the owner's set as well as from the board
+        if (endingSquare->isOccupied()) {
+            capture(*endingSquare->getOccupant());
+        }
+        // moves the Piece chosen to its destination
+        startingSquare->getOccupant()->moveTo(*endingSquare, *this);
     }
 
-    // moves the Piece chosen to its destination
-    startingSquare->getOccupant()->setLocation(endingSquare);
-    startingSquare->setOccupant(nullptr);
+    return gameIsInPlay;
 
 }
 
 void Player::capture(Piece& piece) {
-
     Game::getOpponentOf(*this).getPieces().erase(&piece);
-    piece.getLocation()->setOccupant(nullptr);
+    piece.setLocation(nullptr);
+}
 
+bool Player::isOfferingDraw() {
+    return _isOfferingDraw;
 }

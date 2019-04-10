@@ -1,6 +1,6 @@
 // ldelamotte17@georgefox.edu
-// Assignment 8
-// 2019-04-06
+// Assignment 10
+// 2019-04-20
 
 
 #ifndef _RESTRICTEDPIECE_H
@@ -18,17 +18,6 @@ class RestrictedPiece: public Piece {
     /** Lift base constructors into scope. */
     using Piece::Piece;
 
-    public:
-
-        /**
-         * Moves a Piece to a given location.
-         *
-         * @param location the Square in which the Piece is to be moved to.
-         * @param byPlayer the Player that is to make the move.
-         * @return whether or not the move was successful.
-         */
-        virtual bool moveTo(Square& location, Player& byPlayer);
-
     protected:
 
         /**
@@ -44,6 +33,7 @@ class RestrictedPiece: public Piece {
          * Whether or not the Restricted Piece has moved yet.
          */
         bool _moved = false;
+
 };
 
 #endif //_RESTRICTEDPIECE_H

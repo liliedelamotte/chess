@@ -1,6 +1,6 @@
 // ldelamotte17@georgefox.edu
-// Assignment 8
-// 2019-04-06
+// Assignment 10
+// 2019-04-20
 
 
 #include <iostream>
@@ -20,11 +20,11 @@
 
 using namespace std;
 
-Player* Game::player1 = nullptr;
-Player* Game::player2 = nullptr;
-Player* Game::currentPlayer = nullptr;
-set<Piece*> Game::whitePieces;
-set<Piece*> Game::blackPieces;
+Player* Game::_player1 = nullptr;
+Player* Game::_player2 = nullptr;
+Player* Game::_currentPlayer = nullptr;
+set<Piece*> Game::_whitePieces;
+set<Piece*> Game::_blackPieces;
 
 const string BLACK = "B";
 const string WHITE = "W";
@@ -33,6 +33,10 @@ void Game::initialize() {
 
     const string player1Name = "White";
     const string player2Name = "Black";
+    bool gameIsInPlay = true;
+    long currentSizeOfWhitePieces;
+    long currentSizeOfBlackPieces;
+    int numRoundsWithoutACapture = 0;
 
     cout << "Welcome to Chess!\n";
     cout << "Moves should be entered like so: \'a2 a3\'.\n";
@@ -75,32 +79,53 @@ void Game::initialize() {
     Pawn blackPawn8 = Pawn(&board->getSquareAt(7, 6), BLACK);
 
     // assigns all Pieces to their set
-    blackPieces = {&blackRook1, &blackRook2, &blackKnight1, &blackKnight2,
+    _blackPieces = {&blackRook1, &blackRook2, &blackKnight1, &blackKnight2,
                    &blackBishop1, &blackBishop2, &blackQueen, &blackKing,
                    &blackPawn1, &blackPawn2, &blackPawn3, &blackPawn4,
                    &blackPawn5, &blackPawn6, &blackPawn7, &blackPawn8};
 
-    whitePieces = {&whiteRook1, &whiteRook2, &whiteKnight1, &whiteKnight2,
+    _whitePieces = {&whiteRook1, &whiteRook2, &whiteKnight1, &whiteKnight2,
                    &whiteBishop1, &whiteBishop2, &whiteQueen, &whiteKing,
                    &whitePawn1, &whitePawn2, &whitePawn3, &whitePawn4,
                    &whitePawn5, &whitePawn6, &whitePawn7, &whitePawn8};
 
     // creates the Players
-    Player p1 = Player(player1Name, whiteKing, whitePieces);
-    Player p2 = Player(player2Name, blackKing, blackPieces);
-    player1 = &p1;
-    player2 = &p2;
+    Player p1 = Player(player1Name, whiteKing, _whitePieces);
+    Player p2 = Player(player2Name, blackKing, _blackPieces);
+    _player1 = &p1;
+    _player2 = &p2;
 
-    currentPlayer = player1;
+    _currentPlayer = _player1;
 
     board->display();
 
-    // runs through the game for 10 valid turns
-    for(int i = 0; i < 10; i++) {
+    currentSizeOfWhitePieces = _whitePieces.size();
+    currentSizeOfBlackPieces = _blackPieces.size();
 
-        currentPlayer->makeMove();
-        board->display();
-        currentPlayer = &getNextPlayer();
+    // runs through the game until there is a winner
+    while (gameIsInPlay && numRoundsWithoutACapture <= 50) {
+
+        gameIsInPlay = _currentPlayer->makeMove();
+
+        // only moves the piece and gets the next player if the game isn't over
+        if (gameIsInPlay) {
+            board->display();
+            _currentPlayer = &getNextPlayer();
+            // determines if both Kings are still in play
+            gameIsInPlay = (_currentPlayer->getKing().isOnSquare())
+                           && (getOpponentOf(*_currentPlayer).getKing().isOnSquare());
+        }
+
+        // if the piece sets are still the same size as they were the previous round, a tally is incremented.
+        if (currentSizeOfWhitePieces == _whitePieces.size() && currentSizeOfBlackPieces == _blackPieces.size()) {
+            numRoundsWithoutACapture++;
+        }
+        // if the piece sets have changed since the previous round, the variables are reset
+        else {
+            currentSizeOfWhitePieces = _whitePieces.size();
+            currentSizeOfBlackPieces = _blackPieces.size();
+            numRoundsWithoutACapture = 0;
+        }
 
     }
 
@@ -109,15 +134,15 @@ void Game::initialize() {
 }
 
 Player& Game::getNextPlayer() {
-    return getOpponentOf(*currentPlayer);
+    return getOpponentOf(*_currentPlayer);
 }
 
 Player& Game::getOpponentOf(Player& player) {
 
-    Player* opponent = player1;
+    Player* opponent = _player1;
 
-    if (&player == player1) {
-        opponent = player2;
+    if (&player == _player1) {
+        opponent = _player2;
     }
 
     return *opponent;

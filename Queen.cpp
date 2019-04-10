@@ -1,6 +1,6 @@
 // ldelamotte17@georgefox.edu
-// Assignment 8
-// 2019-04-06
+// Assignment 10
+// 2019-04-20
 
 
 #include "Queen.h"
@@ -24,8 +24,7 @@ bool Queen::canMoveTo(Square& location) {
             canMoveToGivenLocationDiagonal = board->isClearDiagonal(*currentLocation, location);
         }
     }
-
-    if (!(currentFile == futureFile && currentRank == futureRank)) {
+    else if (!(currentFile == futureFile && currentRank == futureRank)) {
         if (location.isOccupied()) {
             if (this->getColor() != location.getOccupant()->getColor()) {
                 if (currentFile == futureFile) {
@@ -46,7 +45,7 @@ bool Queen::canMoveTo(Square& location) {
         }
     }
 
-    return (canMoveToGivenLocationDiagonal && canMoveToGivenLocationStraight);
+    return (canMoveToGivenLocationDiagonal || canMoveToGivenLocationStraight);
 
 }
 

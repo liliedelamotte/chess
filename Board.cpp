@@ -1,9 +1,10 @@
 // ldelamotte17@georgefox.edu
-// Assignment 8
-// 2019-04-06
+// Assignment 10
+// 2019-04-20
 
 
 #include <iostream>
+#include <cstdlib>
 #include "Board.h"
 #include "Square.h"
 #include "Piece.h"
@@ -54,6 +55,7 @@ bool Board::isClearRank(Square& from, Square& to) {
 
     int fromFile = from.getFile();
     int toFile = to.getFile();
+    int fromRank = from.getRank();
     int toRank = to.getRank();
     int currentFile = fromFile + 1;
     bool isClearRank = true;
@@ -131,6 +133,12 @@ bool Board::isClearDiagonal(Square& from, Square& to) {
         currentRank = fromRank - 1;
     }
 
+    // rejects moves whose ranks and files do not have
+    // equal distances from the ending rank and file
+    if (abs(fromFile - toFile) != abs(fromRank - toRank)) {
+        isClearDiagonal = false;
+    }
+
     while ((currentFile != toFile && currentRank != toRank) && isClearDiagonal) {
 
         if (getSquareAt(currentFile, currentRank).isOccupied()) {
@@ -162,17 +170,13 @@ void Board::display() {
     Square* currentSquare;
 
     for (int i = DIMENSION - 1; i >= 0; i--) {
-
         if (i == DIMENSION - 1) {
             cout << "\n     a    b    c    d    e    f    g    h\n";
         }
-
         if (i == DIMENSION - 1) {
             cout << "  +----+----+----+----+----+----+----+----+\n";
         }
-
         for (int j = 0; j < DIMENSION; j++) {
-
             if (j == 0) {
                 cout << i + 1 << " |";
             }
@@ -186,17 +190,12 @@ void Board::display() {
             else {
                 cout << "    |";
             }
-
             if (j == DIMENSION) {
                 cout << " " << j << "\n";
             }
-
         }
-
         cout << " " << i + 1 << "\n  +----+----+----+----+----+----+----+----+\n";
-
     }
-
-    cout << "     a    b    c    d    e    f    g    h\n";
+    cout << "     a    b    c    d    e    f    g    h\n\n";
 
 }

@@ -1,6 +1,6 @@
 // ldelamotte17@georgefox.edu
-// Assignment 8
-// 2019-04-06
+// Assignment 10
+// 2019-04-20
 
 
 #ifndef _PLAYER_H
@@ -65,6 +65,8 @@ class Player {
          */
         void capture(Piece& piece);
 
+        bool isOfferingDraw();
+
     private:
 
         /**
@@ -81,6 +83,8 @@ class Player {
          * The Player's set of Pieces.
          */
         set<Piece*>& _pieces;
+
+        bool _isOfferingDraw = false;
 
 };
 
