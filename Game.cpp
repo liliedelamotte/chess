@@ -103,7 +103,7 @@ void Game::initialize() {
     currentSizeOfBlackPieces = _blackPieces.size();
 
     // runs through the game until there is a winner
-    while (gameIsInPlay && numRoundsWithoutACapture < 50) {
+    while (gameIsInPlay && numRoundsWithoutACapture <= 50) {
 
         gameIsInPlay = _currentPlayer->makeMove();
 
